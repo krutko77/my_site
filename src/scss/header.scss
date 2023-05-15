@@ -1,9 +1,153 @@
-//====================================================================================================
+//header
+.header {
+   position:absolute;
+   background-color: $mainBgColor;
+   width: 100%;
+   z-index: 10;
 
-//====================================================================================================
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;   
+      min-height: 70px;
+   }
+
+   .social {
+      z-index: 5; 
+
+      &__list {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;                
+      } 
+
+      &__link {
+         fill: $mainColor;               
+
+         &:hover {
+            fill: $accentColor;
+         }
+      }
+
+      &__icon {
+         height: 32px;
+         width: 32px;
+         fill: inherit;
+         transition: 0.3s;
+      }
+
+      &__item:not(:last-child) {
+         margin-right: 30px;
+      }
+   }  
+   
+   .menu {
+      &__body {
+         @media (max-width: $mobile) {
+         position: fixed;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(242,242,242, 0.9);
+         padding: 120px 0 0;
+         overflow: auto;
+         transition: left 0.3s ease 0s;
+         }
+
+         .menu-open & {
+            left: 0;
+         }
+      }     
+
+      &__list {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;      
+        
+         @media (max-width: $mobile) {
+         flex-direction: column;
+         }
+      } 
+      
+      &__item {
+         display: inline-block;
+      }
+
+      &__item:not(:last-child) {
+         margin-right: 30px;
+
+         @media (max-width: $pc) {
+            margin-right: calc(20px + 10*((100vw - 768px) / (1260 - 768)));
+         }
+
+         @media (max-width: $mobile) {
+            margin: 0 0 30px;
+            }
+      }
+
+      &__link {
+         padding: 5px 7px 3px;
+         text-transform: uppercase;
+         cursor: pointer; 
+         display: block;    
+         position: relative;  
+
+         @media (max-width: $pc) {
+            font-size: calc(12px + 2*((100vw - 768px) / (1260 - 768)));
+         }
+         
+         @media (max-width: $mobile) {
+            font-size: 22px;
+            }
+      } 
+
+      &__link::before,
+      &__link::after {
+         content: '';    
+         position: absolute; 
+         top: 90%;    
+         width: 0;    
+         height: 2px;    
+         background: $accentColor;    
+         transition: 0.3s;
+      }
+
+      &__link::before {
+         left: calc(50% - 3.5px);      
+      }
+
+      &__link::after {
+         right: calc(50% - 3.5px);      
+      }
+
+      &__link:hover::before,
+      &__link:hover::after {
+         width: calc(50% - 3.5px);
+      }
+      
+      &__link._navigator-active {
+         background-color: #FFCC0D;
+      }
+   }   
+}
+
+//headerScroll
+._header-scroll {
+   position: fixed;
+   top: -200px;       
+}     
+
+._header-scroll {
+   min-height: 50px;    
+} 
+
+._header-show {
+   transition: top 0.7s 0s;
+   top: 0;
+}
 
 //Burger
-/*
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -11,10 +155,8 @@
 		position: relative;
 		width: rem(30);
 		height: rem(18);
+		cursor: pointer;
 		z-index: 5;
-		@media (any-hover: none) {
-			cursor: default;
-		}
 		span,
 		&::before,
 		&::after {
@@ -24,7 +166,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: $mainColor;
 		}
 		&::before {
 			top: 0;
@@ -38,10 +180,7 @@
 		.menu-open & {
 			span {
 				width: 0;
-			}
-			&::before,
-			&::after {
-			}
+			}			
 			&::before {
 				top: calc(50% - rem(1));
 				transform: rotate(-45deg);
@@ -53,4 +192,4 @@
 		}
 	}
 }
-*/
+

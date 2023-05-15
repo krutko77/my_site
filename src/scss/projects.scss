@@ -1,0 +1,250 @@
+//projects
+.projects {
+   padding: 120px 0 20px;
+   margin-bottom: 20px;
+   
+   @media (max-width: $tablet) {
+      padding: 100px 0 20px;
+   }
+
+   @media (max-width: $mobileSmall) {
+      padding: 75px 0 0;
+   }
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 4px solid $mainColor; 
+      
+      @media (max-width: $tablet) {
+         border-width: 3px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 90px;
+      position: relative;      
+
+      @media (max-width: $tablet) {
+         margin-bottom: 70px;
+      }
+
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 35px;
+      }
+
+      &::after {
+         left: 19%;         
+      }
+   }
+
+   .portfolio {      
+      width: 100%;   
+      text-align: center;
+
+      &__content {
+         display: flex;
+         flex-direction: column;         
+         row-gap: 50px;
+
+         @media (max-width: $pc) {
+            gap: calc(30px + 20*((100vw - 1051px) / (1260 - 1051)));
+         } 
+         
+         @media (max-width: $tablet) {
+            gap: 30px;
+         }          
+      }
+
+      &__block {
+         display: flex;        
+         justify-content: space-between;
+       
+         @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items:center;            
+         }
+      }
+
+      &__img-box {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         max-width: 575px;
+         padding: 30px 20px 0;
+         background-color: $mainLightColor; 
+         
+         @media (max-width: $pc) {
+            max-width: calc(475px + 100*((100vw - 1051px) / (1260 - 1051)));
+         }
+
+         @media (max-width: $tablet) {
+            max-width: 575px;
+            
+            &:first-child {
+               margin-bottom: 30px;
+            }
+         }        
+      }
+
+      &__subtitle {
+         font-family: "SpectralSC", serif;
+         @include font(28px, 800, 120%);
+         letter-spacing: 0;
+         text-align: center;
+         text-transform: uppercase;
+         margin-bottom: 20px;
+         max-width: 350px;         
+      
+         @media (max-width: $pc) {
+            font-size: calc(22px + 6*((100vw - 320px) / (1260 - 320)));
+         }
+      }
+
+      &__subtitle--wide-1 {
+         max-width: 370px;
+      }
+
+      &__img-wrapper {
+         width: 100%;
+         position: relative;
+         overflow: hidden;
+         margin-bottom: 30px;
+      }
+
+      &__img-wrapper--border {
+         border: 1px solid #ACACAC;
+      }
+
+      &__img-link {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         z-index: 10;
+         
+         &:hover + .portfolio__img {
+            transform: scale(1);
+         }
+      }      
+
+      &__img {
+         height: 400px;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: 50%;
+         transition: all 1s ease; 
+         transform: scale(1.2);   
+         
+         @media (max-width: $mobileSmall) {
+            height: 300px;
+         }
+      }  
+		
+		&__img--1 {
+         background-image: url("@img/ludmila-valentinova.png");
+      }
+
+      &__img--2 {
+         background-image: url("@img/ToDo.png");
+      }
+      
+      &__img--3 {
+         background-image: url("@img/drive_moto.png");
+      }
+
+      &__img--4 {
+         background-image: url("@img/helicopter_flight.png");
+      }
+
+      &__img--5 {
+         background-image: url("@img/smoothies.png");
+      }
+
+      &__img--6 {
+         background-image: url("@img/archmove.png");
+      }
+
+      &__img--7 {
+         background-image: url("@img/explore_channels.png");
+      }
+
+      &__img--8 {
+         background-image: url("@img/bright_cards.png");
+      }
+
+      &__description {
+         text-align: center;
+         margin-bottom: 20px;
+         padding: 0 10px 0;
+         @include font(18px, 400, 140%);
+
+         @media (max-width: $pc) {
+            font-size: calc(14px + 4*((100vw - 320px) / (1260 - 320)));
+         }
+      }
+
+      &__link {  
+         position: relative;      
+         margin-bottom: 35px;
+         @include font(16px, 500, 120%);
+
+         @media (max-width: $pc) {
+            font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
+         }
+
+         &::before,
+         &::after {
+            content: '';    
+            position: absolute; 
+            top: 100%;    
+            width: 0;    
+            height: 2px;    
+            background: $accentColor;    
+            transition: 0.3s;
+         }
+
+         &::before {
+            left: 50%;      
+         }
+
+         &::after {
+            right: 50%;      
+         }
+
+         &:hover::before,
+         &:hover::after {
+            width: 50%;
+         }      
+      }
+
+      &__button-more {
+         text-transform: uppercase;
+         padding: 10px 20px;
+         background-color: $accentColor;
+         font-weight: 500;
+         letter-spacing: 2px;
+         margin: 30px 0 90px;
+         border: 2px solid transparent;
+         transition: all 0.3s ease;
+
+         @media (max-width: $mobileSmall) {
+            margin: 10px 0 50px;
+         }
+
+         &:hover {
+            @media (min-width: 1025px) {
+               color: $accentColor;
+               background-color: transparent;
+               border: 2px solid $accentColor;
+            }           
+         }
+
+         &:active {
+            transform: translate(1px, 2px);
+            }
+      }
+   }
+}

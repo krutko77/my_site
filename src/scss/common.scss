@@ -1,1 +1,51 @@
-// Заголовки, загальні БЕМ блоки та інше...
+// Заголовки, общие БЄМ блоки и проче...
+.title {
+   display: inline-block;
+   font-family: "SpectralSC", serif;
+   @include font(64px, 700, 98%);
+   letter-spacing: -2px;
+   text-transform: uppercase;
+
+   @media (max-width: $pc) {
+      font-size: calc(36px + 28*((100vw - 320px) / (1260 - 320)));
+   }
+
+   &::after {
+      content: "";
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      width: 210px;
+      height: 10px;
+      background-color: $mainColor;
+
+      @media (max-width: $pc) {
+         width: calc(120px + 90*((100vw - 320px) / (1260 - 320)));
+         bottom: calc(-15px - 10*((100vw - 320px) / (1260 - 320)));
+      }
+
+      @media (max-width: $tablet) {
+         height: 6px;
+      }
+
+      @media (max-width: $mobileSmall) {
+         height: 5px;
+      }
+   }
+}
+
+.text {
+   @include font(22px, 400, 140%);
+
+   @media (max-width: $pc) {
+      font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
+   }
+}
+
+.ul-style {
+	margin-left: 20px;
+}
+
+.ul-style li {
+	list-style-type: square;	
+}

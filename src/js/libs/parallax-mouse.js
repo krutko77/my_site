@@ -1,30 +1,30 @@
-//Модуль паралаксу мишею
-// (c)Фрілансер по життю, "Хмурый Кот"
-// Документація: 
+// Модуль параллакса мышью 
+// (c) Фрилансер по жизни, Хмурый Кот
+// Документация: 
 
-// Підключення функціоналу "Чортоги Фрілансера"
+// Подключение функционала "Чертогов Фрилансера"
 import { isMobile, FLS } from "../files/functions.js";
 import { flsModules } from "../files/modules.js";
 
 /*
-Предмету, який рухатиметься за мишею, вказати атрибут data-prlx-mouse.
+Предмету, который будет двигаться за мышью указать атрибут data-prlx-mouse.
 
 // =========
-Якщо потрібно додаткові налаштування - вказати
+Если нужны дополнительные настройки - указать 
 
-Атрибут											Значення за замовчуванням
+Атрибут											Значение по умолчанию
 -------------------------------------------------------------------------------------------------------------------
-data-prlx-cx="коефіцієнт_х"					100							значення більше - менше відсоток зсуву
-data-prlx-cy="коефіцієнт_y"					100							значення більше - менше відсоток зсуву
-data-prlx-dxr																		проти осі X
-data-prlx-dyr																		проти осі Y
-data-prlx-a="швидкість_анімації"				50								більше значення – більше швидкість
+data-prlx-cx="коэффициент_х"					100							значение больше - меньше процент сдвига
+data-prlx-cy="коэффициент_y"					100							значение больше - меньше процент сдвига
+data-prlx-dxr																		против оси X
+data-prlx-dyr																		против оси Y
+data-prlx-a="скорость_анимации"				50								больше значение - больше скорость
 
 // =========
-Якщо потрібно зчитувати рух миші в блоці-батьку - тому батькові вказати атрибут data-prlx-mouse-wrapper
+Если нужно считывать движение мыши в блоке-родителе - тому родителю указать атрибут data-prlx-mouse-wrapper
 
-Якщо в паралакс картинка - розтягнути її на >100%. 
-Наприклад:
+Если в параллаксе картинка - расстянуть ее на >100%. 
+Например:
 	width: 130%;
 	height: 130%;
 	top: -15%;
@@ -41,9 +41,9 @@ class MousePRLX {
 			const paralaxMouse = document.querySelectorAll('[data-prlx-mouse]');
 			if (paralaxMouse.length) {
 				this.paralaxMouseInit(paralaxMouse);
-				this.setLogging(`Прокинувся, стежу за об'єктами: (${paralaxMouse.length})`);
+				this.setLogging(`Проснулся, слежу за объектами: (${paralaxMouse.length})`);
 			} else {
-				this.setLogging('Немає жодного обєкта. Сплю...');
+				this.setLogging('Нет ни одного объекта. Сплю...zzZZZzZZz...');
 			}
 		}
 	}
@@ -51,25 +51,25 @@ class MousePRLX {
 		paralaxMouse.forEach(el => {
 			const paralaxMouseWrapper = el.closest('[data-prlx-mouse-wrapper]');
 
-			// Коеф. X 
+			// Коэф. X 
 			const paramСoefficientX = el.dataset.prlxCx ? +el.dataset.prlxCx : 100;
-			// Коеф. У 
+			// Коэф. У 
 			const paramСoefficientY = el.dataset.prlxCy ? +el.dataset.prlxCy : 100;
 			// Напр. Х
 			const directionX = el.hasAttribute('data-prlx-dxr') ? -1 : 1;
 			// Напр. У
 			const directionY = el.hasAttribute('data-prlx-dyr') ? -1 : 1;
-			// Швидкість анімації
+			// Скорость анимации
 			const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 50;
 
 
-			// Оголошення змінних
+			// Объявление переменных
 			let positionX = 0, positionY = 0;
 			let coordXprocent = 0, coordYprocent = 0;
 
 			setMouseParallaxStyle();
 
-			// Перевіряю на наявність батька, в якому зчитуватиметься становище миші
+			// Проверяю на наличие родителя, в котором будет считываться положение мыши
 			if (paralaxMouseWrapper) {
 				mouseMoveParalax(paralaxMouseWrapper);
 			} else {
@@ -81,20 +81,20 @@ class MousePRLX {
 				const distY = coordYprocent - positionY;
 				positionX = positionX + (distX * paramAnimation / 1000);
 				positionY = positionY + (distY * paramAnimation / 1000);
-				el.style.cssText = `transform: translate3D(${directionX * positionX / (paramСoefficientX / 10)}%,${directionY * positionY / (paramСoefficientY / 10)}%,0) rotate(0.02deg);`;
+				el.style.cssText = `transform: translate3D(${directionX * positionX / (paramСoefficientX / 10)}%,${directionY * positionY / (paramСoefficientY / 10)}%,0);`;
 				requestAnimationFrame(setMouseParallaxStyle);
 			}
 			function mouseMoveParalax(wrapper = window) {
 				wrapper.addEventListener("mousemove", function (e) {
 					const offsetTop = el.getBoundingClientRect().top + window.scrollY;
 					if (offsetTop >= window.scrollY || (offsetTop + el.offsetHeight) >= window.scrollY) {
-						// Отримання ширини та висоти блоку
+						// Получение ширины и высоты блока
 						const parallaxWidth = window.innerWidth;
 						const parallaxHeight = window.innerHeight;
-						// Нуль посередині
+						// Ноль по середине
 						const coordX = e.clientX - parallaxWidth / 2;
 						const coordY = e.clientY - parallaxHeight / 2;
-						// Отримуємо відсотки
+						// Получаем проценты
 						coordXprocent = coordX / parallaxWidth * 100;
 						coordYprocent = coordY / parallaxHeight * 100;
 					}
@@ -102,13 +102,11 @@ class MousePRLX {
 			}
 		});
 	}
-	// Логінг у консоль
+	// Логгинг в консоль
 	setLogging(message) {
 		this.config.logging ? FLS(`[PRLX Mouse]: ${message}`) : null;
 	}
 }
-// Запускаємо та додаємо в об'єкт модулів
+// Запускаем и добавляем в объект модулей
 flsModules.mousePrlx = new MousePRLX({});
-
-
 

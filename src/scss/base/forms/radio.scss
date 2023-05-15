@@ -16,7 +16,7 @@
 		height: 0;
 		opacity: 0;
 		position: absolute;
-		&:focus-visible + .options__label:before {
+		&:focus + .options__label:before {
 			box-shadow: 0 0 5px #000;
 		}
 		&:checked + .options__label:before {

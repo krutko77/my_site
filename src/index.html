@@ -1,150 +1,405 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
-	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Опис проєкту
-			</div>
-			<h2>Готові сторінки:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Головна</a></li>
-			</ol>
-			<h2>Попапи:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Дякую за замовлення!</h2>
-				<p>Буду радий (да) гарному відгуку.</p>
-				<p>Звертайтесь ще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мої контакти:</h2>
-				<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-				<p>Соц. мережі: <a href="">посилання</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Разработка сайтов"
+})
 
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+<body>   
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="home" data-watch="navigator" data-watch-threshold="0.4">
+            <div class="home__container">
+               <div class="home__wrapper">
+                  <div class="home__content">
+                     <div class="home__img-box">
+                        <div class="home__img-inner">
+                           <div class="home__border-block" data-prlx-mouse data-prlx-cx=400 data-prlx-cy=400
+                              data-prlx-dxr data-prlx-dyr>
+                              <div class="home__img-wrapper">
+                                 <img class="home__img" data-prlx-mouse data-prlx-cx=400 data-prlx-cy=400 data-prlx-dxr
+                                    data-prlx-dyr src="@img/photo.jpg" alt="photo">
+                              </div>
+                           </div>
+                           <div class="home__color-block" data-prlx-mouse data-prlx-cx=400 data-prlx-cy=400
+                              data-prlx-dxr data-prlx-dyr></div>
+                        </div>
+                     </div>
+                     <div class="home__text-box">
+                        <div class="home__text-wrapper">
+                           <h1 class="home__title title">Разработка сайтов</h1>
+                           <p class="home__text-description text">Создаю сайты с использованием технологий HTML, CSS/SCSS, JavaScript, WordPress:</p>
+										<ul class="ul-style text">
+											<li>лендинги и сайты-визитки;</li>
+											<li>многостраничные сайты;</li>
+											<li>мультисайты с ведением блога;</li>
+											<li>для всех категорий сайтов возможен доступ в панель администратора.</li>
+										</ul><br>
+                           <p class="home__text-name text">Павел Крутько / Минск, Беларусь.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="projects" data-watch="navigator" data-watch-threshold="0.3">
+            <div class="projects__container">
+               <div class="projects__wrapper">
+                  <h2 class="projects__title title">Проекты</h2>
+                  <div class="projects__portfolio portfolio block" data-showmore="items">
+                     <ul class="portfolio__content block__content" data-showmore-content>
+
+								<li class="portfolio__item">
+                           <div class="portfolio__block">
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle">Мультисайт "Нутрициолог"</h3>
+                                 <div class="portfolio__img-wrapper" data-aos="flip-right"
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://ludmila-valentinova.ru/"></a>
+                                    <div class="portfolio__img portfolio__img--1"></div>
+                                 </div>
+                                 <p class="portfolio__description">WordPress, Responsive, Animate It!, Contact Form 7, Kama Spam Block, Popup Maker, Quiz And Survey Master, Smart Slider 3, TinyPNG, Yoast SEO, MailPoet</p>
+                                 <a class="portfolio__link" target="portfolio"
+                                    href="https://ludmila-valentinova.ru/">Посмотреть проект</a>
+                              </div>
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle">Приложение<br> ToDo</h3>
+                                 <div class="portfolio__img-wrapper" data-aos="flip-left"
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://krutko77.github.io/Todo/"></a>
+                                    <div class="portfolio__img portfolio__img--2"></div>
+                                 </div>
+                                 <p class="portfolio__description">Приложение разработано на JS с использованием GULP, Sass, GIT, Flex, Responsive.</p>
+                                 <a class="portfolio__link" target="portfolio"
+                                    href="https://github.com/krutko77/Todo">Посмотреть проект на
+                                    GitHub</a>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="portfolio__item">
+                           <div class="portfolio__block">
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle">Интернет магазин "DRIVE MOTO"</h3>
+                                 <div class="portfolio__img-wrapper" data-aos="flip-right"
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://krutko77.github.io/project-11-shops"></a>
+                                    <div class="portfolio__img portfolio__img--3"></div>
+                                 </div>
+                                 <p class="portfolio__description">GULP, Sass, REACT,
+                                    Material UI, Slick Slider, Flex, Grid Layout, Pixel Perfect, Figma, Animation (SVG
+                                    ARTISTA). Desktop version</p>
+                                 <a class="portfolio__link" target="portfolio"
+                                    href="https://github.com/krutko77/project-11-shops">Посмотреть проект на GitHub</a>
+                              </div>
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle">Лендинг "Полёт на вертолёте"</h3>
+                                 <div class="portfolio__img-wrapper" data-aos="flip-left"
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://krutko77.github.io/Project_7_Photosession"></a>
+                                    <div class="portfolio__img portfolio__img--4"></div>
+                                 </div>
+                                 <p class="portfolio__description">GULP, Sass, JS, BEM, Mobile
+                                    First, Responsive, Slick Slider, Flex, Grid Layout, Pixel Perfect, Figma, custom
+                                    video
+                                    player JS</p>
+                                 <a class="portfolio__link" target="portfolio"
+                                    href="https://github.com/krutko77/Project_7_Photosession">Посмотреть проект на
+                                    GitHub</a>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="portfolio__item">
+                           <div class="portfolio__block">
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle">Лендинг "Smoothies"</h3>
+                                 <div class="portfolio__img-wrapper" data-aos="flip-right"
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://krutko77.github.io/Project_1_Smoothies"></a>
+                                    <div class="portfolio__img portfolio__img--5"></div>
+                                 </div>
+                                 <p class="portfolio__description">GULP, Sass, JS, BEM, Responsive, Swiper Slider, Flex,
+                                    Grid
+                                    Layout, Animate (Tilt, AOS), Pixel Perfect, Photoshop</p>
+                                 <a class="portfolio__link" target="portfolio"
+                                    href="https://github.com/krutko77/Project_1_Smoothies">Посмотреть проект на
+                                    GitHub</a>
+                              </div>
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle">Лендинг "Archmove"</h3>
+                                 <div class="portfolio__img-wrapper" data-aos="flip-left"
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://krutko77.github.io/Project-14_Archmove_WP"></a>
+                                    <div class="portfolio__img portfolio__img--6"></div>
+                                 </div>
+                                 <p class="portfolio__description">GULP, Sass, JS, BEM, Responsive, Magnific Popup,
+                                    Slick
+                                    Slider, Animate AOS, Flex, Grid Layout, Pixel Perfect, Figma</p>
+                                 <a class="portfolio__link" target="portfolio"
+                                    href="https://github.com/krutko77/Project-14_Archmove_WP">Посмотреть проект на
+                                    GitHub</a>
+                              </div>
+                           </div>
+                        </li>
+
+                        <li class="portfolio__item">
+                           <div class="portfolio__block">
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle portfolio__subtitle--wide-1">Интерфейс "Explore
+                                    Channels"</h3>
+                                 <div class="portfolio__img-wrapper portfolio__img-wrapper--border"
+                                    data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://krutko77.github.io/project-10-react"></a>
+                                    <div class="portfolio__img portfolio__img--7"></div>
+                                 </div>
+                                 <p class="portfolio__description">GULP, GIT, REACT, Flex, Grid Layout, SVG-sprite,
+                                    Pixel
+                                    Perfect, Figma. Desktop version</p>
+                                 <a class="portfolio__link" target="portfolio"
+                                    href="https://github.com/krutko77/project-10-react">Посмотреть проект на
+                                    GitHub</a>
+                              </div>
+                              <div class="portfolio__img-box">
+                                 <h3 class="portfolio__subtitle">Карточки "Bright Cards"</h3>
+                                 <div class="portfolio__img-wrapper" data-aos="flip-left"
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                    <a class="portfolio__img-link" target="portfolio"
+                                       href="https://krutko77.github.io/iti_bright_cards_c2/#/login"></a>
+                                    <div class="portfolio__img portfolio__img--8"></div>
+                                 </div>
+                                 <p class="portfolio__description">GULP, Sass, GIT, REACT, Material UI, Flex, Grid
+                                    Layout,
+                                    Pixel Perfect, Figma. Desktop version</p>
+                                 <a class="portfolio__link" target="block"
+                                    href="https://github.com/krutko77/iti_bright_cards_c2">Посмотреть проект на
+                                    GitHub</a>
+                              </div>
+                           </div>
+                        </li>
+
+                     </ul>
+                     <button hidden data-showmore-button class="portfolio__button-more" type="button">
+                        <span class="portfolio__button-label"><span>Показать еще</span>
+                           <i class="portfolio__button-icon _icon-chevron-down"></i></span>
+                        <span class="portfolio__button-label"><span>Скрыть</span>
+                           <i class="portfolio__button-icon _icon-chevron-up"></i></span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="skills" data-watch="navigator" data-watch-threshold="0.3">
+            <div class="skills__container">
+               <div class="skills__wrapper">
+                  <h2 class="skills__title title">Навыки</h2>
+                  <div class="skills__content" data-watch data-watch-once>
+                     <p class="skills__text text">По моему субъективному мнению, навыки, используемые мной в проектах,
+                        имеют следующую оценку:</p>
+                     <div class="skills__progress-bar progress">
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">HTML & CSS</h3>
+                              <div class="progress__bg progress__bg-1" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>70%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">FLEX, GRID, BOOTSTRAP</h3>
+                              <div class="progress__bg progress__bg-2" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>60%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">JavaScript</h3>
+                              <div class="progress__bg progress__bg-3" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>35%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">GULP</h3>
+                              <div class="progress__bg progress__bg-4" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>50%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">Figma, Photoshop</h3>
+                              <div class="progress__bg progress__bg-5" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>40%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">Git</h3>
+                              <div class="progress__bg progress__bg-6" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>20%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">WordPress</h3>
+                              <div class="progress__bg progress__bg-7" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>50%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">MUI</h3>
+                              <div class="progress__bg progress__bg-8" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>40%</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress__item">
+                           <div class="progress__item-inner">
+                              <h3 class="progress__subtitle">REACT</h3>
+                              <div class="progress__bg progress__bg-9" data-watch data-watch-once>
+                                 <span class="progress__percent" data-watch data-watch-once>25%</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <ul class="skills__list text">
+                        <li class="skills__item">опытный веб-разработчик с применением технологий HTML, BEM, CSS/SCSS
+                           и JavaScript;</li>
+                        <li class="skills__item">делаю кроссбраузерную, адаптивную, семантическую и валидную (W3C)
+                           вёрстку;</li>
+                        <li class="skills__item">верстаю сайты по методике Desktop First и Mobile First;</li>
+                        <li class="skills__item">использую сборщик GULP;</li>
+                        <li class="skills__item">технологии Flex, Bootstrap и Grid позволяют мне использовать меньше
+                           кода для позиционирования элементов и вёрстки адаптивно-отзывчивого макета;</li>
+                        <li class="skills__item">работаю с макетом сайта в редакторах Figma и Photoshop;</li>
+                        <li class="skills__item">с помощью Pixel Perfect я точно следую макету;</li>
+                        <li class="skills__item">анимация и переходы делают мои сайты нескучными;</li>
+                        <li class="skills__item">по желанию заказчика пренесу свёрстанный макет сайта на WordPress;
+                        </li>
+                        <li class="skills__item">верстаю компоненты под REACT с использованием MUI;</li>
+                        <li class="skills__item">пользуюсь GIT и GitHub для самостоятельной работы и при работе в
+                           команде.</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="about" data-watch="navigator" data-watch-threshold="0.4">
+            <div class="about__container">
+               <div class="about__wrapper">
+                  <h2 class="about__title title">О себе</h2>
+                  <div class="about__content">
+                     <div class="about__description">
+                        <p class="about__description-1 text">Веб-разработчик Павел Крутько из Минска, Беларусь.<br>
+                           Мой опыт в веб-разработке около двух лет. Мне нравится разработка сайтов и я с удовольствием
+                           приступаю к каждому новому проекту. Пишу семантический, валидный и чистый код. Меня
+                           привлекают нестандартные, интересные задачи и поиск эффективных решений. В свободное время
+                           развиваю JS, WordPress, английский.</p><br>
+                        <p class="about__description-2 text">Умею находить выход в спорных ситуациях, находя
+                           компромиссное решение для обеих сторон. Обязательность и честность для меня на первом месте
+                           во взаимоотношениях с коллегами и заказчиками. Есть опыт работы в команде, готов работать на
+                           удалёнке, можно через оформленное ИП.</p><br>
+                        <p class="about__description-3 text">Открыт для ваших предложений !</p>
+                     </div>
+                     <div class="about__hobby">
+                        <p class="about__hobby-text text">Выходные дни я стараюсь проводить с семьёй, иногда
+                           выделяю
+                           немного времени для своих хобби.</p>
+                        <div class="about__swiper swiper" data-watch data-watch-once>
+                           <div class="swiper-wrapper">
+                              <div class="swiper__slide swiper-slide">
+                                 <div class="swiper__slider-image">
+                                    <img class="swiper__image" src="@img/F3A.jpg" alt="картинка">
+                                    <div class="swiper__caption">F3A пилотаж радиомодели</div>
+                                 </div>
+                              </div>
+                              <div class="swiper__slide swiper-slide">
+                                 <div class="swiper__slider-image">
+                                    <img class="swiper__image" src="@img/sailboat.jpg" alt="картинка">
+                                    <div class="swiper__caption">Деревянные модели парусников</div>
+                                 </div>
+                              </div>
+                              <div class="swiper__slide swiper-slide">
+                                 <div class="swiper__slider-image">
+                                    <img class="swiper__image" src="@img/chess.jpg" alt="картинка">
+                                    <div class="swiper__caption">Шахматы</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-pagination"></div>
+                           <button type="button" class="swiper-button-prev"></button>
+                           <button type="button" class="swiper-button-next"></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="contact" data-watch="navigator" data-watch-threshold="0.5">
+            <div class="contact__container">
+               <div class="contact__wrapper">
+                  <h2 class="contact__title title">Контакты</h2>
+                  <div class="contact__content text">
+                     <div class="contact__left-block">
+                        <p class="contact__text">Если у вас есть заказ на разработку сайта или другие предложения по работе, пожалуйста напишите мне или
+                           позвоните. Также вы можете отправить мне сообщение, заполнив форму в этом разделе.</p>
+                        <span class="contact__info contact__info-1">
+                           <a class="contact__link-mail" href="mailto:krutko77@mail.ru"> krutko77@mail.ru</a>
+                        </span>
+                        <span class="contact__info contact__info-2"><a class="contact__link-tel"
+                              href="tel:+375296774581"><span class="contact__tel">+375 29 677-45-81</span></a>
+                        </span>
+                        <span class="contact__info contact__info-3">220056 Минск, ул. Стариновская 3-17, Беларусь<br>ИП Крутько П.В., УНН 191008350</span>
+                     </div>
+                     <div class="contact__right-block">
+                        <div class="contact__form form">
+                           <form class="form__body" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST"
+                           data-dev data-popup-message="#form-message">
+                              <div class="form__contact-block">
+                                 <div class="form__placeholder-container">
+                                    <input class="form__input text for-clear" id="name" type="text" name="name"
+                                       data-validate data-error="Напишите имя" data-required placeholder=" " />
+                                    <label class="form__label text" for="name">Имя *</label>
+                                 </div>
+                                 <div class="form__placeholder-container">
+                                    <input class="form__input text for-clear" id="email" type="email" name="email"
+                                       placeholder=" " data-validate data-error="Напишите правильный E-mail"
+                                       data-required="email" />
+                                    <label class="form__label text" for="email">E-mail *</label>
+                                 </div>
+                                 <div class="form__placeholder-container">
+                                    <textarea class="form__input text for-clear" name="message" id="message"
+                                       data-validate data-error="Напишите текст сообщения" data-required
+                                       placeholder=" "></textarea>
+                                    <label class="form__label text" for="message">Сообщение</label>
+                                 </div>
+                              </div>
+                              <button class="form__button clear-button" type="submit">Отправить</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
 </html>

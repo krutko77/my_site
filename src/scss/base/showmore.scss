@@ -1,9 +1,11 @@
 [data-showmore] {
 }
-[data-showmore-content] {
+
+[data-showmore-content] {     
 }
+
 [data-showmore-button] {
-	span {
+	span.portfolio__button-label {
 		&:last-child {
 			display: none;
 		}

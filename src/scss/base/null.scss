@@ -38,15 +38,20 @@ button,
 textarea {
 	font-family: $fontFamily;
 	font-size: inherit;
-	line-height: inherit;
 }
 button {
 	cursor: pointer;
 	color: inherit;
-	background-color: transparent;
+	background-color: inherit;
 }
 a {
 	color: inherit;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
 	text-decoration: none;
 }
 ul li {

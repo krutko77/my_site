@@ -51,9 +51,9 @@ const config = {
 		static: paths.build,
 		open: true,
 		compress: true,
-		port: 'auto',
+		port: 8080,
 		hot: true,
-		host: 'local-ip', // localhost
+		host: 'localhost', // localhost
 
 		// Розкоментувати на слабкому ПК
 		// (в режимі розробника папка результатом (dist) буде створюватися на диску)

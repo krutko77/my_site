@@ -1,26 +1,26 @@
 
 /*
-Документація по роботі у шаблоні: https://www.lightgalleryjs.com/docs/
-Документація плагіна: https://www.lightgalleryjs.com/docs/
-Сніппет(HTML):
+Документация по работе в шаблоне: https://www.lightgalleryjs.com/docs/
+Документация плагина: https://www.lightgalleryjs.com/docs/
+Сниппет(HTML):
 */
 
-// Підключення функціоналу "Чертоги Фрілансера"
+// Подключение функционала "Чертогов Фрилансера"
 import { isMobile, FLS } from "./functions.js";
-// Підключення списку активних модулів
+// Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-// Підключення базового набору функціоналу
+// Подключение базового набора функционала
 import lightGallery from 'lightgallery';
 
-// Плагіни
+// Плагины
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo, lgMediumZoom
 // import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
 //import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
 
-// Базові стилі
+// Базовые стили
 import '@scss/libs/gallery/lightgallery.scss';
-// Стилі доповнень
+// Стили дополнений
 // import '@scss/libs/gallery/lg-thumbnail.scss';
 // import '@scss/libs/gallery/lg-video.scss';
 // import '@scss/libs/gallery/lg-autoplay.scss';
@@ -33,7 +33,7 @@ import '@scss/libs/gallery/lightgallery.scss';
 // import '@scss/libs/gallery/lg-medium-zoom.scss';
 // import '@scss/libs/gallery/lg-relative-caption.scss';
 
-// Усі стилі
+// Все стили
 // import '@scss/libs/gallery/lightgallery-bundle.scss';
 
 // Запуск
@@ -50,7 +50,7 @@ if (galleries.length) {
 			})
 		})
 	});
-	// Додаємо в об'єкт модулів
+	// Добавляем в объект модулей
 	flsModules.gallery = galleyItems;
 }
 

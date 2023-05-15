@@ -1,3 +1,142 @@
-//====================================================================================================
+//home
+.home {
+   min-height: 100vh;
+   display: flex;
+   padding: 70px 0 20px;
+   margin-bottom: 20px;
+   
+   @media (max-width: $tablet) {
+      padding: 60px 0 20px;
+   }
 
-//====================================================================================================
+   &__container {
+      display:flex;
+      flex: 1 1 auto;
+   }
+
+   &__wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;     
+      border-bottom: 4px solid $mainColor; 
+      
+      @media (max-width: 1024px) and (min-device-aspect-ratio: 3/2), (max-width: 380px) {
+         padding: 40px 0 50px;
+        }
+      
+      @media (max-width: $tablet) {
+         border-width: 3px;
+      }      
+   }
+
+   &__content {
+      display: flex;
+      width: 100%;
+
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   &__text-box {
+      flex: 0 1 50%;
+      display: flex;
+      align-items: center;
+      padding-left: 45px;
+
+      @media (max-width: $mobile) {
+         padding: 0;
+      }      
+   }
+
+   &__title {      
+      margin-bottom: 65px;
+      position: relative;
+
+      @media (max-width: $pc) {
+         margin-bottom: calc(40px + 25*((100vw - 320px) / (1260 - 320)));
+      }
+
+      @media (max-width: $mobile) {
+         max-width: 370px;
+      }      
+
+      &::after {
+         left: 0;         
+      }
+   }
+
+   &__text-description {
+      margin-bottom: 15px;
+      
+      @media (max-width: $mobile) {
+         max-width: 420px;
+      }
+   }
+
+   &__img-box {
+      flex: 0 1 50%;
+      display: flex;
+      justify-content: center;  
+      
+      @media (max-width: $mobile) {
+         margin-bottom: 45px;
+      }     
+   }
+
+   &__img-inner {
+      position: relative;
+      margin-left: 26px;
+
+      @media (max-width: $mobile) {
+         margin: 0 15px;
+      }
+   }
+
+   &__border-block {
+      position: relative;
+      padding: 20px;
+      border: 10px solid $mainColor;
+      background-color: transparent;
+      z-index: 2;
+
+      @media (max-width: $tablet) {
+         border-width: 7px;
+      }
+
+      @media (max-width: $mobileSmall) {
+         border-width: 6px;
+      }
+   }
+
+   &__img-wrapper {
+      max-width: 450px;
+
+      @media (max-width: $mobile) {
+         max-width: 250px;
+      }
+   }
+
+   &__img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 10;
+   }
+
+   &__color-block {     
+      position: absolute;
+      top: 14%;
+      bottom: 14%;
+      left: -4%;
+      right: -4%;
+      z-index: 1;     
+      background-color: $accentColor;
+   }
+}
+
+

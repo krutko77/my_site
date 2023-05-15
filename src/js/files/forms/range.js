@@ -1,11 +1,11 @@
-// Підключення з node_modules
+// Подключение из node_modules
 import * as noUiSlider from 'nouislider';
 
-// Підключення стилів з scss/base/forms/range.scss 
-// у файлі scss/forms/forms.scss
+// Подключение стилей из scss/base/forms/range.scss 
+// в файле scss/forms/forms.scss
 
-// Підключення стилів з node_modules
-import 'nouislider/dist/nouislider.css';
+// Подключение cтилей из node_modules
+// import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
@@ -18,12 +18,7 @@ export function rangeInit() {
 			range: {
 				'min': [0],
 				'max': [200000]
-			},
-			/*
-			format: wNumb({
-				decimals: 0
-			})
-			*/
+			}
 		});
 		/*
 		const priceStart = document.getElementById('price-start');

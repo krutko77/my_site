@@ -1,5 +1,5 @@
 //<INPUT>
-// Сніппет (HTML): inp
+// Снипет (HTML): inp
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -19,15 +19,6 @@ textarea {
 	&._form-error {
 	}
 }
-.input[placeholder]:not([data-placeholder-nohiden]) {
-	&::placeholder {
-		transition: opacity 0.3s;
-	}
-	&:focus::placeholder {
-		opacity: 0;
-	}
-}
-
 textarea.input {
 	resize: none;
 	padding: 0px 0px;
