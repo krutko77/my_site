@@ -2,7 +2,7 @@
 .home {
    min-height: 100vh;
    display: flex;
-   padding: 70px 0 20px;
+   padding: 80px 0 20px;
    margin-bottom: 20px;
    
    @media (max-width: $tablet) {
@@ -136,7 +136,42 @@
       right: -4%;
       z-index: 1;     
       background-color: $accentColor;
-   }
+	}
+
+	&__text-name {
+		margin-bottom: 10px;
+	}
 }
+
+.social {
+	z-index: 5; 
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;                
+	} 
+
+	&__link {
+		fill: $mainColor;               
+
+		&:hover {
+			fill: $accentColor;
+		}
+	}
+
+	&__icon {
+		height: 32px;
+		width: 32px;
+		fill: inherit;
+		transition: 0.3s;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 30px;
+	}
+} 
+
+
 
 

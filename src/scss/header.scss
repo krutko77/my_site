@@ -4,42 +4,31 @@
    background-color: $mainBgColor;
    width: 100%;
    z-index: 10;
+	// border-bottom: solid 1px $mainColor;
 
    &__container {
       display: flex;
       align-items: center;
       justify-content: space-between;   
-      min-height: 70px;
+      min-height: 80px;
+
+		@media (max-width: $mobile) {
+			min-height: calc(70px + 10*((100vw - 768px) / (1260 - 768)));
+      }
    }
 
-   .social {
-      z-index: 5; 
+   &__logo {
+		width: 220px;
 
-      &__list {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;                
-      } 
-
-      &__link {
-         fill: $mainColor;               
-
-         &:hover {
-            fill: $accentColor;
-         }
+		@media (max-width: $mobile) {
+			width: calc(180px + 40*((100vw - 768px) / (1260 - 768)));
       }
-
-      &__icon {
-         height: 32px;
-         width: 32px;
-         fill: inherit;
-         transition: 0.3s;
-      }
-
-      &__item:not(:last-child) {
-         margin-right: 30px;
-      }
-   }  
+	}
+	 
+	&__logo img {
+		width: 100%;
+		object-fit: cover;
+	}
    
    .menu {
       &__body {
@@ -121,10 +110,12 @@
          right: calc(50% - 3.5px);      
       }
 
-      &__link:hover::before,
-      &__link:hover::after {
-         width: calc(50% - 3.5px);
-      }
+		@media (any-hover: hover) {
+			&__link:hover::before,
+			&__link:hover::after {
+				width: calc(50% - 3.5px);
+			}
+		}    
       
       &__link._navigator-active {
          background-color: #FFCC0D;
