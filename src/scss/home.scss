@@ -55,6 +55,7 @@
    &__title {      
       margin-bottom: 65px;
       position: relative;
+		animation: animate_down 1.5s;
 
       @media (max-width: $pc) {
          margin-bottom: calc(40px + 25*((100vw - 320px) / (1260 - 320)));
@@ -69,6 +70,16 @@
       }
    }
 
+	@keyframes animate_down {
+		0% {
+			transform: translate(0, -300px);
+		}
+	
+		100% {
+			transform: translate(0, 0);
+		}
+	}
+
    &__text-description {
       margin-bottom: 15px;
       
@@ -80,8 +91,8 @@
    &__img-box {
       flex: 0 1 50%;
       display: flex;
-      justify-content: center;  
-      
+      justify-content: center; 
+		      
       @media (max-width: $mobile) {
          margin-bottom: 45px;
       }     
