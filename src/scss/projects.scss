@@ -75,10 +75,13 @@
          display: flex;
          flex-direction: column;
          align-items: center;
+			position: relative;
          max-width: 575px;
          padding: 30px 20px 0;
          background-color: $mainLightColor; 
-         
+
+			
+
          @media (max-width: $pc) {
             max-width: calc(475px + 100*((100vw - 1051px) / (1260 - 1051)));
          }
@@ -98,12 +101,7 @@
          letter-spacing: 0;
          text-align: center;
          text-transform: uppercase;
-         margin-bottom: 20px;
-         max-width: 350px;         
-      
-         @media (max-width: $pc) {
-            font-size: calc(22px + 6*((100vw - 320px) / (1260 - 320)));
-         }
+         margin-bottom: 20px;         
       }
 
       &__subtitle--wide-1 {
@@ -128,8 +126,8 @@
          right: 0;
          bottom: 0;
          z-index: 10;
-         
-         &:hover + .portfolio__img {
+
+		   &:hover + .portfolio__img {
             transform: scale(1);
          }
       }      
@@ -148,7 +146,7 @@
       }  
 		
 		&__img--1 {
-         background-image: url("@img/ludmila-valentinova.png");
+         background-image: url("@img/ludmila-valentinova.jpg");
       }
 
       &__img--2 {
@@ -191,7 +189,8 @@
       }
 
       &__link {  
-         position: relative;      
+			color: $linkOtherColor;
+		   position: relative;      
          margin-bottom: 35px;
          @include font(16px, 500, 120%);
 
@@ -251,4 +250,14 @@
             }
       }
    }
+}
+
+@media (any-hover: hover) {
+	.portfolio__img-box:hover .portfolio__link::before
+	{             
+		width: 50%;
+	}  
+	.portfolio__img-box:hover .portfolio__link::after {             
+		width: 50%;
+	}  
 }
