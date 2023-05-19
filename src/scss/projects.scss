@@ -73,14 +73,14 @@
 
       &__img-box {
          display: flex;
+			justify-content: space-between;
          flex-direction: column;
          align-items: center;
 			position: relative;
          max-width: 575px;
-         padding: 30px 20px 0;
+         padding: 30px 20px 30px;
+			min-height: 700px;
          background-color: $mainLightColor; 
-
-			
 
          @media (max-width: $pc) {
             max-width: calc(475px + 100*((100vw - 1051px) / (1260 - 1051)));
@@ -95,7 +95,16 @@
          }        
       }
 
-      &__subtitle {
+		&__link {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         z-index: 1;	   
+      }  
+		
+		&__subtitle {
          font-family: "SpectralSC", serif;
          @include font(28px, 800, 120%);
          letter-spacing: 0;
@@ -104,94 +113,42 @@
          margin-bottom: 20px;         
       }
 
-      &__subtitle--wide-1 {
-         max-width: 370px;
-      }
-
-      &__img-wrapper {
-         width: 100%;
-         position: relative;
+      &__img-wrapper {         
          overflow: hidden;
          margin-bottom: 30px;
       }
 
-      &__img-wrapper--border {
-         border: 1px solid #ACACAC;
-      }
-
-      &__img-link {
-         position: absolute;
-         top: 0;
-         left: 0;
-         right: 0;
-         bottom: 0;
-         z-index: 10;
-
-		   &:hover + .portfolio__img {
-            transform: scale(1);
-         }
-      }      
-
       &__img {
-         height: 400px;
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-position: 50%;
-         transition: all 1s ease; 
-         transform: scale(1.2);   
-         
+         width: 100%;
+			object-fit: cover;
+			transition: all 0.8s ease;
+                 
          @media (max-width: $mobileSmall) {
             height: 300px;
          }
       }  
 		
-		&__img--1 {
-         background-image: url("@img/ludmila-valentinova.jpg");
-      }
-
-      &__img--2 {
-         background-image: url("@img/ToDo.png");
-      }
-      
-      &__img--3 {
-         background-image: url("@img/drive_moto.png");
-      }
-
-      &__img--4 {
-         background-image: url("@img/helicopter_flight.png");
-      }
-
-      &__img--5 {
-         background-image: url("@img/smoothies.png");
-      }
-
-      &__img--6 {
-         background-image: url("@img/archmove.png");
-      }
-
-      &__img--7 {
-         background-image: url("@img/explore_channels.png");
-      }
-
-      &__img--8 {
-         background-image: url("@img/bright_cards.png");
-      }
+		&__img-box:hover img {
+			transform: scale(1.1);
+		}    
 
       &__description {
-         text-align: center;
+			text-align: center;
          margin-bottom: 20px;
          padding: 0 10px 0;
-         @include font(18px, 400, 140%);
+      }
+
+		&__description, &__list {
+			@include font(18px, 400, 140%);
 
          @media (max-width: $pc) {
             font-size: calc(14px + 4*((100vw - 320px) / (1260 - 320)));
          }
-      }
+		}
 
-      &__link {  
+      &__label {  
 			color: $linkOtherColor;
 		   position: relative;      
-         margin-bottom: 35px;
          @include font(16px, 500, 120%);
 
          @media (max-width: $pc) {
@@ -215,12 +172,7 @@
 
          &::after {
             right: 50%;      
-         }
-
-         &:hover::before,
-         &:hover::after {
-            width: 50%;
-         }      
+         }             
       }
 
       &__button-more {
@@ -253,11 +205,14 @@
 }
 
 @media (any-hover: hover) {
-	.portfolio__img-box:hover .portfolio__link::before
+	.portfolio__img-box:hover .portfolio__label {
+		color: $mainColor;
+	}
+	.portfolio__img-box:hover .portfolio__label::before
 	{             
 		width: 50%;
 	}  
-	.portfolio__img-box:hover .portfolio__link::after {             
+	.portfolio__img-box:hover .portfolio__label::after {             
 		width: 50%;
-	}  
+	}
 }
