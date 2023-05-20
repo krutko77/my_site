@@ -10,6 +10,17 @@
       font-size: calc(36px + 28*((100vw - 320px) / (1260 - 320)));
    }
 
+	margin-bottom: 80px;
+	position: relative;      
+
+	@media (max-width: $tablet) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: $mobileSmall) {
+		margin-bottom: 35px;
+	}
+
    &::after {
       content: "";
       position: absolute;
@@ -48,4 +59,8 @@
 
 .ul-style li {
 	list-style-type: square;	
+}
+
+.left-text {
+	text-align: left;
 }

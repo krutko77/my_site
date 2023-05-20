@@ -22,17 +22,7 @@
       }
    }
 
-   &__title {
-      margin-bottom: 90px;
-      position: relative;      
-
-      @media (max-width: $tablet) {
-         margin-bottom: 70px;
-      }
-
-      @media (max-width: $mobileSmall) {
-         margin-bottom: 35px;
-      }
+   &__title {   
 
       &::after {
          left: 19%;         
@@ -78,10 +68,10 @@
          align-items: center;
 			position: relative;
          max-width: 575px;
-         padding: 30px 20px 30px;
+         padding: 20px;
 			min-height: 700px;
          background-color: $mainLightColor; 
-
+		
          @media (max-width: $pc) {
             max-width: calc(475px + 100*((100vw - 1051px) / (1260 - 1051)));
          }
@@ -108,37 +98,28 @@
          font-family: "SpectralSC", serif;
          @include font(28px, 800, 120%);
          letter-spacing: 0;
-         text-align: center;
          text-transform: uppercase;
-         margin-bottom: 20px;         
+         margin-bottom: 15px;         
       }
 
       &__img-wrapper {         
          overflow: hidden;
-         margin-bottom: 30px;
+         margin-bottom: 20px;
       }
 
       &__img {
          width: 100%;
 			object-fit: cover;
-			transition: all 0.8s ease;
-                 
-         @media (max-width: $mobileSmall) {
-            height: 300px;
-         }
+			transition: all 0.8s ease;        
       }  
 		
 		&__img-box:hover img {
 			transform: scale(1.1);
 		}    
 
-      &__description {
-			text-align: center;
-         margin-bottom: 20px;
-         padding: 0 10px 0;
-      }
+    	&__description, &__list {
+			margin-bottom: 15px;			
 
-		&__description, &__list {
 			@include font(18px, 400, 140%);
 
          @media (max-width: $pc) {
@@ -146,7 +127,11 @@
          }
 		}
 
-      &__label {  
+		&__description--last {
+			margin-bottom: 5px;
+		}
+
+		&__label {  
 			color: $linkOtherColor;
 		   position: relative;      
          @include font(16px, 500, 120%);
