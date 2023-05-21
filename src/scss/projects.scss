@@ -132,12 +132,15 @@
 		}
 
 		&__label {  
-			color: $linkOtherColor;
-		   position: relative;      
+			color: $mainColor;
+		   position: relative;
+			text-transform: uppercase;
+			font-size: 12px;
+
          @include font(16px, 500, 120%);
 
          @media (max-width: $pc) {
-            font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
+            font-size: calc(12px + 2*((100vw - 320px) / (1260 - 320)));
          }
 
          &::before,
