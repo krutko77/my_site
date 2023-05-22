@@ -6,14 +6,18 @@
    z-index: 10;
 	// border-bottom: solid 1px $mainColor;
 
-   &__container {
+   &__container-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;   
+      justify-content: space-between;
+		padding: 0 20px;
+		max-width: 1300px;;
       min-height: 80px;
 
 		@media (max-width: $mobile) {
 			min-height: calc(70px + 10*((100vw - 768px) / (1260 - 768)));
+
+			padding: 0 15px;
       }
    }
 

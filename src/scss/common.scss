@@ -46,10 +46,10 @@
 }
 
 .text {
-   @include font(22px, 400, 140%);
+   @include font(20px, 400, 140%);
 
    @media (max-width: $pc) {
-      font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
+      font-size: calc(16px + 4*((100vw - 320px) / (1260 - 320)));
    }
 }
 
