@@ -146,13 +146,13 @@ body {
 
 // Подключение стилей отдельных блоков
 
-@import "preloader";
 @import "header";
-@import "footer";
-
-// Подключение стилей отдельных страниц
 @import "home";
 @import "projects";
+@import "action-block";
 @import "skills";
 @import "about";
 @import "contact";
+@import "footer";
+
+// Подключение стилей отдельных страниц

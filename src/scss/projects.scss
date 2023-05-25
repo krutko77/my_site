@@ -166,11 +166,11 @@
       &__button-more {
          text-transform: uppercase;
          padding: 10px 20px;
-         background-color: $accentColor;
-         font-weight: 500;
+         background-color: $mainLightColor;
+			font-weight: 500;
          letter-spacing: 2px;
          margin: 30px 0 90px;
-         border: 2px solid transparent;
+         border: 2px solid $mainLightColor;
          transition: all 0.3s ease;
 
          @media (max-width: $mobileSmall) {
@@ -179,9 +179,9 @@
 
          &:hover {
             @media (min-width: 1025px) {
-               color: $accentColor;
+               
                background-color: transparent;
-               border: 2px solid $accentColor;
+               border: 2px solid $linkOtherColor;
             }           
          }
 

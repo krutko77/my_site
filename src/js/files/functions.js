@@ -441,21 +441,21 @@ export function showMore() {
 		let showMoreBlocksRegular;
 		let mdQueriesArray;
 		if (showMoreBlocks.length) {
-			// Получение обычных объектов
+			// Отримання звичайних об'єктів
 			showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
 				return !item.dataset.showmoreMedia;
 			});
-			// Инициализация обычных объектов
+			// Ініціалізація звичайних об'єктів
 			showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
 
 			document.addEventListener("click", showMoreActions);
 			window.addEventListener("resize", showMoreActions);
 
-			// Получение объектов с медиа запросами
+			// Отримання об'єктів з медіа-запитами
 			mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
 			if (mdQueriesArray && mdQueriesArray.length) {
 				mdQueriesArray.forEach(mdQueriesItem => {
-					// Событие
+					// Подія
 					mdQueriesItem.matchMedia.addEventListener("change", function () {
 						initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
 					});
@@ -482,7 +482,7 @@ export function showMore() {
 			const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
 			if (matchMedia.matches || !matchMedia) {
 				if (hiddenHeight < getOriginalHeight(showMoreContent)) {
-					_slideUp(showMoreContent, 0, hiddenHeight);
+					_slideUp(showMoreContent, 0, showMoreBlock.classList.contains('_showmore-active') ? getOriginalHeight(showMoreContent) : hiddenHeight);
 					showMoreButton.hidden = false;
 				} else {
 					_slideDown(showMoreContent, 0, hiddenHeight);
@@ -496,20 +496,26 @@ export function showMore() {
 		function getHeight(showMoreBlock, showMoreContent) {
 			let hiddenHeight = 0;
 			const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
+			const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
 			if (showMoreType === 'items') {
-				const showMoreTypeValue = 2;
+				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
 				const showMoreItems = showMoreContent.children;
 				for (let index = 1; index < showMoreItems.length; index++) {
 					const showMoreItem = showMoreItems[index - 1];
-					hiddenHeight += showMoreItem.offsetHeight + 25;
-					if (index == showMoreTypeValue) break
+					const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
+					const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
+					hiddenHeight += showMoreItem.offsetHeight + marginTop;
+					if (index == showMoreTypeValue) break;
+					hiddenHeight += marginBottom;
 				}
+				rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
 			} else {
 				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
 				hiddenHeight = showMoreTypeValue;
 			}
 			return hiddenHeight;
 		}
+
 		function getOriginalHeight(showMoreContent) {
 			let parentHidden;
 			let hiddenHeight = showMoreContent.offsetHeight;
@@ -531,20 +537,11 @@ export function showMore() {
 					const showMoreButton = targetEvent.closest('[data-showmore-button]');
 					const showMoreBlock = showMoreButton.closest('[data-showmore]');
 					const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
-					const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton :500;
+					const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
 					const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-               const iconMore = document.querySelector(".portfolio__button-icon");
 					if (!showMoreContent.classList.contains('_slide')) {
 						showMoreBlock.classList.contains('_showmore-active') ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
 						showMoreBlock.classList.toggle('_showmore-active');
-                  if(showMoreBlock.classList.contains('_showmore-active')) {
-                     iconMore.classList.remove('_icon-chevron-down');
-                     iconMore.classList.add('_icon-chevron-up');
-                   } 
-                   else {
-                     iconMore.classList.remove('_icon-chevron-up');
-                     iconMore.classList.add('_icon-chevron-down');
-                   }     
 					}
 				}
 			} else if (targetType === 'resize') {
