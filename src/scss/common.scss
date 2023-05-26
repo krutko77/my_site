@@ -1,10 +1,13 @@
 // Заголовки, общие БЄМ блоки и проче...
-.title {
-   display: inline-block;
+.title, .subtitle {
    font-family: "SpectralSC", serif;
-   @include font(64px, 700, 98%);
-   letter-spacing: -2px;
    text-transform: uppercase;
+}
+
+.title {
+	display: inline-block;
+	@include font(64px, 700, 98%);
+	letter-spacing: -2px;
 
    @media (max-width: $pc) {
       font-size: calc(36px + 28*((100vw - 320px) / (1260 - 320)));
@@ -45,6 +48,17 @@
    }
 }
 
+
+.subtitle {
+	@include font(28px, 800, 120%);
+	letter-spacing: 0;
+
+	@media (max-width: $pc) {
+      font-size: calc(22px + 6*((100vw - 320px) / (1260 - 320)));
+   }
+}
+
+
 .text {
    @include font(20px, 400, 140%);
 
@@ -63,4 +77,31 @@
 
 .left-text {
 	text-align: left;
+}
+
+button {
+	text-transform: uppercase;
+	padding: 10px 20px;
+	background-color: $mainLightColor;
+	font-weight: 500;
+	letter-spacing: 2px;
+	transition: all 0.3s ease;
+}
+
+button:active {
+	transform: translate(1px, 2px);
+	}
+
+.button-accent {
+	background-color: $accentColor;
+	font-weight: 700;
+	border: 2px solid transparent;	
+}
+
+@media (any-hover: hover) {
+	.button-accent:hover {
+		color: $accentColor;
+		background-color: transparent;
+		border: 2px solid $accentColor; 
+	} 
 }
