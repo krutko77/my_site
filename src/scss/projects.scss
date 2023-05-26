@@ -123,7 +123,7 @@
 		}    
 
     	&__description, &__list {
-			margin-bottom: 15px;			
+			margin-bottom: 15px;
 
 			@include font(18px, 400, 140%);
 
@@ -150,12 +150,12 @@
 
          &::before,
          &::after {
-            content: '';    
+            content: '';
             position: absolute; 
-            top: 100%;    
-            width: 0;    
-            height: 2px;    
-            background: $accentColor;    
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: $accentColor;
             transition: 0.3s;
          }
 
@@ -193,5 +193,5 @@
 	.portfolio__button-more:hover {
 		background-color: transparent;
 		border: 2px solid $linkOtherColor;
-	}         
+	}
 }

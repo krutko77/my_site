@@ -1,4 +1,82 @@
-//popup 
+// //popup 
+// body::after {
+// 	content: "";
+// 	background-color: rgba(0, 0, 0, 0.5);
+// 	position: fixed;
+// 	width: 100%;
+// 	height: 100%;
+// 	top: 0;
+// 	left: 0;
+// 	opacity: 0;
+// 	transition: opacity 0.8s ease 0s;
+// 	pointer-events: none;
+// 	z-index: 149;
+// }
+
+// .popup {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	padding: 30px 10px;
+// 	transition: visibility 0.8s ease 0s;
+// 	visibility: hidden;
+// 	pointer-events: none;
+
+//    &__wrapper {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: center;
+//       min-height: 100%;
+//       flex: 1 1 auto;
+//       width: 100%;		
+//    }
+   
+//    &__content {
+//       text-align: center;
+//       position: relative;
+//       visibility: hidden;
+//       transform: scale(0);
+//       transition: transform 0.3s ease 0s;
+//       background-color: #eee;
+//       padding: 30px 20px;
+//       width: 380px;	
+//       border-radius: 20px;
+   
+//       @media (max-width: $pc) {
+//          width: calc(270px + 110*((100vw - 320px) / (1260 - 320)));
+//       }
+   
+//       .lock & {
+//          visibility: visible;
+//       }
+//    }
+   
+//    &__close {
+//       position: absolute;
+//       top: 12px;
+//       right: 12px;
+//    }
+// }
+
+// .popup_show {
+// 	z-index: 150;
+// 	visibility: visible;
+// 	overflow: auto;
+// 	pointer-events: auto;
+// }
+
+// .popup-show body::after {
+// 	opacity: 1;
+// }
+
+// .popup_show .popup__content {
+// 	visibility: visible;
+// 	transform: scale(1);
+// }
+
 body::after {
 	content: "";
 	background-color: rgba(0, 0, 0, 0.5);
@@ -8,72 +86,90 @@ body::after {
 	top: 0;
 	left: 0;
 	opacity: 0;
-	transition: opacity 0.8s ease 0s;
+	// transition: opacity 0.8s ease 0s;
 	pointer-events: none;
 	z-index: 149;
-}
-
-.popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	pointer-events: none;
-
-   &__wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100%;
-      flex: 1 1 auto;
-      width: 100%;		
-   }
-   
-   &__content {
-      text-align: center;
-      position: relative;
-      visibility: hidden;
-      transform: scale(0);
-      transition: transform 0.3s ease 0s;
-      background-color: #eee;
-      padding: 30px 20px;
-      width: 380px;	
-      border-radius: 20px;
-   
-      @media (max-width: $pc) {
-         width: calc(270px + 110*((100vw - 320px) / (1260 - 320)));
-      }
-   
-      .lock & {
-         visibility: visible;
-      }
-   }
-   
-   &__close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-   }
-}
-
-.popup_show {
-	z-index: 150;
-	visibility: visible;
-	overflow: auto;
-	pointer-events: auto;
 }
 
 .popup-show body::after {
 	opacity: 1;
 }
 
-.popup_show .popup__content {
-	visibility: visible;
-	transform: scale(1);
+.popup {
+	// background: url("../img/3-30.jpg") center / cover no-repeat fixed;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: rem(30) rem(10);
+	// transition: visibility 0.8s ease 0s;
+	opacity: 1;
+	visibility: hidden;
+	pointer-events: none;	
 }
 
+.popup__content {	
+	position: relative;
+	visibility: hidden;
+	transform: translateY(-700px);
+	transition: transform 0.8s ease 0s;
+	background-color: $mainBgColor;
+	padding: rem(40) rem(20) rem(30);
+	width: 100%;
+	max-width: rem(400);
+	border-radius: rem(10);
+	.lock & {
+		visibility: visible;
+	}
+}
+
+.popup__close {
+	position: absolute;
+	top: rem(15);
+	right: rem(15);
+	width: rem(20);
+	height: rem(20);
+}
+
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	opacity: 1;
+	overflow: auto;
+	pointer-events: auto;
+}
+
+.popup_show .popup__content {
+	visibility: visible;
+	transform: translateX(0);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// .popup__icon::before {
+// 	content: "\e974";
+// 	@extend %ic;
+// 	color: ;
+// 	font-size: rem(20);
+// 	font-weight: 700;
+// 	transition: color 0.3s ease 0s;	
+// }
+
+.popup__icon:hover::before {
+	color: $accentColor;
+}
+
+.popup strong {
+	color: $accentColor;
+	text-transform: uppercase;
+}

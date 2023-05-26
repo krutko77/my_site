@@ -11,12 +11,22 @@
    }
 }
 
-.chatme {
-	will-change: transform, opacity;
+.link-wrapper {
 	position: fixed;
 	z-index: 99;
 	bottom: 50px;
 	right: 45px;
+	width: 65px;
+	height: 65px;
+}
+
+.chatme {
+	will-change: transform, opacity;
+	// position: fixed;
+	// z-index: 99;
+	// bottom: 50px;
+	// right: 45px;
+	position: relative;
 	width: 65px;
 	height: 65px;
 	padding: 0;
