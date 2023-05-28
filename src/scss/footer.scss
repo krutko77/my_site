@@ -11,7 +11,7 @@
    }
 }
 
-.chatme{
+.chatme {
 	display: flex;
 	justify-content: end;
 	position: fixed;
@@ -20,106 +20,92 @@
 	right: 45px;
 	width: 82px;
 	height: 65px;
-	border-radius: 33px;
+	border-radius: 33px;	
+}
 
-	&__link {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 1;
+.chatme__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.chatme__icon {
+	will-change: transform, opacity;
+	width: 65px;
+	height: 65px;
+	background-color: #08c;
+	cursor: pointer;
+	outline: 0;
+	border: none;
+	border-radius: 50%;
+	transition: all .3s ease;
+	animation: pulse 1.6s infinite;
+	
+	@media (max-width: $mobile) {
+		bottom: 25px;
+		right: 25px;
+		bottom: 51px;		
 	}
 }
 
+@keyframes pulse {
 
-.zircle {
-	width: 61px;
-	height: 61px;
-	border-radius: 50%;
-	background-color: blue;
+	0% {
+		box-shadow: 0 0 0 0 rgba(0,136,204,.85);
+	}
+	70% {
+		box-shadow: 0 0 0 2em rgba(0,136,204,0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(0,136,204,0);
+	}
 }
 
-// .chatme {
-// 	will-change: transform, opacity;
-// 	// position: fixed;
-// 	// z-index: 99;
-// 	// bottom: 50px;
-// 	// right: 45px;
-// 	position: relative;
-// 	width: 65px;
-// 	height: 65px;
-// 	padding: 0;
-// 	background-color: #08c;
-// 	cursor: pointer;
-// 	outline: 0;
-// 	border: none;
-// 	border-radius: 50%;
-// 	transition: all .3s ease;
-// 	animation: pulse 1.6s infinite;
-	
-// 	@media (max-width: $mobile) {
-// 		bottom: 25px;
-// 		right: 25px;
-// 		bottom: 51px;		
-// 	}
-// }
+.chatme__icon:before, .chatme__icon::after {
+	position: absolute;
+	display: block;
+	background-repeat: no-repeat;
+	transition: opacity .5s;
+}
 
-// @keyframes pulse {
+.chatme__icon:before {
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("../img/icons/telegram-white-icon.svg");
+	background-size: 30px auto;
+	background-position: calc(50% - 1px) calc(50% + 1px);
+	opacity: 1;
+}
 
-// 	0% {
-// 		box-shadow: 0 0 0 0 rgba(0,136,204,.85);
-// 	}
-// 	70% {
-// 		box-shadow: 0 0 0 2em rgba(0,136,204,0);
-// 	}
-// 	100% {
-// 		box-shadow: 0 0 0 0 rgba(0,136,204,0);
-// 	}
-// }
+.chatme__icon::after {
+	content: "ЗАДАТЬ ВОПРОС";
+	color: $mainBgColor;
+	top: 19px;
+	right: 0;
+	opacity: 0;
+	font-size: 11px;
+	text-align: center;
+	line-height: 120%;
+}
 
-// .chatme:before, .chatme:after {
-// 	position: absolute;
-// 	display: block;
-// 	background-repeat: no-repeat;
-// 	transition: opacity .5s;
-// }
-
-// .chatme:before {
-// 	content: "";
-// 	top: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	background-image: url("../img/icons/telegram-white-icon.svg");
-// 	background-size: 30px auto;
-// 	background-position: calc(50% - 1px) calc(50% + 1px);
-// 	opacity: 1;
-// }
-
-// .chatme::after {
-// 	content: "ЗАДАТЬ ВОПРОС";
-// 	color: $mainBgColor;
-// 	top: 19px;
-// 	right: 0;
-// 	opacity: 0;
-// 	font-size: 11px;
-// 	text-align: center;
-// 	line-height: 120%;
-// }
-
-// @media (any-hover: hover) {
-// 	.chatme:active, .chatme:hover {
-// 		background-color: #0073ad;	
-// 		animation: none;
-// 	}
-// 	.chatme:hover:before {
-// 		opacity: 0;
-//   }
-// 	.chatme:hover:after {
-// 		opacity: 1;
-//   }
-// }
+@media (any-hover: hover) {
+	.chatme__icon:active, .chatme__icon:hover {
+		background-color: #0073ad;	
+		animation: none;
+	}
+	.chatme__icon:hover::before {
+		opacity: 0;
+  }
+	.chatme__icon:hover::after {
+		opacity: 1;
+  }
+}
 	
 
 
