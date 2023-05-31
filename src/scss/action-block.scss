@@ -1,12 +1,14 @@
 .action-block {
 	background: url("../img/3-30.jpg") center / cover no-repeat;
+	// .action-block__wrapper
+	&__wrapper {
 	color: $mainBgColor;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 400px;
-	padding: 140px;
+	min-height: 400px;	
+	}
 
 	// .action-block__subtitle
 

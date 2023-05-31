@@ -214,8 +214,8 @@
                   </div>
                </div>
             </div>
-				@@include('html/_action-block.htm',{})
          </section>
+			@@include('html/_action-block.htm',{})
          <section class="skills" data-watch="navigator" data-watch-threshold="0.3">
             <div class="skills__container">
                <div class="skills__wrapper">
@@ -366,7 +366,7 @@
                      <div class="contact__right-block">
                         <div class="contact__form form">
                            <form class="form__body" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST"
-                           data-dev data-popup-message="#form-message">
+                           data-ajax data-popup-message="#form-message">
                               <div class="form__contact-block">
                                  <div class="form__placeholder-container">
                                     <input class="form__input text for-clear" id="name" type="text" name="name"
@@ -402,3 +402,5 @@
 </body>
 
 </html>
+
+

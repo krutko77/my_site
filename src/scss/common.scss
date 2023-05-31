@@ -58,7 +58,6 @@
    }
 }
 
-
 .text {
    @include font(20px, 400, 140%);
 
@@ -82,7 +81,7 @@
 button {
 	text-transform: uppercase;
 	padding: 10px 20px;
-	background-color: $mainLightColor;
+	border-radius: 3px;
 	font-weight: 500;
 	letter-spacing: 2px;
 	transition: all 0.3s ease;

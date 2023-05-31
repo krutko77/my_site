@@ -96,7 +96,6 @@ body::after {
 }
 
 .popup {
-	// background: url("../img/3-30.jpg") center / cover no-repeat fixed;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -106,7 +105,7 @@ body::after {
 	// transition: visibility 0.8s ease 0s;
 	opacity: 1;
 	visibility: hidden;
-	pointer-events: none;	
+	pointer-events: none;
 }
 
 .popup__content {	
@@ -164,6 +163,13 @@ body::after {
 // 	font-weight: 700;
 // 	transition: color 0.3s ease 0s;	
 // }
+
+._icon-circle-xmark::before {
+   content: "\e902";
+	color: $linkOtherColor;
+	font-size: 24px;
+ }
+
 
 .popup__icon:hover::before {
 	color: $accentColor;
