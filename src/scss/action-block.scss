@@ -7,7 +7,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 400px;	
+	min-height: 400px;
+
+	@media (max-width: $pc) {
+		min-height: calc(250px + 150*((100vw - 480px) / (1260 - 480)));
+		}
 	}
 
 	// .action-block__subtitle
@@ -15,7 +19,11 @@
 	&__subtitle {
 		text-align: center;
 		max-width: 600px;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
+
+		@media (max-width: $pc) {
+			margin-bottom: calc(40px + 10*((100vw - 480px) / (1260 - 480)));
+		}
 	}
 
 	// .action-block__btn

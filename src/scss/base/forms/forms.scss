@@ -1,17 +1,129 @@
 //<FORM>
-// Снипет (HTML):
 .form {
-	&__row {
+	&__body {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("../img/loading.gif") center / 50px no-repeat;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease;
+		}
+
+		&._sending::after {
+			opacity: 1;
+			visibility:visible;
+		}
 	}
-	&__column {
+
+	&__placeholder-container {
+		position: relative;
+		width: 100%;
+		margin-bottom: 20px;
 	}
-	&__line {
-	}
+	
 	&__input {
+		background-color: transparent;
+		border-radius: 3px;
+		border: 1.5px solid $mainColor;
+		height: 45px;
+		outline: 0;
+		padding: 0 20px;
+		width: 100%;
+		transition: all 0.3s;
+
+		@media (max-width: $pc) {
+			height: calc(50px + 20 * (100vw - 320px) / 940);
+		 }
+  }
+
+  &__input._form-error {
+	  border: 1.5px solid $errorColor;      
+  }
+
+  &__error {
+	  margin-top: 3px;
+	  font-size: 16px;
+	  color: $errorColor;
+
+	  @media (max-width: $pc) {
+		font-size: calc(12px + 4*((100vw - 320px) / (1260 - 320)));
+		}
+	} 
+  
+  &__label {
+		background-color: $mainBgColor;
+		padding: 5px 10px;
+		pointer-events: none;
+		position: absolute;
+		transition: all 0.3s;
+		top: 5px;
+		left: 10px; 
+		
+		@media (max-width: $pc) {
+			top: calc(9px + 6 * (100vw - 320px) / 940);
+			left: calc(7px + 3 * (100vw - 320px) / 940);
+		}
 	}
+
+	textarea.form__input {
+	  height: 200px;
+	  resize: vertical;
+	  padding: 20px;
+
+	  @media (max-width: $pc) {
+		height: calc(140px + 60 * (100vw - 320px) / 940);
+	 }
+  }
+
+	.form__input:focus {
+		border-color: $accentColor;
+	}
+
+	.form__input:focus + label, 
+	.form__input:not(:placeholder-shown) + label {
+		top: -13px;
+		left: 10px;
+		font-size: 18px; 
+		background-color: $mainBgColor;
+		padding: 2px 10px;
+		color: $accentColor;
+		
+		@media (max-width: $pc) {
+			top: calc(-14px - 3 * (100vw - 320px) / 940);
+			left: calc(7px + 3 * (100vw - 320px) / 940);
+		}
+	}
+
+	.form__input:not(:focus) + label {
+		color: $linkOtherColor;
+	}
+
 	&__button {
+		width: 100%;
 	}
-	&__error {
+	
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus
+	input:-webkit-autofill,
+	textarea:-webkit-autofill,
+	textarea:-webkit-autofill:hover
+	textarea:-webkit-autofill:focus,
+	select:-webkit-autofill,
+	select:-webkit-autofill:hover,
+	select:-webkit-autofill:focus {
+		
+		-webkit-text-fill-color: #1f1f20;
+		-webkit-box-shadow: 0 0 0 1000px transparent inset;
+		transition: background-color 5000s ease-in-out 0s;
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
 	}
 }
 //</FORM>

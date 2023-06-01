@@ -6,6 +6,7 @@
 
 .title {
 	display: inline-block;
+	line-height: 110%;
 	@include font(64px, 700, 98%);
 	letter-spacing: -2px;
 
@@ -52,6 +53,7 @@
 .subtitle {
 	@include font(28px, 800, 120%);
 	letter-spacing: 0;
+	line-height: 110%;
 
 	@media (max-width: $pc) {
       font-size: calc(22px + 6*((100vw - 320px) / (1260 - 320)));

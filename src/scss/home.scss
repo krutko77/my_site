@@ -70,13 +70,23 @@
       }
    }
 
+	// @keyframes animate_down {
+	// 	0% {
+	// 		transform: translate(0, -300px);
+	// 	}
+	
+	// 	100% {
+	// 		transform: translate(0, 0);
+	// 	}
+	// }
+
 	@keyframes animate_down {
 		0% {
-			transform: translate(0, -300px);
+			transform: scaleY(0);
 		}
 	
 		100% {
-			transform: translate(0, 0);
+			transform: scaleY(1);
 		}
 	}
 
