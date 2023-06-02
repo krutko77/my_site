@@ -68,6 +68,14 @@
    }
 }
 
+.text-form {
+   @include font(16px, 400, 120%);
+
+   @media (max-width: $pc) {
+      font-size: calc(16px + 4*((100vw - 320px) / (1260 - 320)));
+   }
+}
+
 .ul-style {
 	margin-left: 20px;
 }

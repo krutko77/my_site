@@ -27,6 +27,10 @@
 		width: 100%;
 		margin-bottom: 20px;
 	}
+
+	&__placeholder-container--last {
+		margin-bottom: 5px;
+	}
 	
 	&__input {
 		background-color: transparent;
@@ -73,12 +77,12 @@
 	}
 
 	textarea.form__input {
-	  height: 200px;
+	  min-height: 200px;
 	  resize: vertical;
 	  padding: 20px;
 
 	  @media (max-width: $pc) {
-		height: calc(140px + 60 * (100vw - 320px) / 940);
+		min-height: calc(140px + 60 * (100vw - 320px) / 940);
 	 }
   }
 
