@@ -67,6 +67,7 @@ body::after {
 	visibility: visible;
 	transform: translateX(0);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -95,16 +96,6 @@ body::after {
 	position: absolute;
 	top: -3px;
  }
-
-
-.popup__icon:hover::before {
-	color: $accentColor;
-}
-
-.popup strong {
-	color: $accentColor;
-	text-transform: uppercase;
-}
 
 .popup__title {
 	padding-top: 5px;
