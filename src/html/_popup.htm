@@ -25,11 +25,40 @@
 						</div>
 						<div class="form__placeholder-container form__placeholder-container--last">
 							<textarea class="form__input text for-clear" name="message" id="message"
-								data-validate data-error="Опишите вашу задачу" data-required
+								data-validate data-error="Опишите вашу задачу для сайта" data-required
 								placeholder=" "></textarea>
-							<label class="form__label text" for="message">Опишите вашу задачу *</label>
+							<label class="form__label text" for="message">Опишите вашу задачу для сайта *</label>
 						</div>
-						<p class="text-form">Нужен ли домен и (или) хостинг?</p>
+						<div class="form__radio-block block">
+							<span class="block__title text-form">Нужен ли домен?</span>
+							<div class="block__options options">
+								<div class="options__item">
+									<input id="yesDomain" checked type="radio" value="yes" name="domain" class="options__input">
+									<label for="yesDomain" class="options__label">да</label>
+								</div>
+								<div class="options__item">
+									<input id="noDomain" type="radio" value="no" name="domain" class="options__input">
+									<label for="noDomain" class="options__label">нет</label>
+								</div>
+							</div>
+						</div>
+						<div class="form__radio-block block">
+							<span class="block__title text-form">Нужен ли хостинг?</span>
+							<div class="block__options options">
+								<div class="options__item">
+									<input id="yesHosting" checked type="radio" value="yes" name="hosting" class="options__input">
+									<label for="yesHosting" class="options__label">да</label>
+								</div>
+								<div class="options__item">
+									<input id="noHosting" type="radio" value="no" name="hosting" class="options__input">
+									<label for="noHosting" class="options__label">нет</label>
+								</div>
+							</div>
+						</div>						
+						<div class="form__checkbox checkbox">
+							<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input" data-required />
+							<label for="formAgreement"><span class="text-form">Заполняя форму, я соглашаюсь на <a href="https://webkrutko.by/privacy-page.html">обработку персональных данных</a></span></label>
+						</div>
 					</div>
 					<button class="form__button text button-accent clear-button" type="submit">Отправить</button>
 				</form>

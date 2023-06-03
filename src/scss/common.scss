@@ -107,10 +107,19 @@ button:active {
 	border: 2px solid transparent;	
 }
 
+a {
+	color: $linkOtherColor;	
+}
+
 @media (any-hover: hover) {
 	.button-accent:hover {
 		color: $accentColor;
 		background-color: transparent;
 		border: 2px solid $accentColor; 
 	} 
+
+	a:hover {
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
 }
