@@ -29,7 +29,7 @@
 	}
 
 	&__placeholder-container--last {
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 	
 	&__input {
@@ -67,7 +67,7 @@
 		pointer-events: none;
 		position: absolute;
 		transition: all 0.3s;
-		top: 5px;
+		top: 9px;
 		left: 10px; 
 		
 		@media (max-width: $pc) {
@@ -77,7 +77,7 @@
 	}
 
 	textarea.form__input {
-	  min-height: 200px;
+	  min-height: 150px;
 	  resize: vertical;
 	  padding: 20px;
 
@@ -109,6 +109,32 @@
 		color: $linkOtherColor;
 	}
 
+
+	&__radio {
+		margin-bottom: 10px;
+	}
+
+	.radio__title {
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+
+	&__checkbox {
+		margin-bottom: 15px;
+	}
+
+	.checkbox__link {
+		color: $linkOtherColor;
+	}
+
+	@media (any-hover: hover) {
+	
+		.checkbox__link:hover {
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
+
 	&__button {
 		width: 100%;
 	}
@@ -132,14 +158,6 @@
 }
 //</FORM>
 
-// <BUTTONS>
-// Снипет (HTML): btn
-// @import "button";
-
-// <INPUTS>
-// Снипет (HTML): inp
-// @import "input";
-
 // <CHECK>
 // Снипет (HTML): chk
 @import "checkbox";
@@ -148,22 +166,3 @@
 // Снипет (HTML): opt
 @import "radio";
 
-// <SELECT>
-// Снипет (HTML): sel
-// @import "select";
-
-// <RATING>
-// Снипет (HTML): rating
-// @import "rating";
-
-// <QUANTITY>
-// Снипет (HTML): qa
-// @import "quantity";
-
-// <RANGE>
-// Снипет (HTML):
-// @import "range";
-
-// <CALENDAR>
-// Снипет (HTML):
-// @import "datepicker";
