@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"HomePage"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page thank">
+				<div class="thank__content">
+					<div data-watch data-watch-once class="thank__img-wrap">
+						<img class="thank__img" src="@img/tick-mark.png" alt="галочка на зеленом круге">
+					</div>
+					<h2 class="thank__title subtitle">
+						Спасибо!<br>
+						Сообщение отправлено.
+					</h2>
+					<p class="thank__text center-tex text">Мы свяжемся с вами в ближайшее время.</p>
+				</div>
+			</main>
+			<!-- <script type="text/javascript">
+				setTimeout('location.replace("https://webkrutko.by/")', 3000);
+			</script> -->
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

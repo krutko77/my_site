@@ -47,3 +47,7 @@
 		}
 	}	
 }
+
+.checkbox._form-error .checkbox__label:before {
+	box-shadow: 0 0 6px $errorColor;
+}

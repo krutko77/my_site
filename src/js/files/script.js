@@ -56,3 +56,7 @@
 //       document.getElementById("form").reset(); // а затем сбросьте значения формы 
 //    } 
 // } 
+
+document.addEventListener( 'formSent', function( event ) {
+	location = 'https://webkrutko.by/stranitsa-blagodarnosti.html/';
+}, false );
