@@ -34,7 +34,7 @@ body::after {
 .popup__content {	
 	position: relative;
 	visibility: hidden;
-	transform: translateY(-700px);
+	transform: translateY(-800px);
 	transition: transform 0.8s ease 0s;
 	background-color: $mainBgColor;
 	padding: rem(40) rem(20) rem(30);

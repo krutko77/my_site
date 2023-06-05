@@ -1,25 +1,18 @@
 //contact
 .contact {
-   min-height: calc(100vh - 70px);
-   display: flex;
+	padding: 140px 0 20px;
+	display: flex;
    margin-bottom: 40px;   
-   
-   @media (max-width: $mobileSmall) {
-      margin-bottom: 10px; 
-   }
 
-   &__container {
-      padding-top: 120px;
-      padding-bottom: 20px;
+		@media (max-width: $tablet) {
+			padding-top: 100px;        
+		}
 
-      @media (max-width: $tablet) {
-         padding-top: 100px;        
-      }
+		@media (max-width: $mobileSmall) {
+			padding-top: 90px;
+			margin-bottom: 10px; 
+		}   
    
-      @media (max-width: $mobileSmall) {
-         padding-top: 90px;        
-      }
-   }
 
    &__wrapper {
       height: 100%;

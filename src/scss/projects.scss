@@ -1,6 +1,6 @@
 //projects
 .projects {
-   padding: 120px 0 20px;
+   padding: 140px 0 20px;
    margin-bottom: 20px;
    
    @media (max-width: $tablet) {
@@ -8,7 +8,7 @@
    }
 
    @media (max-width: $mobileSmall) {
-      padding: 75px 0 0;
+      padding: 90px 0 0;
    }
 
 	&__container {
@@ -33,7 +33,7 @@
    &__title {   
 
       &::after {
-         left: 19%;         
+         left: 31%;         
       }
    }
 
