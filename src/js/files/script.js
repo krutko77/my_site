@@ -58,5 +58,5 @@
 // } 
 
 document.addEventListener( 'formSent', function( event ) {
-	location = 'https://webkrutko.by/stranitsa-blagodarnosti.html/';
+	location = 'https://webkrutko.by/thank-you-page.html';
 }, false );

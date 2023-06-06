@@ -10,19 +10,19 @@
 	$mail->CharSet = 'UTF-8';
 	$mail->setLanguage('ru', 'phpmailer/language/');
 	$mail->IsHTML(true);
-
 	
-	// Настройки вашей почты
+		
 	$mail->isSMTP();                                            //Send using SMTP
-	$mail->Host       = 'ssl://smtp.yandex.ru';                     //Set the SMTP server to send through
+	$mail->Host       = 'mailbe05.hoster.by';                     //Set the SMTP server to send through
 	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-	$mail->Username   = 'webkrutko@yandex.by';                     //SMTP username
-	$mail->Password   = 'Certina77';                               //SMTP password
+	$mail->Username   = 'postmaster@webkrutko.by';                     //SMTP username
+	$mail->Password   = 'certina77';                               //SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-	$mail->Port       = 465;    
-
+	$mail->Port       = 465;                 
+	
+	
 	//От кого письмо
-	$mail->setFrom('webkrutko@yandex.by', 'Cайт по разработки сайтов'); // Указать нужный E-mail
+	$mail->setFrom('postmaster@webkrutko.by', 'Cайт по разработки сайтов'); // Указать нужный E-mail
 	//Кому отправить
 	$mail->addAddress('webkrutko@mail.ru'); // Указать нужный E-mail
 	//Тема письма
