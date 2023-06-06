@@ -1,14 +1,35 @@
 //footer
 .footer {
+	padding: 20px 0;
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 70px;
+   min-height: 70px;
    background-color: $mainLightColor; 
    
    span {
       font-weight: 500;
    }
+
+	&__link {
+		color: $linkOtherColor;
+		margin-bottom: 10px;		
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+	}
+}
+
+
+@media (any-hover: hover) {
+	
+	.footer__link:hover {
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
 }
 
 .chatme {

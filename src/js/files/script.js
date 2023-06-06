@@ -57,6 +57,13 @@
 //    } 
 // } 
 
+// Переход на страницу благодарности после отправки формы
 document.addEventListener( 'formSent', function( event ) {
 	location = 'https://webkrutko.by/thank-you-page.html';
 }, false );
+
+// Защита формы от ботов через пустое поле
+let code = document.querySelector('#code'); // Получаем скрытый input
+  document.querySelector('.btn').onclick = function(){ // Клик по кнопке отправки
+    code.value = 'NOSPAM'; // Подставляем значение в value инпута
+  };

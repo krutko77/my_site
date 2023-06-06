@@ -86,8 +86,12 @@
 	 }
   }
 
-	.form__input:focus {
+  	.form__input:focus {
 		border-color: $accentColor;
+	}
+
+	.form__input:not(:focus) + label {
+		color: $linkOtherColor;
 	}
 
 	.form__input:focus + label, 
@@ -104,11 +108,6 @@
 			left: calc(7px + 3 * (100vw - 320px) / 940);
 		}
 	}
-
-	.form__input:not(:focus) + label {
-		color: $linkOtherColor;
-	}
-
 
 	&__radio {
 		margin-bottom: 10px;

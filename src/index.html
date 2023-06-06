@@ -286,7 +286,7 @@
 									data-ajax data-popup-message="#form-message">
 										<div class="form__contact-block">
 											<div class="form__placeholder-container">
-												<input class="form__input text for-clear" id="name" type="text" name="name"
+												<input class="form__input text-form for-clear" id="name" type="text" name="name"
 													data-validate data-error="Напишите имя" data-required placeholder=" " />
 												<label class="form__label text-form" for="name">Имя *</label>
 											</div>
@@ -337,6 +337,7 @@
 												<input id="formAgreement-2" type="checkbox" name="agreement" class="checkbox__input" data-required data-validate data-error="Отметьте чекбокс"/>
 												<label for="formAgreement-2" class="checkbox__label"><span class="text-form">Заполняя форму, я соглашаюсь на <a class="checkbox__link" href="https://webkrutko.by/privacy-page.html">обработку персональных данных</a></span></label>
 											</div>
+											<input type="hidden" name="code" value="" id="code"/>
 										</div>
 										<button class="form__button text button-accent clear-button" type="submit">Отправить</button>
 									</form>
