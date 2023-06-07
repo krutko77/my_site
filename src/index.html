@@ -231,7 +231,32 @@
             <div class="reviews__container">
                <div class="reviews__wrapper">
                   <h2 class="reviews__title title">Отзывы</h2>
-                  <div class="reviews__content" data-watch data-watch-once>
+                  <div class="reviews__content">
+							<p class="reviews__text-block text">Этот раздел – копилка искренних отзывов о моей работе.
+
+								Благодарю каждого за обратную связь!
+								
+								Мне ценно ваше мнение!</p>
+							<div class="reviews__swiper swiper">
+								<div class="swiper-wrapper">
+								   <div class="swiper__slide swiper-slide">
+										<img class="swiper__image" src="@img/" alt="отзыв">
+									</div>
+									<div class="swiper__slide swiper-slide">
+										<img class="swiper__image" src="@img/" alt="отзыв">
+									</div>
+									<div class="swiper__slide swiper-slide">
+										<img class="swiper__image" src="@img/" alt="отзыв">
+									</div>
+									<div class="swiper__slide swiper-slide">
+										<img class="swiper__image" src="@img/" alt="отзыв">
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+								<button type="button" class="swiper-button-prev"></button>
+								<button type="button" class="swiper-button-next"></button>
+							</div>
+							
                   </div>   
             </div>				
          </section>
@@ -357,3 +382,18 @@
 </html>
 
 
+<!-- Оболочка слайдера -->
+<div class="имя-блока__slider swiper">
+	<!-- Двигающееся часть слайдера -->
+	<div class="имя-блока__wrapper swiper-wrapper">
+		<!-- Слайд -->
+		<div class="имя-блока__slide swiper-slide"></div>
+	</div>
+	<!-- Если нужна пагинация -->
+	<div class="swiper-pagination"></div>
+	<!-- Если нужна навигация (влево/вправо) -->
+	<button type="button" class="swiper-button-prev"></button>
+	<button type="button" class="swiper-button-next"></button>
+	<!-- Если нужен скролбар -->
+	<div class="swiper-scrollbar"></div>
+</div>
