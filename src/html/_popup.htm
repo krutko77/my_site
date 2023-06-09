@@ -4,8 +4,7 @@
          <button class="popup__close" data-close type="button"><span class="popup__close-icon text"><i class="_icon-circle-xmark"></i></span></button>
 			<h3 class="popup__title subtitle">Рассчитать стоимость</h3>
 			<div class="popup__form form">
-				<form class="form__body" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST"
-				data-ajax data-popup-message="#form-message">
+				<form class="form__body" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST" data-ajax>
 					<div class="form__contact-block">
 						<div class="form__placeholder-container">
 							<input class="form__input text-form for-clear" id="name" type="text" name="name"
@@ -57,11 +56,11 @@
 						</div>
 						<div class="form__checkbox checkbox">
 							<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input" data-required />
-							<label for="formAgreement" class="checkbox__label"><span class="text-form">Заполняя форму, я соглашаюсь на <a class="checkbox__link" href="https://webkrutko.by/privacy-page.html">обработку персональных данных</a></span></label>							
+							<label for="formAgreement" class="checkbox__label"><span class="text-form">Заполняя форму, я соглашаюсь на <a class="checkbox__link" href="https://webkrutko.by/privacy-page.html">обработку персональных данных</a></span></label>
 						</div>
-						<input type="hidden" name="code" value="" id="code"/>
+						<input type="hidden" name="code" value="" id="code-popup"/>
 					</div>
-					<button class="form__button btn text button-accent clear-button" type="submit" data-watch data-watch-once>Отправить</button>
+					<button class="form__button btn-popup text button-accent clear-button" type="submit" data-watch data-watch-once>Отправить</button>
 				</form>
 			</div>
 		</div>

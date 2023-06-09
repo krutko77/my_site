@@ -28,13 +28,13 @@ function initSliders() {
          },	
 
 			// Пагинация			
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'fraction',
-            renderFraction: function(currentClass, totalClass) {
-               return 'Фото <span class="'+ currentClass +'"></span>' + ' из ' + '<span class="' + totalClass +'"></span>';
-            }
-			},
+			// pagination: {
+			// 	el: '.swiper-pagination',
+			// 	type: 'fraction',
+         //    renderFraction: function(currentClass, totalClass) {
+         //       return 'Фото <span class="'+ currentClass +'"></span>' + ' из ' + '<span class="' + totalClass +'"></span>';
+         //    }
+			// },
 			
 			// Кнопки "влево/вправо"
 			navigation: {

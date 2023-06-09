@@ -13,7 +13,7 @@
 		max-width: 1300px;
       min-height: 80px;
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			min-height: calc(70px + 10*((100vw - 768px) / (1260 - 768)));
 
 			padding: 0 15px;
@@ -36,7 +36,7 @@
    
    .menu {
       &__body {
-         @media (max-width: $mobile) {
+         @media (max-width: $tablet) {
          position: fixed;
          top: 0;
          left: -100%;
@@ -58,7 +58,7 @@
          align-items: center;
          justify-content: space-between;
         
-         @media (max-width: $mobile) {
+         @media (max-width: $tablet) {
          flex-direction: column;
          }
       } 
@@ -75,7 +75,7 @@
             margin-right: calc(20px + 10*((100vw - 768px) / (1260 - 768)));
          }
 
-         @media (max-width: $mobile) {
+         @media (max-width: $tablet) {
             margin: 0 0 30px;
             }
       }
@@ -90,7 +90,7 @@
             font-size: calc(12px + 2*((100vw - 768px) / (1260 - 768)));
          }
          
-         @media (max-width: $mobile) {
+         @media (max-width: $tablet) {
             font-size: 22px;
             }
       } 
@@ -146,7 +146,7 @@
 //Burger
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: rem(30);

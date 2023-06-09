@@ -65,5 +65,10 @@ document.addEventListener( 'formSent', function( event ) {
 // Защита формы от ботов через пустое поле
 let code = document.querySelector('#code'); // Получаем скрытый input
   document.querySelector('.btn').onclick = function(){ // Клик по кнопке отправки
-    code.value = 'NOSPAM'; // Подставляем значение в value инпута
+    code.value = 'NOSPAM'; // Подставляем значение в value инпута	
+  };
+
+  let codePopup = document.querySelector('#code-popup'); // Получаем скрытый input
+  document.querySelector('.btn-popup').onclick = function(){ // Клик по кнопке отправки
+    codePopup.value = 'NOSPAM'; // Подставляем значение в value инпута	
   };

@@ -2,6 +2,7 @@
 .reviews {
    padding: 140px 0 20px;
    margin-bottom: 20px;
+	// background-color: $mainLightColor;
    
    @media (max-width: $tablet) {
       padding: 100px 0 20px;
@@ -39,26 +40,24 @@
       }
    }
 
-   &__content {
-      
-   }
-
-	&__text-block {
+  	&__text-block {
+		text-align: center;
 		margin-bottom: 50px;
+
+		@media (max-width: $pc) {
+			margin-bottom: calc(5px + 45*((100vw - 320px) / (1260 - 320)));
+		}
 	}
 }
 
 .swiper {   
-   width: 800px;
+   max-width: 440px;
    padding: 30px 50px 60px;
 
-   @media (max-width: $pc) {
-      width: calc(290px + 510*((100vw - 320px) / (1260 - 320)));
-   }
-   
    @media (max-width: $mobileSmall) {
-      padding: 15px 35px 40px;
-   }   
+      padding: 20px 30px 50px;
+		max-width: calc(300px + 140*((100vw - 320px) / (479 - 320)));
+   }
   
    &__slide {
       text-align: center;
@@ -77,28 +76,28 @@
 	
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-	left: 10px; 
+	left: 0; 
 	
 	@media (max-width: $mobileSmall) {
-	left: 5px; 
+	left: -11px; 
 	}
 }
 	
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-	right: 10px;
+	right: 0;
 	
 	@media (max-width: $mobileSmall) {
-	right: 5px; 
+	right: -11px; 
 	}
 }
 
 .swiper-button-next:after,
-.swiper-button-prev:after {        
-	font-size: 44px;
+.swiper-button-prev:after {
+	font-size: 30px;
 	@media (max-width: $pc) {
 		font-size: calc(22px + 22*((100vw - 320px) / (1260 - 320)));
-	}   
+	}
 }
 
 .swiper-pagination {
@@ -113,11 +112,11 @@
 	bottom: 3.5%;
 	left: 0;
 	width: 100%;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 150%;
 
 	@media (max-width: $pc) {
-		font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
+		font-size: calc(16px + 2*((100vw - 320px) / (1260 - 320)));
 	}
 } 
 
