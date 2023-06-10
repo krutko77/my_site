@@ -2,6 +2,8 @@
 .about {
    padding: 140px 0 20px;
    margin-bottom: 20px;
+	background: url("../img/bg-about-30.jpg") center / cover no-repeat fixed;
+	color: $mainLightColor;
    
    @media (max-width: $tablet) {
       padding: 100px 0 20px;
@@ -11,11 +13,15 @@
       padding: 90px 0 0;
    }
 
+	&__inner {
+		
+	}
+
    &__wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-bottom: 4px solid $mainColor; 
+      border-bottom: 4px solid $mainLightColor; 
       
       @media (max-width: $tablet) {
          border-width: 3px;
@@ -36,7 +42,8 @@
       }
 
       &::after {
-         left: 5%;         
+         left: 5%;
+			background-color: $mainLightColor;
       }
    }
 
