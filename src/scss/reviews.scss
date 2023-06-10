@@ -42,10 +42,10 @@
 
   	&__text-block {
 		text-align: center;
-		margin-bottom: 50px;
+		margin-bottom: 10px;
 
 		@media (max-width: $pc) {
-			margin-bottom: calc(5px + 45*((100vw - 320px) / (1260 - 320)));
+			margin-bottom: calc(5px + 5*((100vw - 320px) / (1260 - 320)));
 		}
 	}
 }
