@@ -22,6 +22,10 @@
 		}
 	}
 
+	&__contact-block  {
+		margin-bottom: 15px;
+	}
+
 	&__placeholder-container {
 		position: relative;
 		width: 100%;
@@ -123,16 +127,10 @@
 	}
 
 	.checkbox__link {
-		color: $linkOtherColor;
+		display: inline-block;
 	}
 
-	@media (any-hover: hover) {
-	
-		.checkbox__link:hover {
-			text-decoration: underline;
-			text-underline-offset: 4px;
-		}
-	}
+
 
 	&__button {
 		width: 100%;

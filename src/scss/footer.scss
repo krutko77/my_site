@@ -4,15 +4,14 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   min-height: 70px;
+   min-height: 90px;
    background-color: $mainLightColor; 
    
    span {
       font-weight: 500;
    }
 
-	&__link {
-		color: $linkOtherColor;
+	&__link {		
 		margin-bottom: 10px;		
 	}
 
@@ -20,15 +19,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items:center;
-	}
-}
-
-
-@media (any-hover: hover) {
-	
-	.footer__link:hover {
-		text-decoration: underline;
-		text-underline-offset: 4px;
 	}
 }
 

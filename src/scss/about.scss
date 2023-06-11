@@ -3,18 +3,19 @@
    
    margin-bottom: 20px;
 	background: url("../img/bg-about-30.jpg") center / cover no-repeat fixed;
-	color: $mainLightColor;
+	color: $mainLightColor;   
    
-   @media (max-width: $tablet) {
-      padding: 100px 0 20px;
-   }
-
-   @media (max-width: $mobileSmall) {
-      padding: 90px 0 0;
-   }
 
 	&__inner {
-		padding: 140px 0 20px;
+		padding: 140px 0 40px;
+
+		@media (max-width: $tablet) {
+			padding: 100px 0 30px;
+		}
+	
+		@media (max-width: $mobileSmall) {
+			padding: 90px 0 30px;
+		}
 	}
 
    &__wrapper {
@@ -48,20 +49,18 @@
    }
 
    &__content {
-      margin-bottom: 90px;      
+      margin-bottom: 50px;
             
       @media (max-width: $mobileSmall) {
-         margin-bottom: 50px;         
+         margin-bottom: 30px;
       }
    }
 
-   &__description { 
-      padding: 25px 20px 25px; 
-      // text-align: center;  
-      // background-color: $mainLightColor;           
-      
-      @media (max-width: $mobileSmall) {
-         padding: 20px 10px 20px; 
+	&__text {
+		margin-bottom: 30px;
+
+		@media (max-width: $mobileSmall) {
+         margin-bottom: 20px;
       }
-   } 
+	}
 }
