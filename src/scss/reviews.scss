@@ -50,9 +50,10 @@
 	}
 }
 
-.swiper {   
+.swiper {
    max-width: 440px;
    padding: 30px 50px 60px;
+	background-color: $mainLightColor;
 
    @media (max-width: $mobileSmall) {
       padding: 20px 30px 50px;

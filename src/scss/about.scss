@@ -62,5 +62,48 @@
 		@media (max-width: $mobileSmall) {
          margin-bottom: 20px;
       }
+
+	// &__subtitle {
+	// 	text-align: center;
+	// 	margin-bottom: 30px;
+	// 	}
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		margin-bottom: 50px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+         margin-bottom: 30px;
+      }
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.item-grid {
+			&__subtitle {
+				text-align: center;
+				margin-bottom: 15px;
+			}
+
+			&__list li {
+				list-style-type: square;
+				color: $accentColor;
+			}
+
+			&__list li span {
+				color: $mainBgColor;
+			}
+		}
 	}
 }
+
+.about__subtitle {
+	text-align: center;
+	margin-bottom: 30px;
+	}
