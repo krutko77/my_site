@@ -2,7 +2,7 @@
 .about {
    
    margin-bottom: 20px;
-	background: url("../img/bg-about-30.jpg") center / cover no-repeat fixed;
+	background: url("../img/bg-about-40.jpg") center / cover no-repeat fixed;
 	color: $mainLightColor;   
    
 
@@ -39,7 +39,7 @@
       }
 
       @media (max-width: $mobileSmall) {
-         margin-bottom: 35px;
+         margin-bottom: 50px;
       }
 
       &::after {
@@ -62,48 +62,60 @@
 		@media (max-width: $mobileSmall) {
          margin-bottom: 20px;
       }
-
-	// &__subtitle {
-	// 	text-align: center;
-	// 	margin-bottom: 30px;
-	// 	}
 	}
 
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+	&__text--last {
 		margin-bottom: 50px;
 
-		@media (max-width: $mobile) {
-			grid-template-columns: 1fr 1fr;
-         margin-bottom: 30px;
+		@media (max-width: $mobileSmall) {
+         margin-bottom: 40px;
       }
+	}
 
-		&__item {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+	&__subtitle {
+		text-align: center;
+		margin-bottom: 30px;
+	}	
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-bottom: 50px;
+	row-gap: 30px;
+
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.item-grid {
+		padding: 0 20px 0;
+
+		&__subtitle {
+			text-align: center;
+			margin-bottom: 15px;
 		}
 
-		.item-grid {
-			&__subtitle {
-				text-align: center;
-				margin-bottom: 15px;
-			}
+		&__list {
+			// min-width: max-content;
+		}
 
-			&__list li {
-				list-style-type: square;
-				color: $accentColor;
-			}
+		&__list li {
+			list-style-type: square;
+			color: $accentColor;
+			margin-left: 20px;
+		}
 
-			&__list li span {
-				color: $mainBgColor;
-			}
+		&__list li span {
+			color: $mainBgColor;
 		}
 	}
 }
 
-.about__subtitle {
-	text-align: center;
-	margin-bottom: 30px;
-	}
