@@ -11,10 +11,6 @@
       padding: 90px 0 0;
    }
 
-   ul li {
-      list-style:square;
-   }
-
    &__wrapper {
       display: flex;
       flex-direction: column;
@@ -46,4 +42,12 @@
    &__content {
       
    }
+
+	&__subtitle {
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		
+	}
 }
