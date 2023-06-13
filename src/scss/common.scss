@@ -154,7 +154,15 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 	}
 }
 
-.margin-bottom {
+.margin-bottom-30 {
+	margin-bottom: 30px;
+
+	@media (max-width: $pc) {
+      margin-bottom: calc(20px + 10*((100vw - 320px) / (1260 - 320)));
+   }
+}
+
+.margin-bottom-40 {
 	margin-bottom: 40px;
 
 	@media (max-width: $pc) {
@@ -162,3 +170,34 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
    }
 }
 
+.float-left {
+	float: left;
+	margin: 0 em(30, 20) em(20, 20) 0;	
+}
+
+.float-left {
+	@media (max-width:$mobileSmall){
+		clear: both; 
+		margin: em(10, 20) 0;
+	}
+}
+
+.clearfix {
+	display: flow-root;
+}
+
+.img-box {
+	width: 40%;
+
+	@media (max-width:$tablet){
+		width: 35%;
+	}
+
+	@media (max-width:$mobile){
+		 width: 30%; 
+	}
+
+	@media (max-width:$mobileSmall){
+		width: 100%; 
+	}
+}

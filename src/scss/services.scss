@@ -47,7 +47,16 @@
 		margin-bottom: 20px;
 	}
 
+	&__list {
+		margin-left: 50px;
+	}
+
 	&__text {
-		
+		margin-bottom: 20px;
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
 	}
 }
