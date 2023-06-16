@@ -35,7 +35,7 @@
       }
 
       &::after {
-         left: 12%;         
+         left: 9%;         
       }
    }
 
@@ -51,8 +51,13 @@
 		margin-left: 50px;
 	}
 
-	&__text {
-		margin-bottom: 20px;
+	// &__text {
+	// 	margin-bottom: 20px;
+	// }
+
+	&__img-box {
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
 	&__img {
