@@ -154,6 +154,14 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 	}
 }
 
+.margin-bottom-20 {
+	margin-bottom: 20px;
+
+	@media (max-width: $pc) {
+      margin-bottom: calc(10px + 10*((100vw - 320px) / (1260 - 320)));
+   }
+}
+
 .margin-bottom-30 {
 	margin-bottom: 30px;
 
