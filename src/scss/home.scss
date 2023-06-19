@@ -110,10 +110,10 @@
       flex: 0 1 50%;
       display: flex;
       justify-content: center; 
-		      
+		
       @media (max-width: $mobile) {
          margin-bottom: 45px;
-      }     
+      }
    }
 
    &__img-inner {
