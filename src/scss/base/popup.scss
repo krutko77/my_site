@@ -31,7 +31,7 @@ body::after {
 	pointer-events: none;
 }
 
-.popup__content {	
+.popup__content, .popup__content-2 {	
 	position: relative;
 	visibility: hidden;
 	transform: translateY(-900px);
@@ -46,13 +46,10 @@ body::after {
 	}
 }
 
-.popup__close {
-	position: absolute;
-	outline: none;
-	top: rem(15);
-	right: rem(15);
-	width: rem(20);
-	height: rem(20);
+.popup__content-2 {	
+	padding: rem(40) rem(20) rem(30);
+	width: 100%;
+	max-width: rem(1000);	
 }
 
 .popup_show {
@@ -63,9 +60,18 @@ body::after {
 	pointer-events: auto;
 }
 
-.popup_show .popup__content {
+.popup_show .popup__content, .popup_show .popup__content-2 {
 	visibility: visible;
 	transform: translateX(0);
+}
+
+.popup__close {
+	position: absolute;
+	outline: none;
+	top: rem(15);
+	right: rem(15);
+	width: rem(20);
+	height: rem(20);
 }
 
 .popup__wrapper {
@@ -80,15 +86,6 @@ body::after {
 	align-items: center;
 }
 
-// .popup__icon::before {
-// 	content: "\e974";
-// 	@extend %ic;
-// 	color: ;
-// 	font-size: rem(20);
-// 	font-weight: 700;
-// 	transition: color 0.3s ease 0s;	
-// }
-
 ._icon-circle-xmark::before {
    content: "\e902";
 	color: $linkOtherColor;
@@ -101,4 +98,14 @@ body::after {
 	padding-top: 5px;
 	text-align: center;
 	margin-bottom: 20px;
+}
+
+.popup__img-wrapper {
+	width: 100%;
+}
+
+.popup__img {
+	object-fit: cover;
+	max-width: 100%;
+	// box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }

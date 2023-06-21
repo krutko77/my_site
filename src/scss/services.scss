@@ -47,15 +47,13 @@
 		margin-left: 50px;
 	}
 
-	&__img-wrapper {
-		max-width: 1000px;
-		margin: 0 auto;
+	&__img-box {
 		opacity: 0;
-		transform: translateY(200px);
-		transition: transform 1.8s ease, opacity 1.8s ease;
+		transform: translateY(70px);
+		transition: transform 1.6s ease, opacity 1.6s ease;
 	}
 
-	&__img-wrapper._watcher-view {
+	&__img-box._watcher-view {
 		opacity: 1;
 		transform: translateY(0);
 	}
