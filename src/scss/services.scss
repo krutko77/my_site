@@ -41,6 +41,10 @@
 
   	&__subtitle {
 		margin-bottom: 20px;
+
+		@media (max-width: $pc) {
+      margin-bottom: calc(7px + 13*((100vw - 320px) / (1260 - 320)));
+   }
 	}
 
 	&__list {
