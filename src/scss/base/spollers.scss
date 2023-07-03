@@ -15,7 +15,7 @@
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
+	border: 1px solid $linkOtherColor;
 	padding: rem(10) rem(15);
 	border-radius: rem(5);
 	position: relative;
@@ -30,7 +30,7 @@
 			position: absolute;
 			right: 10px;
 			top: 50%;
-			background-color: #000;
+			background-color: $linkOtherColor;
 			height: 2px;
 			width: 15px;
 			transition: transform 0.5s ease 0s;
@@ -88,5 +88,6 @@
 .spollers__body {
 	padding: rem(20);
 	border-radius: rem(5);
-	border: 1px solid #eee;
+	border: 1px solid $linkOtherColor;
+	margin-top: rem(5);
 }
