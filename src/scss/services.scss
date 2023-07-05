@@ -77,10 +77,6 @@
 	&__list-wrapper {
 		display: flex;
 	}
-
-	&__grid {
-		
-	}
 }
 
 .spollers {
@@ -89,6 +85,61 @@
 	}
 }
 
-.grid {
+.grid-services {	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 40px;
+	
+	@media (max-width: $pc) {
+      gap: calc(20px + 20*((100vw - 992px) / (1260 - 992)));
+   }
+
+	@media (max-width:$tablet) {
+		grid-template-columns: 1fr 1fr;
+			gap: 30px; 
+	}
+
+	@media (max-width:$mobileSmall) {
+		grid-template-columns: 1fr;
+			gap: 20px; 
+	}
+
+	&__item {
+		background-color: $mainLightColor;
+		padding: em(30, 20) em(30, 20);
+		border-radius: 5px;
+	}
+
+	&__img-wrapper {
+		width: 30%;
+		margin-bottom: em(15, 20);
+
+		@media (max-width:$mobileSmall) {
+		width: 20%;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+   &__subtitle {
+		margin-bottom: em(5, 20);
+	} 
+
+	&__label {
+		line-height: 100%;
+		margin-bottom: em(15, 20);
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 100%;
+
+		@media (max-width: $pc) {
+      font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
+   	}
+	}
 	
 }
