@@ -44,7 +44,15 @@
 
 		@media (max-width: $pc) {
       margin-bottom: calc(7px + 13*((100vw - 320px) / (1260 - 320)));
-   }
+   	}
+	}
+
+	&__subtitle-price {
+		margin-bottom: 30px;
+
+		@media (max-width: $pc) {
+      margin-bottom: calc(10px + 20*((100vw - 320px) / (1260 - 320)));
+   	}
 	}
 
 	&__list {
@@ -105,6 +113,9 @@
 	}
 
 	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		background-color: $mainLightColor;
 		padding: em(30, 20) em(30, 20);
 		border-radius: 5px;
@@ -135,11 +146,20 @@
 
 	&__text {
 		font-size: 16px;
-		line-height: 100%;
+		line-height: 110%;
+		margin-bottom: em(50, 20);
 
 		@media (max-width: $pc) {
       font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
    	}
+
+		&__link {
+			text-align: center;
+		}
+	}
+
+	&__price-color {
+		color: $errorColor;
 	}
 	
 }
