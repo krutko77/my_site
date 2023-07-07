@@ -186,6 +186,14 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
    }
 }
 
+.margin-bottom-60 {
+	margin-bottom: 60px;
+
+	@media (max-width: $pc) {
+      margin-bottom: calc(35px + 25*((100vw - 320px) / (1260 - 320)));
+   }
+}
+
 .float-left {
 	float: left;
 	margin: 0 em(30, 20) 0 0;	
