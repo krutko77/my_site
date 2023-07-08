@@ -47,6 +47,14 @@
    	}
 	}
 
+	&__sub-subtitle {
+		margin-bottom: 10px;
+
+		@media (max-width: $pc) {
+      margin-bottom: calc(3px + 7*((100vw - 320px) / (1260 - 320)));
+   	}
+	}
+
 	&__subtitle-price {
 		margin-bottom: 30px;
 
@@ -84,6 +92,18 @@
 
 	&__list-wrapper {
 		display: flex;
+	}
+
+	&__content-box {
+		margin-top: 35px;
+
+		@media (max-width: $pc) {
+			margin-top: calc(5px + 30*((100vw - 992px) / (1260 - 992)));
+		}
+
+		@media (max-width: $tablet) {
+			margin-top: 0;
+		}
 	}
 }
 
