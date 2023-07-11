@@ -1,14 +1,13 @@
 //skills
 .services {
-   padding: 140px 0 20px;
-   margin-bottom: 20px;
-   
+  	padding: 140px 0 120px;
+      
    @media (max-width: $tablet) {
-      padding: 100px 0 20px;
+      padding: 110px 0 100px;
    }
 
    @media (max-width: $mobileSmall) {
-      padding: 90px 0 0;
+      padding: 90px 0 50px;
    }
 
    &__wrapper {
@@ -95,10 +94,10 @@
 	}
 
 	&__content-box {
-		margin-top: 35px;
+		margin-top: 45px;
 
 		@media (max-width: $pc) {
-			margin-top: calc(5px + 30*((100vw - 992px) / (1260 - 992)));
+			margin-top: calc(5px + 40*((100vw - 992px) / (1260 - 992)));
 		}
 
 		@media (max-width: $tablet) {
