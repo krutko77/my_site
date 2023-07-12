@@ -27,7 +27,7 @@ if ( document.querySelector('.btn') ) {  // Проверяем наличие э
   // Кнопка НАЗАД
 if ( document.querySelector('.button-back') ) {  // Проверяем наличие элемента на странице
 	document.querySelector('.button-back').onclick = function(){ // Клик по кнопке НАЗАД
-		window.history.back(); // возвращаемся назад
+		window.history.go(-2); // возвращаемся назад
 	};
 }
 
