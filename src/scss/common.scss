@@ -70,7 +70,7 @@
 }
 
 .text {
-   @include font(20px, 400, 140%);
+   @include font(20px, 400, 150%);
 
    @media (max-width: $pc) {
       font-size: calc(16px + 4*((100vw - 320px) / (1260 - 320)));
@@ -83,6 +83,10 @@
    @media (max-width: $pc) {
       font-size: calc(16px + 4*((100vw - 320px) / (1260 - 320)));
    }
+}
+
+ol {
+	margin-left: 30px;
 }
 
 .ul-style {
@@ -138,6 +142,7 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 .link {
 	transition: color 0.3s ease;
 	position: relative;
+	display: inline-block;
 	&::before {
          content: '';
          position: absolute;

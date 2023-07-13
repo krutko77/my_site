@@ -24,7 +24,7 @@
 		width: 240px;
 
 		@media (max-width: $mobile) {
-			width: calc(190px + 50*((100vw - 768px) / (1260 - 768)));
+			width: calc(210px + 40*((100vw - 768px) / (1260 - 768)));
       }
 	}
 	 
