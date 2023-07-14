@@ -10,12 +10,16 @@
       padding: 90px 0 50px;
    }
 
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
    &__title {
-		display: block;
-		text-align: center;
+		align-self: center;
 
 		&::after {
-			width: 0;
-		}
+			left: 24%;
+      }
 	}
 }

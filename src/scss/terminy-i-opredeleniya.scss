@@ -8,15 +8,22 @@
 
 	@media (max-width: $mobileSmall) {
 		padding: 90px 0 50px;
-	}
-	
+	}	
 
-	&__title {
-		display: block;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title-inner {
 		text-align: center;
+	}
+
+   &__title {
+		align-self: center;
 
 		&::after {
-			width: 0;
-		}
+			left: 31%;
+      }
 	}
 }
