@@ -99,7 +99,7 @@
       &__link::after {
          content: '';    
          position: absolute; 
-         top: 90%;    
+         top: 100%;    
          width: 0;    
          height: 2px;    
          background: $accentColor;    
@@ -130,11 +130,11 @@
 //headerScroll
 ._header-scroll {
    position: fixed;
-   top: -200px;       
-}     
+   top: -200px;
+}
 
 ._header-scroll {
-   min-height: 50px;    
+   min-height: 50px;
 } 
 
 ._header-show {

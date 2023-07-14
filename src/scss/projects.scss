@@ -20,10 +20,10 @@
       }
    }
 
-   &__title {   
+   &__title {
 
       &::after {
-         left: 31%;         
+         left: 31%;
       }
    }
 
@@ -31,13 +31,13 @@
 		margin-bottom: 40px;
 	}
 
-   .portfolio {      
-      width: 100%;   
+   .portfolio {
+      width: 100%;
       text-align: center;
 
       &__content {
          display: flex;
-         flex-direction: column;         
+         flex-direction: column;
          row-gap: 50px;
 
          @media (max-width: $pc) {
@@ -55,7 +55,7 @@
        
          @media (max-width: $tablet) {
             flex-direction: column;
-            align-items:center;            
+            align-items:center;
          }
       }
 

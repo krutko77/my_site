@@ -21,37 +21,18 @@
    }
 
    &__title {
-      margin-bottom: 90px;
-      position: relative;
-      align-self: center;
-
-      @media (max-width: $tablet) {
-         margin-bottom: 70px;
-      }
-
-      @media (max-width: $mobileSmall) {
-         margin-bottom: 35px;
-      }
-
+    
       &::after {
          left: 9%;
       }
    }
 
   	&__subtitle {
-		margin-bottom: 20px;
-
-		@media (max-width: $pc) {
-      margin-bottom: calc(7px + 13*((100vw - 320px) / (1260 - 320)));
-   	}
+		margin-bottom: 20px;	
 	}
 
 	&__sub-subtitle {
 		margin-bottom: 10px;
-
-		@media (max-width: $pc) {
-      margin-bottom: calc(3px + 7*((100vw - 320px) / (1260 - 320)));
-   	}
 	}
 
 	&__subtitle-price {

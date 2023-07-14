@@ -45,14 +45,14 @@
    }
 
    &__content {
-      display: flex;    
+      display: flex;
       
       @media (max-width: $tablet) {
          flex-direction: column;
          width: calc(290px + 510 * (100vw - 320px) / 940);
       }
 
-      @media (max-width: $mobile) {
+      @media (max-width: $mobileSmall) {
          width: 100%;
       } 
    }
@@ -174,10 +174,6 @@
 		border: 2px solid $linkOtherColor;
 		border-radius: 5px;
       
-      @media (max-width: $pc) {
-         width: calc(290px + 210*((100vw - 320px) / (1260 - 320)));
-      }
-
       @media (max-width: $tablet) {
         width: 100%;
       }

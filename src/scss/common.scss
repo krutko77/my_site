@@ -9,20 +9,19 @@
 	line-height: 110%;
 	@include font(64px, 700, 98%);
 	letter-spacing: -2px;
+	margin-bottom: 80px;
+	position: relative;
 
    @media (max-width: $pc) {
       font-size: calc(36px + 28*((100vw - 320px) / (1260 - 320)));
-   }
-
-	margin-bottom: 80px;
-	position: relative;
+   }	
 
 	@media (max-width: $tablet) {
 		margin-bottom: 60px;
 	}
 
 	@media (max-width: $mobileSmall) {
-		margin-bottom: 35px;
+		margin-bottom: 45px;
 	}
 
    &::after {
@@ -146,7 +145,7 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 	&::before {
          content: '';
          position: absolute;
-         top: 105%;
+         top: 95%;
          width: 100%;
          height: 2px;
          background: $accentColor;         
@@ -161,18 +160,10 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 
 .margin-bottom-10 {
 	margin-bottom: 10px;
-
-	@media (max-width: $pc) {
-      margin-bottom: calc(7px + 3*((100vw - 320px) / (1260 - 320)));
-   }
 }
 
 .margin-bottom-20 {
-	margin-bottom: 20px;
-
-	@media (max-width: $pc) {
-      margin-bottom: calc(10px + 10*((100vw - 320px) / (1260 - 320)));
-   }
+	margin-bottom: 20px;	
 }
 
 .margin-bottom-30 {
@@ -220,7 +211,7 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 .float-left, .float-right {
 	@media (max-width:$mobileSmall){
 		clear: both; 
-		margin: 0 0 em(20, 20);
+		margin: 0 0 20px;
 	}
 }
 

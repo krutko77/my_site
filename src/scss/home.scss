@@ -115,6 +115,9 @@
 		@media (max-width: $mobile) {
          margin-bottom: 45px;
       }
+		@media (max-width: $mobileSmall) {
+         margin-bottom: 30px;
+      }
    }
 
    &__img-inner {
