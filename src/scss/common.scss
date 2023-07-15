@@ -198,6 +198,18 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
    }
 }
 
+.margin-bottom-120 {
+	margin-bottom: 120px;
+	 
+	@media (max-width: $tablet) {
+		margin-bottom: 100px;
+	}
+
+	@media (max-width: $mobileSmall) {
+		margin-bottom: 50px;
+	}
+}
+
 .float-left {
 	float: left;
 	margin: 0 em(30, 20) 0 0;	
