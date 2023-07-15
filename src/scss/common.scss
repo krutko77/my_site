@@ -6,7 +6,7 @@
 
 .title {
 	display: inline-block;
-	line-height: 110%;
+	line-height: 120%;
 	@include font(64px, 700, 98%);
 	letter-spacing: -2px;
 	margin-bottom: 80px;
@@ -34,7 +34,7 @@
       background-color: $mainColor;
 
       @media (max-width: $pc) {
-         width: calc(120px + 90*((100vw - 320px) / (1260 - 320)));
+         width: calc(115px + 95*((100vw - 320px) / (1260 - 320)));
          bottom: calc(-15px - 10*((100vw - 320px) / (1260 - 320)));
       }
 
@@ -212,12 +212,12 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 
 .float-left {
 	float: left;
-	margin: 0 em(30, 20) 0 0;	
+	margin: 0 em(30, 20) em(20, 20) 0;	
 }
 
 .float-right {
 	float: right;
-	margin: 0 0 0 em(30, 20);	
+	margin: 0 0 em(20, 20) em(30, 20);	
 }
 
 .float-left, .float-right {
@@ -237,4 +237,8 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 	@media (max-width:$mobileSmall){
 		width: 100%; 
 	}
+}
+
+.checkbox__label {
+	margin-bottom: em(10, 20);
 }

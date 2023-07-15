@@ -49,11 +49,11 @@
 	}
 
 	&__img-box--left {
-		transform: translateX(70px);
+		transform: translateX(-70px);
 	}
 
 	&__img-box--right {
-		transform: translateX(-70px);
+		transform: translateX(70px);
 	}
 
 	&__img-box._watcher-view {

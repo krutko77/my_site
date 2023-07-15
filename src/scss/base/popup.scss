@@ -37,7 +37,7 @@ body::after {
 	transform: translateY(-900px);
 	transition: transform 0.8s ease 0s;
 	background-color: $mainBgColor;
-	padding: rem(40) rem(20) rem(30);
+	padding: rem(40) rem(20) rem(20);
 	width: 100%;
 	max-width: rem(450);
 	border-radius: rem(5);

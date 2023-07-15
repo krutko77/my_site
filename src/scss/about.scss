@@ -12,7 +12,7 @@
 		}
 	
 		@media (max-width: $mobileSmall) {
-			padding: 0px 0 0px;
+			padding: 0;
 		}
 	}
 
@@ -41,7 +41,7 @@
       }
 
       &::after {
-         left: 3%;
+         left: 4%;
 			background-color: $mainLightColor;
       }
    }
@@ -95,6 +95,10 @@
 
 	.item-grid {
 		padding: 0 20px 0;
+
+		@media (max-width: $mobileSmall) {
+			padding: 0 5px 0;
+		}
 
 		&__subtitle {
 			text-align: center;
