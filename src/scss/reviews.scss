@@ -1,6 +1,7 @@
 //reviews
 .reviews {
    padding: 140px 0 120px;
+	margin-bottom: 40px;
       
    @media (max-width: $tablet) {
       padding: 110px 0 100px;
@@ -8,12 +9,14 @@
 
    @media (max-width: $mobileSmall) {
       padding: 90px 0 50px;
+		margin-bottom: 10px;
    }
 
    &__wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center;      
+      align-items: center;
+		border-bottom: 4px solid $mainColor; 
       
       @media (max-width: $tablet) {
          border-width: 3px;
