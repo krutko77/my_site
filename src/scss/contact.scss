@@ -54,31 +54,9 @@
       flex: 0 1 50%;
    }
 
-   &__left-block {
-      text-align: justify;
-      padding: 0 20px; 
-      
-      @media (max-width: $tablet) {
-         margin-bottom: 40px;
-       }
-
-       @media (max-width: $mobileSmall) {
-         margin-bottom: 10px;
-       }
-   }
-
-   &__text {
-      margin-bottom: 30px;
-
-      @media (max-width: $mobileSmall) {
-         margin-bottom: 20px;
-       }
-   }
-
-   &__info {
+    &__info {
       position: relative;
-      display: block;
-      margin-bottom: 20px;
+      display: block;      
       padding-left: 42px;
 
       @media (max-width: $mobileSmall) {
@@ -113,41 +91,10 @@
       background: url("./../img/icons/location-icon.png") 0 0/100% 100% no-repeat;
    }
 
-   &__link-mail {
-      position: relative;
-   }
-    
-   &__link-mail::before,
-   &__link-mail::after {
-      content: '';
-      position: absolute; 
-      top: 100%;
-      width: 0;
-      height: 2px;
-      background: $accentColor;
-      transition: 0.3s;
-   }
-
-   &__link-mail::before {
-      left: calc(50%);
-   }
-
-   &__link-mail::after {
-      right: calc(50%);
-   }
-
-   &__link-mail:hover::before,
-   &__link-mail:hover::after {
-      width: calc(50%);
-   }
-
-   &__tel {
-      transition: 0.3s ease;
-
-      &:hover {
-         color: $accentColor;
-      }
-   }
+	&__button-box {
+		display: flex;
+		justify-content: center;
+	}
 
    &__right-block {
       display: flex;
@@ -171,3 +118,32 @@
    }
 }
 
+.social {
+	display: flex;
+
+	&__icon {
+		height: 40px;
+		width: 40px;		
+
+		@media (any-hover: hover) {
+			opacity: 0.7;
+			transition: opacity 0.3s ease;
+		
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 30px;
+	}
+}  
+
+.form__button {
+	transition: all 0.8s ease 0.3s;
+
+	@media (max-width: $tablet) {
+		transition: all 0.8s ease;
+	 }
+}

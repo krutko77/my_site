@@ -106,7 +106,7 @@ button {
 	border-radius: 3px;
 	font-weight: 500;
 	letter-spacing: 2px;
-	transition: color 0.3s ease, background-color 0.3s ease, transform 0.8s ease;
+	transition: color 0.3s ease, background-color 0.3s ease, transform 0.8s ease, opacity 0.8s ease;
 }
 
 button:not(.swiper-button-prev, .swiper-button-next):active {
@@ -128,13 +128,13 @@ button:not(.swiper-button-prev, .swiper-button-next):active {
 	} 	
 }
 
-.action-block__btn, .form__button, .portfolio__button-more {
-	visibility: hidden;
+.action-block__btn, .form__button, .portfolio__button-more, .contact__button-brif {
+	opacity: 0;
 	transform: scale(0.5);
 }
 
 ._watcher-view {
-	visibility: visible;
+	opacity: 1;
 	transform: scale(1);	
 }
 
