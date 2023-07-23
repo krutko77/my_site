@@ -44,15 +44,11 @@
 		outline: 0;
 		padding: 0 20px;
 		width: 100%;
-		transition: all 0.3s;
-
-		@media (max-width: $pc) {
-			height: calc(50px + 20 * (100vw - 320px) / 940);
-		 }
+		transition: all 0.3s;	
   }
 
   &__input._form-error {
-	  border: 1.5px solid $errorColor;      
+	  border: 1.5px solid $errorColor;
   }
 
   &__error {
@@ -100,17 +96,12 @@
 
 	.form__input:focus + label, 
 	.form__input:not(:placeholder-shown) + label {
-		top: -13px;
+		top: -10px;
 		left: 10px;
-		font-size: 18px; 
+		font-size: 14px; 
 		background-color: $mainBgColor;
 		padding: 2px 10px;
 		color: $accentColor;
-		
-		@media (max-width: $pc) {
-			top: calc(-14px - 3 * (100vw - 320px) / 940);
-			left: calc(7px + 3 * (100vw - 320px) / 940);
-		}
 	}
 
 	&__radio {
@@ -129,8 +120,6 @@
 	.checkbox__link {
 		display: inline-block;
 	}
-
-
 
 	&__button {
 		width: 100%;

@@ -100,7 +100,7 @@ ol {
 	text-align: left;
 }
 
-button {
+button, .contact__button-brif {
 	text-transform: uppercase;
 	padding: 10px 20px;
 	border-radius: 3px;
@@ -109,7 +109,7 @@ button {
 	transition: color 0.3s ease, background-color 0.3s ease, transform 0.8s ease, opacity 0.8s ease;
 }
 
-button:not(.swiper-button-prev, .swiper-button-next):active {
+button:not(.swiper-button-prev, .swiper-button-next):active, .contact__button-brif:active {
 	transform: translate(1px, 2px);
 	transition: transform 0.3s ease;
 }

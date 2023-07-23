@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Разработка сайтов | Бриф на разработку"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-back.htm',{})
+			<main id="anchor51" class="page brif text">
+				<div class="brif__container">
+					<div class="brif__wrapper">
+						<h1 class="brif__title title"><div class="brif__title-inner">Бриф<br>на разработку</div></h1>
+						<p class="brif__text text margin-bottom-30">Заполнение брифа значительно уменьшает время на обсуждение проекта между заказчиком и разработчиком. Этот опросный лист поможет более четко понять цели и задачи интернет-проекта.</p>
+						<form class="form__body form-brif" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST" data-ajax>
+							<div class="form__contact-block">
+								<div class="form__placeholder-container">
+									<input class="form__input text-form for-clear" id="name" type="text" name="name"
+										data-validate data-error="Напишите имя" data-required placeholder=" " />
+									<label class="form__label text-form" for="name">Имя *</label>
+								</div>
+								<div class="form__placeholder-container">
+									<input class="form__input text-form for-clear" id="tel" type="text" name="tel" placeholder=" " />
+									<label class="form__label text-form" for="tel">Телефон или мессенджер</label>
+								</div>
+								<div class="form__placeholder-container">
+									<input class="form__input text-form for-clear" id="email" type="email" name="email"
+										placeholder=" " data-validate data-error="Напишите правильный E-mail"
+										data-required="email" />
+									<label class="form__label text-form" for="email">В каком городе вы предоставляете<br>услугу/товар?</label>
+								</div>
+								<div class="form__placeholder-container form__placeholder-container--last">
+									<textarea class="form__input text-form for-clear" name="message" id="message"
+										data-validate data-error="Опишите задачу для сайта" data-required
+										placeholder=" "></textarea>
+									<label class="form__label text-form" for="message">Опишите задачу для сайта *</label>
+								</div>
+								<div class="form__radio radio text-form">
+									<span class="radio__title">Нужен ли домен?</span>
+									<div class="radio__options options">
+										<div class="options__item">
+											<input id="yesDomain-1" checked type="radio" value="yes" name="domain" class="options__input">
+											<label for="yesDomain-1" class="options__label">да</label>
+										</div>
+										<div class="options__item">
+											<input id="noDomain-1" type="radio" value="no" name="domain" class="options__input">
+											<label for="noDomain-1" class="options__label">нет</label>
+										</div>
+									</div>
+								</div>
+								<div class="form__radio radio text-form">
+									<span class="radio__title">Нужен ли хостинг?</span>
+									<div class="radio__options options">
+										<div class="options__item">
+											<input id="yesHosting-1" checked type="radio" value="yes" name="hosting" class="options__input">
+											<label for="yesHosting-1" class="options__label">да</label>
+										</div>
+										<div class="options__item">
+											<input id="noHosting-1" type="radio" value="no" name="hosting" class="options__input">
+											<label for="noHosting-1" class="options__label">нет</label>
+										</div>
+									</div>
+								</div>
+								<div class="form__checkbox checkbox">
+									<input id="formAgreement-1" type="checkbox" name="agreement" class="checkbox__input" data-required />
+									<label for="formAgreement-1" class="checkbox__label"><span class="text-form">Заполняя форму, я соглашаюсь на <a class="checkbox__link link" href="https://webkrutko.by/privacy-page.html">обработку</a> персональных данных</span></label>
+								</div>
+								<input type="hidden" name="code" value="" id="code-popup"/>
+							</div>
+							<button class="form__button btn-popup text button-accent clear-button" type="submit" data-watch data-watch-once>Отправить</button>
+						</form>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
