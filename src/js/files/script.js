@@ -9,7 +9,7 @@ document.addEventListener( 'formSent', function( event ) {
 }, false );
 
 // Защита формы от ботов через пустое поле
-// Форма на странице
+// Форма в контактах
 if ( document.querySelector('.btn') ) {  // Проверяем наличие элемента на странице
 		let code = document.querySelector('#code'); // Получаем скрытый input
 		document.querySelector('.btn').onclick = function(){ // Клик по кнопке отправки
@@ -20,6 +20,14 @@ if ( document.querySelector('.btn') ) {  // Проверяем наличие э
   if ( document.querySelector('.btn-popup') ) {  // Проверяем наличие элемента на странице
 		let codePopup = document.querySelector('#code-popup'); // Получаем скрытый input
 		document.querySelector('.btn-popup').onclick = function(){ // Клик по кнопке отправки
+			codePopup.value = 'NOSPAM'; // Подставляем значение в value инпута	
+		};
+  }
+
+    // Форма в брифе
+	 if ( document.querySelector('.btn-brif') ) {  // Проверяем наличие элемента на странице
+		let codePopup = document.querySelector('#code-brif'); // Получаем скрытый input
+		document.querySelector('.btn-brif').onclick = function(){ // Клик по кнопке отправки
 			codePopup.value = 'NOSPAM'; // Подставляем значение в value инпута	
 		};
   }
