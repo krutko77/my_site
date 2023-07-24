@@ -32,28 +32,38 @@
 										placeholder=" " data-validate data-error="Напишите правильный E-mail"
 										data-required="email" />
 								</div>
-								
 									<div class="form-brif__radio radio text-form">
-										<span class="radio__title">Какой формат сайта нужен?</span>
-										<div class="radio__options  options">
+										<span class="radio__title">Какого типа нужен сайт?</span>
+										<div class="radio__options options-brif">
 											<div class="options__item">
-												<input id="yesLanding"  type="radio" value="1" name="landing" class="options__input">
-												<label for="yesLanding" class="options__label">Лендинг</label>
+												<input id="landing"  type="radio" value="landing" name="siteType" class="options__input">
+												<label for="landing" class="options__label">Лендинг</label>
 											</div>
 											<div class="options__item">
-												<input id="yesBusinessСard" type="radio" value="2" name="businessСard" class="options__input">
-												<label for="yesBusinessСard" class="options__label">Сайт-визитка</label>
+												<input id="businessСard" type="radio" value="businessСard" name="siteType" class="options__input">
+												<label for="businessСard" class="options__label">Сайт-визитка</label>
+											</div>
+											<div class="options__item">
+												<input id="multipageSite" type="radio" value="multipageSite" name="siteType" class="options__input">
+												<label for="multipageSite" class="options__label">Многостраничный сайт</label>
+											</div>
+											<div class="options__item">
+												<input id="blog" type="radio" value="blog" name="siteType" class="options__input">
+												<label for="blog" class="options__label">Тематический сайт-блог</label>
+											</div>
+											<div class="options__item">
+												<input id="other" type="radio" value="other" name="siteType" class="options__input">
+												<label for="other" class="options__label">Другое</label>
 											</div>
 										</div>
-									</div>
-								
+									</div>								
 								<div class="form-brif__item">
 									<label class="form-brif__label text-form" for="message">Опишите задачи для сайта *</label>
 									<textarea class="form-brif__input text-form for-clear" name="message" id="message"
 										data-validate data-error="Опишите задачи для сайта" data-required
 										placeholder=" "></textarea>
 								</div>
-								<div class="form-brif__radio radio text-form">
+								<div class="form-brif__radio radio text-form margin-bottom-10">
 									<span class="radio__title">Нужен ли домен?</span>
 									<div class="radio__options options">
 										<div class="options__item">
@@ -66,7 +76,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="form-brif__radio radio text-form">
+								<div class="form-brif__radio radio text-form margin-bottom-10">
 									<span class="radio__title">Нужен ли хостинг?</span>
 									<div class="radio__options options">
 										<div class="options__item">
