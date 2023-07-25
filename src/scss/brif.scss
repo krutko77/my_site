@@ -31,10 +31,16 @@
 	&__text {
 		text-align: center;
 	}
+
+	&__inner {
+		padding: 1em 1em 1.25em;	
+		border: 2px solid #FFCC0D;
+		border-radius: 5px;
+	}
 }
 
 .form-brif {
-	max-width: 600px;
+	max-width: 550px;
 
 	&__body {
 		position: relative;
@@ -75,8 +81,11 @@
 		outline: 0;
 		padding: 0 20px;
 		width: 100%;
-		transition: all 0.3s;
-		color: $linkOtherColor;
+		transition: all 0.3s ease;
+
+		@media (max-width: $pc) {
+			height: calc(35px + 10 * (100vw - 320px) / 940);
+		 }
   }
 
   &__input._form-error {
@@ -94,17 +103,13 @@
 	} 
   
   &__label {
-		padding: 5px 10px;
+		padding: 5px 0;
 	}
 
 	textarea.form-brif__input {
-	  min-height: 150px;
+	  min-height: 100px;
 	  resize: vertical;
-	  padding: 20px;
-
-	  @media (max-width: $pc) {
-		min-height: calc(140px + 60 * (100vw - 320px) / 940);
-	 }
+	  padding: 20px;	  
   }
 
   	&__input:focus {
