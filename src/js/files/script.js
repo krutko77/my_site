@@ -25,9 +25,9 @@ if ( document.querySelector('.btn') ) {  // Проверяем наличие э
   }
 
     // Форма в брифе
-	 if ( document.querySelector('.btn-brif') ) {  // Проверяем наличие элемента на странице
-		let codePopup = document.querySelector('#code-brif'); // Получаем скрытый input
-		document.querySelector('.btn-brif').onclick = function(){ // Клик по кнопке отправки
+	 if ( document.querySelector('.btn-brief') ) {  // Проверяем наличие элемента на странице
+		let codePopup = document.querySelector('#code-brief'); // Получаем скрытый input
+		document.querySelector('.btn-brief').onclick = function(){ // Клик по кнопке отправки
 			codePopup.value = 'NOSPAM'; // Подставляем значение в value инпута	
 		};
   }

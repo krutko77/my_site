@@ -1,5 +1,5 @@
 // policy
-.brif {
+.brief {
 	padding: 140px 0 100px;
       
    @media (max-width: $tablet) {
@@ -39,7 +39,7 @@
 	}
 }
 
-.form-brif {
+.form-brief {
 	max-width: 550px;
 
 	&__body {
@@ -106,7 +106,7 @@
 		padding: 5px 0;
 	}
 
-	textarea.form-brif__input {
+	textarea.form-brief__input {
 	  min-height: 100px;
 	  resize: vertical;
 	  padding: 20px;	  
@@ -130,11 +130,11 @@
 	margin-bottom: 5px;
 }
 
-.options-brif {
+.options-brief {
 	display: block;	
 }
 
-.options-brif .options__item {
+.options-brief .options__item {
 	margin-bottom: 5px;
 }
 

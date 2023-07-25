@@ -100,7 +100,7 @@ ol {
 	text-align: left;
 }
 
-button, .contact__button-brif {
+button, .contact__button-brief {
 	text-transform: uppercase;
 	padding: 10px 20px;
 	border-radius: 3px;
@@ -109,7 +109,7 @@ button, .contact__button-brif {
 	transition: color 0.3s ease, background-color 0.3s ease, transform 0.8s ease, opacity 0.8s ease;
 }
 
-button:not(.swiper-button-prev, .swiper-button-next):active, .contact__button-brif:active {
+button:not(.swiper-button-prev, .swiper-button-next):active, .contact__button-brief:active {
 	transform: translate(1px, 2px);
 	transition: transform 0.3s ease;
 }
@@ -128,7 +128,7 @@ button:not(.swiper-button-prev, .swiper-button-next):active, .contact__button-br
 	} 	
 }
 
-.action-block__btn, .form__button, .portfolio__button-more, .contact__button-brif {
+.action-block__btn, .form__button, .portfolio__button-more, .contact__button-brief {
 	opacity: 0;
 	transform: scale(0.5);
 }
