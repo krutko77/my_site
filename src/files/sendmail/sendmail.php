@@ -46,7 +46,6 @@
 		$siteType = "другое";
 	}
 
-
 	//Домен
 	$domain = "нужен";
 	if($_POST['domain'] == "no"){
@@ -111,7 +110,7 @@
 	}
 
 	if(trim(!empty($_POST['content']))){
-		$body.='<p><strong>Есть ли готовые фото/видео и статьи для сайта?:</strong> '.$_POST['content'].'</p>';      
+		$body.='<p><strong>Есть ли готовые фото/видео и статьи для сайта:</strong> '.$_POST['content'].'</p>';      
 	}
 
 	if(trim(!empty($_POST['term']))){
