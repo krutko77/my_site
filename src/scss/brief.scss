@@ -102,14 +102,10 @@
 		}
 	} 
   
-  &__label {
-		padding: 5px 0;
-	}
-
-	textarea.form-brief__input {
+ 	textarea.form-brief__input {
 	  min-height: 100px;
 	  resize: vertical;
-	  padding: 20px;	  
+	  padding: 10px 20px;	  
   }
 
   	&__input:focus {

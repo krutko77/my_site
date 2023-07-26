@@ -79,7 +79,7 @@
 	textarea.form__input {
 	  min-height: 150px;
 	  resize: vertical;
-	  padding: 20px;
+	  padding: 10px 20px;
 
 	  @media (max-width: $pc) {
 		min-height: calc(140px + 60 * (100vw - 320px) / 940);
