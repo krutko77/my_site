@@ -84,6 +84,14 @@
    }
 }
 
+.text-description {
+   @include font(16px, 400, 170%);
+
+   @media (max-width: $pc) {
+      font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
+   }
+}
+
 ol {
 	margin-left: 30px;
 }

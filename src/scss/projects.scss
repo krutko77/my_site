@@ -71,8 +71,8 @@
          align-items: center;
 			position: relative;
          max-width: 575px;
-         padding: 20px 20px 25px;
-			min-height: 700px;
+         padding: 20px 20px 35px;
+			min-height: 770px;
          background-color: $mainLightColor; 
 		
          @media (max-width: $pc) {
@@ -125,9 +125,18 @@
 			transition: all 0.8s ease;		
       }  
 		
-		&__description, &__list {
-			margin-bottom: 15px;
+		&__description {
+			margin-bottom: 25px;
 
+			@include font(15px, 400, 160%);
+
+         @media (max-width: $pc) {
+            font-size: calc(13px + 2*((100vw - 320px) / (1260 - 320)));
+         }
+		}
+
+		&__list {
+			margin-bottom: 20px;
 			@include font(18px, 400, 140%);
 
          @media (max-width: $pc) {
@@ -135,7 +144,7 @@
          }
 		}
 
-		&__description--last {
+		&__title-small {
 			margin-bottom: 5px;
 		}
 
