@@ -12,7 +12,15 @@
    }
 
 	&__link {		
-		margin-bottom: 10px;		
+		text-transform: uppercase;
+
+	@media (max-width: $pc) {
+		font-size: calc(12px + 2*((100vw - 320px) / (1260 - 320)));
+		}
+	}
+
+	&__link--top {
+		margin-bottom: 15px;
 	}
 
 	&__content {
