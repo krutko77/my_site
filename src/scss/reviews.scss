@@ -12,10 +12,7 @@
 	}
 
 
-	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	&__wrapper {		
 		border-bottom: 4px solid $mainColor; 
 
 		padding: 140px 0 110px;
@@ -30,10 +27,17 @@
 		}
 	}
 
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
    &__title {
       margin-bottom: 90px;
       position: relative;
-      align-self: center;
+		align-items: center;
+      // align-self: center;
 
       @media (max-width: $tablet) {
          margin-bottom: 70px;
@@ -44,7 +48,7 @@
       }
 
       &::after {
-         left: 17%;         
+         left: 17%;
       }
    }
 
@@ -55,8 +59,18 @@
 		@media (max-width: $pc) {
 			margin-bottom: calc(10px + 10*((100vw - 320px) / (1260 - 320)));
 		}
-	}
+	}	
 }
 
 
+.swiper {
+	padding: 0 40px;
 
+	&__image {
+		text-align: center;
+	}
+
+	&__image img {
+		max-width: 100%;
+	}
+}
