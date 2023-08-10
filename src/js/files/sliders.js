@@ -32,7 +32,7 @@ function initSliders() {
 		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -59,7 +59,8 @@ function initSliders() {
 			
 			pagination: {
 				el: '.swiper-pagination',
-				clickable: true,
+				// clickable: true,
+				type: 'fraction',
 			},
 			
 
@@ -86,16 +87,10 @@ function initSliders() {
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 45,
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 45,
 				},
-				// 1268: {
-				// 	slidesPerView: 3,
-				// 	spaceBetween: 45,
-				// },
 			},
 			
 			// Події
