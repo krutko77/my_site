@@ -1,5 +1,5 @@
 //reviews
-.reviews {	
+.reviews {
    margin-bottom: 40px;
 
    @media (max-width: $tablet) {
@@ -11,7 +11,7 @@
 	}
 
 
-	&__wrapper {		
+	&__wrapper {
 		border-bottom: 4px solid $mainColor; 
 
 		padding: 140px 0 110px;
@@ -51,21 +51,16 @@
    }
 
   	&__text-block {
-		text-align: center;
-		margin-bottom: 40px;
-
-		@media (max-width: $pc) {
-			margin-bottom: calc(20px + 30*((100vw - 320px) / (1260 - 320)));
-		}
+		text-align: center;		
 	}	
 }
 
 // Дополнительно прописываем стили
 .swiper {
-	padding: 0 40px 50px;
+	padding: 50px 40px 50px;
 
 	@media (max-width: $mobileSmall) {
-		padding: 0 0 35px;
+		padding: 35px 0 35px;
 	}
 
 	&__image {
