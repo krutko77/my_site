@@ -3,39 +3,39 @@
    margin-bottom: 40px;
 
    @media (max-width: $tablet) {
-		margin-bottom: 30px;
-	}
+      margin-bottom: 30px;
+   }
 
-	@media (max-width: $mobileSmall) {
-		margin-bottom: 20px; 
-	}
+   @media (max-width: $mobileSmall) {
+      margin-bottom: 20px;
+   }
 
 
-	&__wrapper {
-		border-bottom: 4px solid $mainColor; 
+   &__wrapper {
+      border-bottom: 4px solid $mainColor;
 
-		padding: 140px 0 110px;
-		
-		@media (max-width: $tablet) {
-			border-width: 3px;
-			padding: 100px 0 70px;
-		}
+      padding: 140px 0 110px;
 
-		@media (max-width: $mobileSmall) {
-			padding: 90px 0 40px;
-		}
-	}
+      @media (max-width: $tablet) {
+         border-width: 3px;
+         padding: 100px 0 70px;
+      }
 
-	&__inner {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+      @media (max-width: $mobileSmall) {
+         padding: 90px 0 40px;
+      }
+   }
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
 
    &__title {
       margin-bottom: 90px;
       position: relative;
-		align-items: center;      
+      align-items: center;
 
       @media (max-width: $tablet) {
          margin-bottom: 70px;
@@ -50,199 +50,229 @@
       }
    }
 
-  	&__text-block {
-		text-align: center;		
-	}	
+   &__text-block {
+      text-align: center;
+   }
 }
 
 // Дополнительно прописываем стили
 .swiper {
-	padding: 50px 40px 50px;
+   padding: 50px 40px 50px;
 
-	@media (max-width: $mobileSmall) {
-		padding: 35px 0 35px;
-	}
+   @media (max-width: $mobileSmall) {
+      padding: 35px 0 35px;
+   }
 
-	&__image {
-		text-align: center;
-	}
+   &__image {
+      text-align: center;
+   }
 
-	&__image img {
-		max-width: 100%;
-	}
+   &__image img {
+      max-width: 100%;
+   }
 }
 
 
 // Меняем установленные стили стрелок
 :root {
-	--swiper-navigation-size: 44px;
+   --swiper-navigation-size: 44px;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
-	position: absolute;
-	top: 50%;
-	width: calc(var(--swiper-navigation-size) / 44 * 27);
-	height: var(--swiper-navigation-size);
-	margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-	z-index: 10;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: $linkOtherColor;
+   position: absolute;
+   top: 50%;
+   width: calc(var(--swiper-navigation-size) / 44 * 27);
+   height: var(--swiper-navigation-size);
+   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+   z-index: 10;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: $linkOtherColor;
 
-	@media (max-width: $mobileSmall) {
+   @media (max-width: $mobileSmall) {
       display: none;
-	}
+   }
 }
+
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-	opacity: 0.35;
-	cursor: auto;
-	pointer-events: none;
+   opacity: 0.35;
+   cursor: auto;
+   pointer-events: none;
 }
+
 .swiper-button-next:after,
 .swiper-button-prev:after {
-	font-family: swiper-icons;
-	font-size: var(--swiper-navigation-size);
-	text-transform: none !important;
-	letter-spacing: 0;
-	text-transform: none;
-	font-variant: initial;
-	line-height: 1;
+   font-family: swiper-icons;
+   font-size: var(--swiper-navigation-size);
+   text-transform: none !important;
+   letter-spacing: 0;
+   text-transform: none;
+   font-variant: initial;
+   line-height: 1;
 }
+
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-	left: -8px;
-	right: auto;
+   left: -8px;
+   right: auto;
 }
+
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-	content: "prev";
+   content: "prev";
 }
+
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-	right: -8px;
-	left: auto;
+   right: -8px;
+   left: auto;
 }
+
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-	content: "next";
+   content: "next";
 }
 
 
 // Меняем стили пагинации
 .swiper-pagination {
-	position: absolute;
-	text-align: center;
-	transition: 0.3s opacity;
-	transform: translate3d(0, 0, 0);
-	z-index: 10;
+   position: absolute;
+   text-align: center;
+   transition: 0.3s opacity;
+   transform: translate3d(0, 0, 0);
+   z-index: 10;
 }
+
 .swiper-pagination.swiper-pagination-hidden {
-	opacity: 0;
+   opacity: 0;
 }
-.swiper-horizontal > .swiper-pagination-bullets,
+
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	font-size: 22px;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   font-size: 22px;
 
-	@media (max-width: $pc) {
-			font-size: calc(20px + 2*((100vw - 320px) / (1260 - 320)));
-		}
+   @media (max-width: $pc) {
+      font-size: calc(20px + 2*((100vw - 320px) / (1260 - 320)));
+   }
 }
+
 .swiper-pagination-bullets-dynamic {
-	overflow: hidden;
-	font-size: 0;
+   overflow: hidden;
+   font-size: 0;
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-	transform: scale(0.33);
-	position: relative;
+   transform: scale(0.33);
+   position: relative;
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
-	transform: scale(1);
+   transform: scale(1);
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-	transform: scale(1);
+   transform: scale(1);
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
-	transform: scale(0.66);
+   transform: scale(0.66);
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
-	transform: scale(0.33);
+   transform: scale(0.33);
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
-	transform: scale(0.66);
+   transform: scale(0.66);
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
-	transform: scale(0.33);
+   transform: scale(0.33);
 }
+
 .swiper-pagination-bullet {
-	width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-	height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
-	display: inline-block;
-	border-radius: 50%;
-	background: var(--swiper-pagination-bullet-inactive-color, #000);
-	opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+   width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+   display: inline-block;
+   border-radius: 50%;
+   background: var(--swiper-pagination-bullet-inactive-color, #000);
+   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
 }
+
 button.swiper-pagination-bullet {
-	border: none;
-	margin: 0;
-	padding: 0;
-	box-shadow: none;
-	-webkit-appearance: none;
-	appearance: none;
+   border: none;
+   margin: 0;
+   padding: 0;
+   box-shadow: none;
+   -webkit-appearance: none;
+   appearance: none;
 }
+
 .swiper-pagination-clickable .swiper-pagination-bullet {
-	cursor: pointer;
+   cursor: pointer;
 }
+
 .swiper-pagination-bullet:only-child {
-	display: none !important;
+   display: none !important;
 }
+
 .swiper-pagination-bullet-active {
-	opacity: var(--swiper-pagination-bullet-opacity, 1);
-	background: var(--swiper-pagination-color, var(--swiper-theme-color));
+   opacity: var(--swiper-pagination-bullet-opacity, 1);
+   background: var(--swiper-pagination-color, var(--swiper-theme-color));
 }
+
 .swiper-pagination-vertical.swiper-pagination-bullets,
-.swiper-vertical > .swiper-pagination-bullets {
-	right: 10px;
-	top: 50%;
-	transform: translate3d(0px, -50%, 0);
+.swiper-vertical>.swiper-pagination-bullets {
+   right: 10px;
+   top: 50%;
+   transform: translate3d(0px, -50%, 0);
 }
+
 .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
-	margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
-	display: block;
+.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+   margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
+   display: block;
 }
+
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-.swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-	top: 50%;
-	transform: translateY(-50%);
-	width: 8px;
+.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+   top: 50%;
+   transform: translateY(-50%);
+   width: 8px;
 }
+
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
-.swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-	display: inline-block;
-	transition: 0.2s transform, 0.2s top;
+.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+   display: inline-block;
+   transition: 0.2s transform, 0.2s top;
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
 }
-.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-	left: 50%;
-	transform: translateX(-50%);
-	white-space: nowrap;
+   left: 50%;
+   transform: translateX(-50%);
+   white-space: nowrap;
 }
-.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-	transition: 0.2s transform, 0.2s left;
+   transition: 0.2s transform, 0.2s left;
 }
-.swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-	transition: 0.2s transform, 0.2s right;
+
+.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+   transition: 0.2s transform, 0.2s right;
 }

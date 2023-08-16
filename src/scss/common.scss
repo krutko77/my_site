@@ -108,55 +108,56 @@ ol {
 	text-align: left;
 }
 
-button, .contact__button-brief {
+button:not(.swiper-button-prev, .swiper-button-next), .contact__button-brief {
 	text-transform: uppercase;
 	padding: 10px 20px;
 	border-radius: 3px;
 	font-weight: 500;
-	letter-spacing: 2px;
-	transition: color 0.3s ease, background-color 0.3s ease, transform 0.8s ease, opacity 0.8s ease;
-}
-
-button:not(.swiper-button-prev, .swiper-button-next):active, .contact__button-brief:active {
-	transform: translate(1px, 2px);
-	transition: transform 0.3s ease;
+	letter-spacing: 2px;	
 }
 
 .button-accent {
 	background-color: $accentColor;
 	font-weight: 700;
-	border: 2px solid transparent;	
+	border: 2px solid transparent;
+	opacity: 0;
+	transform: scale(0.5);
+	transition: color .3s ease, 
+					background-color .3s ease, 
+					border-color .3s ease,
+					transform .8s ease, 
+					opacity .8s ease;
 }
 
 @media (any-hover: hover) {
 	.button-accent:hover {
 		color: $accentColor;
 		background-color: transparent;
-		border: 2px solid $accentColor; 
-	} 	
+		border-color: $accentColor; 
+	} 
 }
 
-.action-block__btn, .form__button, .portfolio__button-more, .contact__button-brief {
-	opacity: 0;
-	transform: scale(0.5);
-}
-
-._watcher-view {
+.button-accent._watcher-view {
 	opacity: 1;
 	transform: scale(1);	
 }
 
+.button-accent._watcher-view:active, .portfolio__button-more:active {
+	transform: translate(1px, 2px);
+	transition: transform 0.3s ease;
+}
+
 .link {
-	transition: color 0.3s ease;
 	position: relative;
 	display: inline-block;
+	transition: color 0.3s ease;
 	&::before {
          content: '';
          position: absolute;
          top: 95%;
          width: 100%;
          height: 2px;
-         background: $accentColor;         
+         background: $accentColor;
       }
 
 		@media (any-hover: hover) {

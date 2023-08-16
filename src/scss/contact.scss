@@ -141,9 +141,14 @@
 }  
 
 .contact__form .form__button {
-	transition: all 0.8s ease 0.25s;
+	transition: color .3s ease, 
+					background-color .3s ease, 
+					border-color .3s ease,
+					transform 0.8s ease 0.25s,
+					opacity 0.8s ease 0.25s;
 
 	@media (max-width: $tablet) {
-		transition: all 0.8s ease;
+		transition: transform 0.8s ease,
+						opacity 0.8s ease;
 	 }
 }
