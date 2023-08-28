@@ -44,4 +44,14 @@
 			left: 31%;
       }
 	}
+
+	&__content {
+		border: solid 1px $linkOtherColor;
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+	}
 }
+

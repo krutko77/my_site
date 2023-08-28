@@ -94,6 +94,10 @@
 
 ol {
 	margin-left: 30px;
+
+	@media (max-width: $pc) {
+		margin-left: calc(18px + 12*((100vw - 478px) / (1260 - 478)));
+	} 
 }
 
 .ul-style {
