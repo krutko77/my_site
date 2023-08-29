@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Ошибка!",
+	"description": "Ошибка 404"
+	})
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9TL3FCC"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page error-404">
+				<div class="error-404__content">
+					<h1 class="error-404__title title">404</h1>
+					<p class="error-404__text center-tex text">Извините, такой страницы у нас нет. Мы поможем найти нужную информацию.</p>
+					<a data-watch data-watch-once class="error-404__link text" href="/">Перейти на главную</a>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
