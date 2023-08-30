@@ -1,1 +1,18 @@
 // header-back
+
+.header__button-back {
+	background-color: $accentColor;
+	font-weight: 700;
+	border: 2px solid transparent;
+	transition: color 0.3s ease, 
+					background-color 0.3s ease, 
+					border-color 0.3s ease;
+}
+
+@media (any-hover: hover) {
+	.header__button-back:hover {
+		color: $accentColor;
+		background-color: transparent;
+		border-color: $accentColor; 
+	} 
+}
