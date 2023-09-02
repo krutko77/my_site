@@ -4,29 +4,29 @@
          <button class="popup__close" data-close type="button"><span class="popup__close-icon text"><i class="_icon-circle-xmark"></i></span></button>
 			<h3 class="popup__title subtitle">Рассчитать стоимость</h3>
 			<div class="popup__form form">
-				<form class="form__body" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST" data-ajax>
+				<form class="form__body" id="form-popup" name="myForm" action="files/sendmail/sendmail.php" method="POST" data-ajax>
 					<div class="form__contact-block">
 						<div class="form__placeholder-container">
-							<input class="form__input text-form for-clear" id="name" type="text" name="name"
+							<input class="form__input text-form for-clear" id="name-popup" type="text" name="name"
 								data-validate data-error="Напишите имя" data-required placeholder=" " />
-							<label class="form__label text-form" for="name">Имя *</label>
+							<label class="form__label text-form" for="name-popup">Имя *</label>
 						</div>
 						<div class="form__placeholder-container">
-							<input class="form__input text-form for-clear" id="tel" type="text" name="tel"
+							<input class="form__input text-form for-clear" id="tel-popup" type="text" name="tel"
 								 placeholder=" " />
-							<label class="form__label text-form" for="tel">Телефон или мессенджер</label>
+							<label class="form__label text-form" for="tel-popup">Телефон или мессенджер</label>
 						</div>
 						<div class="form__placeholder-container">
-							<input class="form__input text-form for-clear" id="email" type="email" name="email"
+							<input class="form__input text-form for-clear" id="email-popup" type="email" name="email"
 								placeholder=" " data-validate data-error="Напишите правильный E-mail"
 								data-required="email" />
-							<label class="form__label text-form" for="email">E-mail *</label>
+							<label class="form__label text-form" for="email-popup">E-mail *</label>
 						</div>
 						<div class="form__placeholder-container form__placeholder-container--last">
-							<textarea class="form__input text-form for-clear" name="message" id="message"
+							<textarea class="form__input text-form for-clear" name="message" id="message-popup"
 								data-validate data-error="Опишите задачи для сайта" data-required
 								placeholder=" "></textarea>
-							<label class="form__label text-form" for="message">Опишите задачи для сайта *</label>
+							<label class="form__label text-form" for="message-popup">Опишите задачи для сайта *</label>
 						</div>
 						<div class="form__radio radio text-form">
 							<span class="radio__title">Нужен ли домен?</span>
@@ -55,10 +55,10 @@
 							</div>
 						</div>
 						<div class="form__checkbox checkbox">
-							<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input" data-required />
+							<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input" data-required>
 							<label for="formAgreement" class="checkbox__label"><span class="text-form">Заполняя форму, я соглашаюсь на <a class="checkbox__link link" href="http://webkrutko.by/politika-obrabotki.html#anchor52">обработку</a> персональных данных</span></label>
 						</div>
-						<input type="hidden" name="code" value="" id="code-popup"/>
+						<input type="hidden" name="code" value="" id="code-popup">
 					</div>
 					<button class="form__button btn-popup text button-accent clear-button" type="submit" data-watch data-watch-once>Отправить</button>
 				</form>

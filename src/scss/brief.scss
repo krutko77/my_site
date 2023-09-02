@@ -16,12 +16,8 @@
 		align-items: center;
 	}
 
-   &__title-inner {
-		text-align: center;
-	}
-
    &__title {
-		align-self: center;
+		text-align: center;
 
 		&::after {
 			left: 31%;
