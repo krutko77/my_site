@@ -63,7 +63,7 @@
 
 	&__img {
 		width: 100%;
-		object-fit: cover;
+		height: auto;
 	}
 
 	&__list-wrapper {
@@ -154,7 +154,7 @@
 
 	&__img {
 		width: 100%;
-		object-fit: cover;
+		aspect-ratio: 1/1;
 	}
 
    &__subtitle {

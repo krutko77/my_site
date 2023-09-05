@@ -68,7 +68,8 @@
    }
 
    &__image img {
-      max-width: 100%;
+		width: 100%;
+		aspect-ratio: 175/344;
    }
 }
 

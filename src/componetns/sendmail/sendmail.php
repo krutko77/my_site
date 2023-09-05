@@ -22,12 +22,30 @@
 	
 	
 	//От кого письмо
-	$mail->setFrom('postmaster@webkrutko.by', 'Cайт по разработки сайтов'); // Указать нужный E-mail
+	$mail->setFrom('postmaster@webkrutko.by', 'Cайт по разработке.'); // Указать нужный E-mail
 	//Кому отправить
 	$mail->addAddress('webkrutko@mail.ru'); // Указать нужный E-mail
 	//Тема письма
-	$mail->Subject = 'Привет! Это запрос с сайта по разработки сайтов';
+	$mail->Subject = 'Привет! Это запрос с сайта по разработке.';
+
+	//Типы сайтов
+	$siteType = "лендинг";
+	if($_POST['siteType'] == "businessСard"){
+		$siteType = "сайт-визитка";
+	}
+
+	if($_POST['siteType'] == "multiPageSite"){
+		$siteType = "многостраничный сайт";
+	}
 	
+	if($_POST['siteType'] == "blog"){
+		$siteType = "тематический сайт-блог";
+	}
+
+	if($_POST['siteType'] == "other"){
+		$siteType = "другое";
+	}
+
 	//Домен
 	$domain = "нужен";
 	if($_POST['domain'] == "no"){
@@ -47,14 +65,62 @@
 		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';      
 	}
 
+	if(trim(!empty($_POST['nameCompany']))){
+		$body.='<p><strong>Название компании:</strong> '.$_POST['nameCompany'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['tel']))){
+		$body.='<p><strong>Телефон или мессенджер:</strong> '.$_POST['tel'].'</p>';      
+	}
+
    if(trim(!empty($_POST['email']))){
 		$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';      
 	}
 
+	if(trim(!empty($_POST['siteType']))){
+		$body.='<p><strong>Тип сайта:</strong> '.$siteType.'</p>';      
+	}
+
+	if(trim(!empty($_POST['theme']))){
+		$body.='<p><strong>Тематика сайта:</strong> '.$_POST['theme'].'</p>';      
+	}
+
 	if(trim(!empty($_POST['message']))){
-		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';      
+		$body.='<p><strong>Задачи сайта:</strong> '.$_POST['message'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['region']))){
+		$body.='<p><strong>Регион:</strong> '.$_POST['region'].'</p>';      
 	}	
-	
+
+	if(trim(!empty($_POST['site']))){
+		$body.='<p><strong>Есть ли сайт:</strong> '.$_POST['site'].'</p>';      
+	}
+		
+	if(trim(!empty($_POST['logo']))){
+		$body.='<p><strong>Фирменный шрифт, цвета, логотип:</strong> '.$_POST['logo'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['design']))){
+		$body.='<p><strong>Пожелания по дизайну сайта:</strong> '.$_POST['design'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['links']))){
+		$body.='<p><strong>Ссылки на сайты, которые нравятся:</strong> '.$_POST['links'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['content']))){
+		$body.='<p><strong>Есть ли готовые фото/видео и статьи для сайта:</strong> '.$_POST['content'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['term']))){
+		$body.='<p><strong>Желаемый срок разработки сайта:</strong> '.$_POST['term'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['info']))){
+		$body.='<p><strong>Полезная информация:</strong> '.$_POST['info'].'</p>';      
+	}
+
 	if(trim(!empty($_POST['domain']))){
 		$body.='<p><strong>Домен:</strong> '.$domain.'</p>';      
 	}
@@ -63,19 +129,10 @@
 		$body.='<p><strong>Хостинг:</strong> '.$hosting.'</p>';      
 	}	
 	
-	/*
-	//Прикрепить файл
-	if (!empty($_FILES['image']['tmp_name'])) {
-		//путь загрузки файла
-		$filePath = __DIR__ . "/files/sendmail/attachments/" . $_FILES['image']['name']; 
-		//грузим файл
-		if (copy($_FILES['image']['tmp_name'], $filePath)){
-			$fileAttach = $filePath;
-			$body.='<p><strong>Фото в приложении</strong>';
-			$mail->addAttachment($fileAttach);
+	// Проверка на бота
+	if ($_POST['code'] != 'NOSPAM') {
+		exit;
 		}
-	}
-	*/
 
 	$mail->Body = $body;
 
