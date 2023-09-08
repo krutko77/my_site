@@ -17,7 +17,7 @@
       align-items: center;     
       border-bottom: 4px solid $mainColor; 
       
-      @media (max-width: 1024px) and (min-device-aspect-ratio: 3/2), (max-width: 380px) {
+      @media (max-width: 1024px) and (min-aspect-ratio: 3/2), (max-width: 380px) {
          padding: 40px 0 50px;
         }
       

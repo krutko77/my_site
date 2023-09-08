@@ -1,7 +1,7 @@
 <div class="popup" id="popup" aria-hidden="true" >
 	<div class="popup__wrapper">
 		<div class="popup__content">		
-         <button class="popup__close" data-close type="button"><span class="popup__close-icon text"><i class="_icon-circle-xmark"></i></span></button>
+         <button class="popup__close" aria-label="Закрыть" data-close type="button"><span class="popup__close-icon text"><i class="_icon-circle-xmark"></i></span></button>
 			<h3 class="popup__title subtitle">Рассчитать стоимость</h3>
 			<div class="popup__form form">
 				<form class="form__body" id="form-popup" name="myForm" action="files/sendmail/sendmail.php" method="POST" data-ajax>
@@ -60,7 +60,7 @@
 						</div>
 						<input type="hidden" name="code" value="" id="code-popup">
 					</div>
-					<button class="form__button btn-popup text button-accent clear-button" type="submit" data-watch data-watch-once>Отправить</button>
+					<button class="form__button btn-popup text button-accent clear-button" type="submit" aria-label="Отправить" data-watch data-watch-once>Отправить</button>
 				</form>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 <div class="popup" id="popup-2" aria-hidden="true" >
 	<div class="popup__wrapper">
 		<div class="popup__content-2">		
-         <button class="popup__close" data-close type="button"><span class="popup__close-icon text"><i class="_icon-circle-xmark"></i></span></button>
+         <button class="popup__close" data-close type="button"><span class="popup__close-icon text" aria-label="Закрыть"><i class="_icon-circle-xmark"></i></span></button>
 			<h3 class="popup__title subtitle">Классический редактор WordPress</h3>
 			<div class="popup__img-wrapper">
 				<img class="services__img" src="@img/admin-WP-1.jpg" width="998" height="559" alt="Админпанель">
