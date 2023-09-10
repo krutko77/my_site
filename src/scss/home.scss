@@ -3,15 +3,18 @@
    min-height: 100vh;
    display: flex;
    padding: 85px 0 20px;
+
+	@media (max-width: $mobileSmall) {
+		padding: 75px 0 20px;
+	}
 	     
-   &__container {
-      display:flex;
-      flex: 1 1 auto;
-   }
+   // &__container {
+   //    display:flex;
+   //    flex: 1 1 auto;
+   // }
 
    &__wrapper {
       height: 100%;
-      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;     
@@ -23,13 +26,17 @@
       
       @media (max-width: $tablet) {
          border-width: 3px;
-      }      
+      } 
+		
+		@media (max-width: $mobileSmall) {
+         align-items: start;
+      } 
    }
 
    &__content {
       display: flex;
-		align-items: center;
-      width: 100%;
+		// align-items: center;
+      // width: 100%;
 
       @media (max-width: $tablet) {
          flex-direction: column;			
@@ -63,30 +70,22 @@
       }
    }
 
-	&__descripton-wrapper, &__text-description-2  {
+	&__list {
 		opacity: 0;
 		transform: translateY(50px);
+		margin-bottom: 20px;
+
+		@media (max-width: $pc) {
+         margin-bottom: calc(10px + 10*((100vw - 320px) / (1260 - 320)));
+      }
 	}
 
-   &__text-description, &__text-description-2 {
-      margin-bottom: 15px;		
-      
-      @media (max-width: $mobile) {
-         max-width: 420px;
-      }
-   }
-
-	&__text-name {
+ 	&__text-name {
 		opacity: 0;
-		transform: translateY(30px);
-		
-		@media (max-width: $mobile) {
-         margin-bottom: 20px;
-      }
+		transform: translateY(30px);		
 	}
 
-	&__title._watcher-view, &__descripton-wrapper._watcher-view, &__text-description-2._watcher-view,
-	&__text-name._watcher-view  {
+	&__title._watcher-view, &__list._watcher-view, &__text-name._watcher-view  {
 		opacity: 1;
 		transform: translateY(0);
 	}
@@ -95,17 +94,17 @@
 		transition: transform 1.3s ease 0s, opacity 1.3s ease 0s;
 	}
 
-	&__descripton-wrapper._watcher-view {
+	&__list._watcher-view {
 		transition: transform 1.2s ease 0.4s, opacity 1.2s ease 0.4s;
 	}
 
-	&__text-description-2._watcher-view {
+	&__text-name._watcher-view {
 		transition: transform 1.1s ease 0.8s, opacity 1.1s ease 0.8s;
 	}
 
-	&__text-name._watcher-view {
-		transition: transform 1s ease 1.2s, opacity 1s ease 1.2s;
-	}
+	// &__text-name._watcher-view {
+	// 	transition: transform 1s ease 1.2s, opacity 1s ease 1.2s;
+	// }
 
    &__img-box {
       flex: 0 1 50%;
@@ -144,8 +143,12 @@
          border-width: 7px;
       }
 
-      @media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
          border-width: 6px;
+      }
+
+      @media (max-width: $mobileSmall) {
+         border-width: 4px;
       }
    }
 
@@ -157,11 +160,11 @@
       }
 
       @media (max-width: $mobile) {
-         max-width: 280px;
+         max-width: 300px;
       }
 
 		@media (max-width: $mobileSmall) {
-         max-width: 230px;
+         max-width: 250px;
       }
    }
 
