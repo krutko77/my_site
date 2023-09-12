@@ -60,9 +60,13 @@
 	border-radius: 33px;
 
 	@media (max-width: $mobile) {
-		bottom: 15px;
+		right: 25px;
+		bottom: 40px;
+	}
+
+	@media (max-width: $mobileSmall) {
 		right: 10px;
-		bottom: 51px;
+		bottom: 30px;
 	}
 }
 
