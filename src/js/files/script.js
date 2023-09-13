@@ -41,7 +41,7 @@ if ( document.querySelector('.button-back') ) {  // Проверяем нали�
 
 // Изменение значения data атрибута у секции projects для мобильных
 // получение элемента
-var section = document.querySelector(".projects");
+let section = document.querySelector(".projects");
 //Проверка наличия атрибута
 if (section.hasAttribute("data-watch-threshold")) {
 	if (window.innerWidth <= 820) {
@@ -50,3 +50,13 @@ if (section.hasAttribute("data-watch-threshold")) {
 	}	
 }
 
+// Изменение значения data атрибута у секции contact для мобильных
+// получение элемента
+let sectionCont = document.querySelector(".contact");
+//Проверка наличия атрибута
+if (sectionCont.hasAttribute("data-watch-threshold")) {
+	if (window.innerWidth <= 820) {
+		// изменение значения атрибута
+		section.setAttribute("data-watch-threshold", "0.1");
+	}	
+}
