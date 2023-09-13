@@ -39,7 +39,14 @@ if ( document.querySelector('.button-back') ) {  // Проверяем нали�
 	};
 }
 
-
-
-
+// Изменение значения data атрибута у секции projects для мобильных
+// получение элемента
+var section = document.querySelector(".projects");
+//Проверка наличия атрибута
+if (section.hasAttribute("data-watch-threshold")) {
+	if (window.innerWidth <= 820) {
+		// изменение значения атрибута
+		section.setAttribute("data-watch-threshold", "0.1");
+	}	
+}
 
