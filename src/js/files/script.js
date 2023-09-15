@@ -39,28 +39,11 @@ if ( document.querySelector('.button-back') ) {  // Проверяем нали�
 	};
 }
 
-// Изменение значения data атрибута у секции projects для мобильных
-// получение элемента
-// let section = document.querySelector(".projects");
-// //Проверка наличия атрибута
-// if (section.hasAttribute("data-watch-threshold")) {
-// 	if (window.innerWidth <= 820) {
-// 		// изменение значения атрибута
-// 		section.setAttribute("data-watch-threshold", "0.1");
-// 		location.reload;
-// 	}	
-// }
 
-// Изменение значения data атрибута у секции contact для мобильных
-// получение элемента
-// let sectionCont = document.querySelector(".contact");
-// //Проверка наличия атрибута
-// if (sectionCont.hasAttribute("data-watch-threshold")) {
-// 	if (window.innerWidth <= 820) {
-// 		// изменение значения атрибута
-// 		sectionCont.setAttribute("data-watch-threshold", "0.1");
-//    }
-// }
+
+
+
+
 
 
 

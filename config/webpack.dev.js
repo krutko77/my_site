@@ -10,7 +10,7 @@ const builFolder = "dist";
 const rootFolder = path.basename(path.resolve());
 
 let pugPages = fs.readdirSync(srcFolder).filter(fileName => fileName.endsWith('.pug'))
-let htmlPages = []
+let htmlPages = [];
 
 if (!pugPages.length) {
 	htmlPages = [new FileIncludeWebpackPlugin({
@@ -51,9 +51,9 @@ const config = {
 		static: paths.build,
 		open: true,
 		compress: true,
-		port: 'auto',
+		port: 8080,
 		hot: true,
-		host: 'local-ip', // localhost
+		host: 'localhost', // localhost
 
 		// Розкоментувати на слабкому ПК
 		// (в режимі розробника папка результатом (dist) буде створюватися на диску)
@@ -120,24 +120,6 @@ const config = {
 						}
 					}
 				]
-			}, {
-				test: /\.(jsx)$/,
-				exclude: /node_modules/,
-				use: [
-					{
-						loader: 'string-replace-loader',
-						options: {
-							search: '@img',
-							replace: 'img',
-							flags: 'g'
-						}
-					}, {
-						loader: "babel-loader",
-						options: {
-							presets: ["@babel/preset-react"]
-						}
-					}
-				],
 			}
 		],
 	},
