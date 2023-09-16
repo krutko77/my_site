@@ -3,19 +3,6 @@
    background: url("../img/bg-about-40.jpg") center / cover no-repeat;
 	color: $mainLightColor;   
    
-
-	&__inner {
-		// padding: 90px 0 40px;
-
-		// @media (max-width: $tablet) {
-		// 	padding: 60px 0 30px;
-		// }
-	
-		// @media (max-width: $mobileSmall) {
-		// 	padding: 0;
-		// }
-	}
-
    &__wrapper {
       display: flex;
       flex-direction: column;
@@ -25,17 +12,13 @@
 		padding: 90px 0 40px;
 
 		@media (max-width: $tablet) {
-			padding: 60px 0 30px;
+			padding: 90px 0 30px;
 			border-width: 3px;
 		}
 	
 		@media (max-width: $mobileSmall) {
 			padding: 0;
 		}
-      
-      // @media (max-width: $tablet) {
-      //    border-width: 3px;
-      // }
    }
 
    &__title {

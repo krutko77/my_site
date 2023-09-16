@@ -4,20 +4,12 @@
    padding: 140px 0 120px;
       
    @media (max-width: $tablet) {
-      padding: 110px 0 100px;
+      padding: 130px 0 100px;
    }
 
    @media (max-width: $mobileSmall) {
-      padding: 90px 0 50px;
+      padding: 100px 0 50px;
    }
-
-	// &__inner {
-	// 	position: absolute;
-	// 	padding-bottom: 80%;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// }
 
    &__wrapper {
       display: flex;
@@ -46,6 +38,7 @@
 	}
 
 	&__button-more {
+		text-align: center;
 		margin-top: 50px;
 		background-color: $mainLightColor;
 		border: 2px solid $mainLightColor;
@@ -53,12 +46,11 @@
 		background-color 0.3s ease,
 		border-color 0.3s ease;
 		
-		@media (max-width: $mobileSmall) {
-			margin: 10px 0 0;
+		@media (max-width: $pc) {
+			margin-top: calc(30px + 20*((100vw - 320px) / (1260 - 320)));
 		}
 	}
 }
-
 
 .portfolio {
 	display: grid;
@@ -120,6 +112,7 @@
 	}
 
 	&__img-wrapper {
+		overflow: hidden;
 		margin-bottom: 20px;
 		transition: transform 2.3s ease;
 
@@ -188,16 +181,17 @@
 }
 
 @media (any-hover: hover) {
-	.portfolio__img-box:hover .portfolio__label {
+	.projects__button-more:hover {
+		background-color: transparent;
+		border-color: $linkOtherColor;
+		color: $linkOtherColor;
+	}
+
+	.portfolio__item:hover .portfolio__label {
 		color: $accentColor;
 	}
 	
-	.portfolio__button-more:hover {
-		background-color: transparent;
-		border-color: $linkOtherColor;
-	}
-
-	.portfolio__img-box:hover img {
+	.portfolio__item:hover .portfolio__img {
 		transform: scale(1.1);
 	}
 }
