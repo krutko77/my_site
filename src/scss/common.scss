@@ -112,7 +112,8 @@ ol {
 	text-align: left;
 }
 
-button:not(.swiper-button-prev, .swiper-button-next), .contact__button-brief {
+button:not(.swiper-button-prev, .swiper-button-next), .button, 
+.contact__button-brief {
 	text-transform: uppercase;
 	padding: 10px 20px;
 	border-radius: 3px;

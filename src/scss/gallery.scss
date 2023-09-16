@@ -20,18 +20,12 @@
 		text-align: center;
 
 		&::after {
-			left: 31%;
+			left: 20%;
       }
 	}
 
 	&__text {
 		text-align: center;
-	}
-
-	&__inner {
-		padding: 1em 1em 1.25em;	
-		border: 2px solid #FFCC0D;
-		border-radius: 5px;
-	}
+	}	
 }
 
