@@ -40,6 +40,7 @@
 	&__button-more {
 		text-align: center;
 		margin-top: 50px;
+		color: $linkOtherColor;
 		background-color: $mainLightColor;
 		border: 2px solid $mainLightColor;
 		transition: color 0.3s ease, 
@@ -184,7 +185,6 @@
 	.projects__button-more:hover {
 		background-color: transparent;
 		border-color: $linkOtherColor;
-		color: $linkOtherColor;
 	}
 
 	.portfolio__item:hover .portfolio__label {
