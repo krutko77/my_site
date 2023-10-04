@@ -90,13 +90,20 @@ body::after {
 	align-items: center;
 }
 
-._icon-circle-xmark::before {
-   content: "\e902";
+._icon-xmark::before {
+   // content: "\e902";
 	color: $linkOtherColor;
 	font-size: 24px;
 	position: absolute;
 	top: -3px;
- }
+	transition: color 0.3s ease;
+	}
+
+@media (any-hover: hover) {
+	._icon-xmark:hover::before {
+		color: $accentColor;
+	}
+}
 
 .popup__title {
 	padding-top: 5px;
@@ -111,4 +118,8 @@ body::after {
 .popup__img {
 	object-fit: cover;
 	max-width: 100%;	
+}
+
+.popup__form textarea.form__input {
+	min-height: 100px;
 }
