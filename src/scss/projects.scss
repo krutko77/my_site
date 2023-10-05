@@ -41,8 +41,8 @@
 		text-align: center;
 		margin-top: 50px;
 		color: $linkOtherColor;
-		background-color: $mainLightColor;
-		border: 2px solid $mainLightColor;
+		background-color: transparent;
+		border: 2px solid $linkOtherColor;
 		transition: color 0.3s ease, 
 		background-color 0.3s ease,
 		border-color 0.3s ease;
@@ -184,8 +184,9 @@
 
 @media (any-hover: hover) {
 	.projects__button-more:hover {
-		background-color: transparent;
+		background-color: $linkOtherColor;
 		border-color: $linkOtherColor;
+		color: $mainBgColor;
 	}
 
 	.portfolio__item:hover .portfolio__label {

@@ -21,9 +21,10 @@
    }
 
    &__title {
+		text-align: center;
     
       &::after {
-         left: 10%;
+         left: 30%;
       }
    }
 
