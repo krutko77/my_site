@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-		"title":"Надёжные сайты | Павел Крутько",
-		"description": "Разработка и сопровождение продающих сайтов. Уникальный дизайн, адаптивность, WordPress."
-		})
+@@include('html/_head.htm',{
+"title":"Надёжные сайты | Павел Крутько",
+"description": "Разработка и сопровождение продающих сайтов. Уникальный дизайн, адаптивность, WordPress."
+})
+
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="home" data-watch="navigator" data-watch-threshold="0.48">
+			<section class="home" data-watch="navigator" data-watch-threshold="0.7">
 				<div class="home__container">
 					<div class="home__wrapper">
 						<div class="home__content">
@@ -27,9 +28,10 @@
 							</div>
 							<div class="home__text-box">
 								<div class="home__text-wrapper">
-									<h1 class="home__title title" data-watch data-watch-once>Надёжные сайты</h1>									
+									<h1 class="home__title title" data-watch data-watch-once>Надёжные сайты</h1>
 									<ul class="home__list list ul-style text" data-watch data-watch-once>
-										<li class="list__item">быстрые адаптивные продающие сайты под ключ на чистом коде или WordPress;</li>
+										<li class="list__item">быстрые адаптивные продающие сайты под ключ на чистом коде или
+											WordPress;</li>
 										<li class="list__item">наличие админ-панели для управления контентом сайта;</li>
 										<li class="list__item">защита от спама и взлома;</li>
 										<li class="list__item">базовая SEO подготовка сайта;</li>
@@ -44,84 +46,87 @@
 					</div>
 				</div>
 			</section>
-			<section class="price" data-watch="navigator" data-watch-threshold="0.22">
-				<div class="price__container">
-					<div class="price__wrapper">
-						<h2 class="price__title title">Цены</h2>
-						<h3 class="price__subtitle subtitle ">Стоимость услуг (без НДС)</h3>
-							<div class="services__grid grid-services text margin-bottom-30">
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--1">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-dev-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Разработка</h4>
-										<p class="grid-services__label">Лендинг</p>
-										<p class="grid-services__text">Домен и хостинг, базовая разработка на WordPress, защита и
-											ускорение сайта</p>
+			<section class="prices" data-watch="navigator" data-watch-threshold="0.35">
+				<div class="prices__container">
+					<div class="prices__wrapper">
+						<h2 class="prices__title title">Цены</h2>
+						<div class="prices__subtitle-box subtitle-box">
+							<svg viewBox="0 0 520 520" aria-hidden="true" focusable="false">
+								<path
+									d="m161.688 453.165a10 10 0 0 1 -9.039-5.721l-119.687-252.835a10 10 0 0 1 15.285-12.088l114 91.2 310.235-205.221a10 10 0 0 1 13.086 14.876l-316.311 366.324a10 10 0 0 1 -7.569 3.465z">
+								</path>
+							</svg>
+							<h3 class="prices__subtitle subtitle">Стоимость услуг (без НДС)</h3>
+						</div>
+						<div class="services__grid grid-prices text margin-bottom-30">
+							<div data-watch data-watch-once data-watch-threshold="0.5"
+								class="grid-prices__item grid-prices__item--1">
+								<div class="grid-prices__item-top">
+									<div class="grid-prices__img-wrapper">
+										<img class="grid-prices__img" src="@img/icons/web-dev-icon.png"
+											alt="иконка веб-разработки">
 									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">450</span> BYN
-									</p>
+									<h4 class="grid-prices__subtitle sub-subtitle">Лендинг</h4>
+									<p class="grid-prices__text">Домен и хостинг, базовая разработка на WordPress, защита и
+										ускорение сайта</p>
 								</div>
-
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--2">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-dev-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Разработка</h4>
-										<p class="grid-services__label">Сайт-визитка</p>
-										<p class="grid-services__text">Домен и хостинг, базовая разработка на WordPress, защита и
-											ускорение сайта</p>
-									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">750</span> BYN
-									</p>
-								</div>
-
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--3">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-dev-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Разработка</h4>
-										<p class="grid-services__label">Многостраничный сайт</p>
-										<p class="grid-services__text">Домен и хостинг, базовая разработка на WordPress, защита и
-											ускорение сайта</p>
-									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">1100</span> BYN
-									</p>
-								</div>
-
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--4">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-support-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Поддержка сайта</h4>
-										&nbsp;
-										<p class="grid-services__text">Техническая поддержка и сопровождение сайта</p>
-									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">150</span> BYN/1
-										мес.</p>
-								</div>
+								<p class="grid-prices__price">от <span class="grid-prices__price-color">450</span> BYN
+								</p>
 							</div>
-							<p class="services__text text margin-bottom-30">Стоимость создания сайта в первую очередь зависит
-								от поставленных заказчиком задач, необходимого функционала и объёма работы. Все сайты очень
-								разные, как и люди, которые их заказывают. Поэтому точную стоимость я смогу назвать только после
-								того, как заказчик заполнит <a class="services__link link"
-									href="terminy-i-opredeleniya.html#anchor31">бриф</a> на разработку сайта (посмотреть или
-								заполнить бриф можно <a class="services__link link" href="brief.html#anchor51">здесь</a>) и я
-								смогу определить необходимый объём работ.</p>
-							<p class="services__text text">Для быстрой предварительной оценки стоимости проекта пожалуйста
-								заполните небольшую форму, нажав на жёлтую кнопку в блоке ниже.</p>
+
+							<div data-watch data-watch-once data-watch-threshold="0.5"
+								class="grid-prices__item grid-prices__item--2">
+								<div class="grid-prices__item-top">
+									<div class="grid-prices__img-wrapper">
+										<img class="grid-prices__img" src="@img/icons/web-dev-icon.png"
+											alt="иконка веб-разработки">
+									</div>
+									<h4 class="grid-prices__subtitle sub-subtitle">Сайт-визитка</h4>
+									<p class="grid-prices__text">Домен и хостинг, базовая разработка на WordPress, защита и
+										ускорение сайта</p>
+								</div>
+								<p class="grid-prices__price">от <span class="grid-prices__price-color">750</span> BYN
+								</p>
+							</div>
+
+							<div data-watch data-watch-once data-watch-threshold="0.5"
+								class="grid-prices__item grid-prices__item--3">
+								<div class="grid-prices__item-top">
+									<div class="grid-prices__img-wrapper">
+										<img class="grid-prices__img" src="@img/icons/web-dev-icon.png"
+											alt="иконка веб-разработки">
+									</div>
+									<h4 class="grid-prices__subtitle sub-subtitle">Многостраничный сайт</h4>
+									<p class="grid-prices__text">Домен и хостинг, базовая разработка на WordPress, защита и
+										ускорение сайта</p>
+								</div>
+								<p class="grid-prices__price">от <span class="grid-prices__price-color">1100</span> BYN
+								</p>
+							</div>
+
+							<div data-watch data-watch-once data-watch-threshold="0.5"
+								class="grid-prices__item grid-prices__item--4">
+								<div class="grid-prices__item-top">
+									<div class="grid-prices__img-wrapper">
+										<img class="grid-prices__img" src="@img/icons/web-support-icon.png"
+											alt="иконка веб-разработки">
+									</div>
+									<h4 class="grid-prices__subtitle sub-subtitle">Поддержка сайта</h4>
+									<p class="grid-prices__text">Техническая поддержка и сопровождение сайта</p>
+								</div>
+								<p class="grid-prices__price">от <span class="grid-prices__price-color">150</span> BYN/1
+									мес.</p>
+							</div>
+						</div>
+						<p class="services__text text margin-bottom-30">Стоимость создания сайта в первую очередь зависит
+							от поставленных заказчиком задач, необходимого функционала и объёма работы. Все сайты очень
+							разные, как и люди, которые их заказывают. Поэтому точную стоимость я смогу назвать только после
+							того, как заказчик заполнит <a class="services__link link"
+								href="terminy-i-opredeleniya.html#anchor31">бриф</a> на разработку сайта (посмотреть или
+							заполнить бриф можно <a class="services__link link" href="brief.html#anchor51">здесь</a>) и я
+							смогу определить необходимый объём работ.</p>
+						<p class="services__text text">Для быстрой предварительной оценки стоимости проекта пожалуйста
+							заполните небольшую форму, нажав на жёлтую кнопку в блоке ниже.</p>
 					</div>
 				</div>
 			</section>
@@ -143,8 +148,8 @@
 								<div class="portfolio__inner">
 									<h3 class="portfolio__subtitle subtitle">Тематический
 										сайт <br>с блогом </h3>
-									<div class="portfolio__img-wrapper portfolio__img-wrapper--left" data-watch
-										data-watch-once data-watch-threshold="0.5">
+									<div class="portfolio__img-wrapper portfolio__img-wrapper--left" data-watch data-watch-once
+										data-watch-threshold="0.5">
 										<img class="portfolio__img" src="@img/projects/ludmila-valentinova.jpg"
 											alt="фото проекта">
 									</div>
@@ -176,10 +181,9 @@
 								<div class="portfolio__inner">
 									<h3 class="portfolio__subtitle subtitle">Сайт по
 										услугам<br>аренды усадьбы</h3>
-									<div class="portfolio__img-wrapper portfolio__img-wrapper--right" data-watch
-										data-watch-once data-watch-threshold="0.5">
-										<img class="portfolio__img" src="@img/projects/gusarovshcina.jpg"
-											alt="фото проекта">
+									<div class="portfolio__img-wrapper portfolio__img-wrapper--right" data-watch data-watch-once
+										data-watch-threshold="0.5">
+										<img class="portfolio__img" src="@img/projects/gusarovshcina.jpg" alt="фото проекта">
 									</div>
 									<p class="portfolio__description">Многостраничный адаптивный
 										сайт, разработан на CMS WordPress. Есть возможность управления контентом сайта
@@ -201,16 +205,15 @@
 								</div>
 								<span class="portfolio__label">Посмотреть проект</span>
 							</div>
-							
+
 							<div class="portfolio__item">
-								<a class="portfolio__link" target="_blank"
-										href="http://smoothies.webkrutko.by/"></a>
-								<div class="portfolio__inner">												
+								<a class="portfolio__link" target="_blank" href="http://smoothies.webkrutko.by/"></a>
+								<div class="portfolio__inner">
 									<h3 class="portfolio__subtitle subtitle">Лендинг
 										<br>"Smoothies"
 									</h3>
-									<div class="portfolio__img-wrapper portfolio__img-wrapper--left" data-watch
-										data-watch-once data-watch-threshold="0.5">
+									<div class="portfolio__img-wrapper portfolio__img-wrapper--left" data-watch data-watch-once
+										data-watch-threshold="0.5">
 										<img class="portfolio__img" src="@img/projects/smoothies.jpg" alt="фото проекта">
 									</div>
 									<p class="portfolio__description">Одностраничный адаптивный
@@ -233,16 +236,16 @@
 							</div>
 
 							<div class="portfolio__item">
-								<a class="portfolio__link" target="_blank"
-										href="https://yurist.ludmila-valentinova.ru/"></a>
+								<a class="portfolio__link" target="_blank" href="https://yurist.ludmila-valentinova.ru/"></a>
 								<div class="portfolio__inner">
 									<h3 class="portfolio__subtitle subtitle">Лендинг<br>"Услуги юриста"</h3>
-									<div class="portfolio__img-wrapper portfolio__img-wrapper--right" data-watch
-										data-watch-once data-watch-threshold="0.5">
+									<div class="portfolio__img-wrapper portfolio__img-wrapper--right" data-watch data-watch-once
+										data-watch-threshold="0.5">
 										<img class="portfolio__img" src="@img/projects/yurist.ludmila-valentinova.jpg"
 											alt="фото проекта">
 									</div>
-									<p class="portfolio__description">Одностраничный адаптивный сайт, разработан на чистом коде (HTML/SCSS/JavaScript).</p>
+									<p class="portfolio__description">Одностраничный адаптивный сайт, разработан на чистом коде
+										(HTML/SCSS/JavaScript).</p>
 									<p class="portfolio__title-small left-text"><strong>Особенности проекта:</strong>
 									</p>
 									<div class="portfolio__list-wrapper left-text">
@@ -259,7 +262,7 @@
 								</div>
 								<span class="portfolio__label">Посмотреть проект</span>
 							</div>
-								
+
 						</div>
 						<a class="projects__button-more button text" href="gallery.html#anchor55">Показать больше</a>
 					</div>
@@ -271,7 +274,7 @@
 					<div class="services__wrapper">
 						<h2 class="services__title title">Услуги</h2>
 						<div class="services__content">
-							<div class="services__subtitle-box">
+							<div class="services__subtitle-box subtitle-box">
 								<svg viewBox="0 0 520 520" aria-hidden="true" focusable="false">
 									<path
 										d="m161.688 453.165a10 10 0 0 1 -9.039-5.721l-119.687-252.835a10 10 0 0 1 15.285-12.088l114 91.2 310.235-205.221a10 10 0 0 1 13.086 14.876l-316.311 366.324a10 10 0 0 1 -7.569 3.465z">
@@ -294,7 +297,8 @@
 									поисковым запросам. А это значит, что ваш сайт увидят раньше сайтов конкурентов.</p>
 								<p class="services__text text margin-bottom-30">
 									Мне нравится создавать сайты с уникальным дизайном, но при этом несложные и понятные для
-									пользователя. Надёжность, скорость загрузки и работы, удобство в использовании – вот основные критерии в моей разработке сайтов.
+									пользователя. Надёжность, скорость загрузки и работы, удобство в использовании – вот основные
+									критерии в моей разработке сайтов.
 								</p>
 							</div>
 							<p class="services__text text margin-bottom-40">Я выполняю заказы как на определенные этапы
@@ -321,8 +325,11 @@
 							<ul class="services__list list ul-style text margin-bottom-20">
 								<li class="list__item">вёрстка <a class="services__link link"
 										href="terminy-i-opredeleniya.html#anchor6">статичного</a> сайта путем написания <a
-										class="services__link link" href="terminy-i-opredeleniya.html#anchor11">чистого кода</a> <a class="services__link link"	href="terminy-i-opredeleniya.html#anchor7">HTML5, CSS3</a> с использованием <a class="services__link link"
-										href="terminy-i-opredeleniya.html#anchor10">JavaScript</a>;</li>
+										class="services__link link" href="terminy-i-opredeleniya.html#anchor11">чистого кода</a>
+									<a class="services__link link" href="terminy-i-opredeleniya.html#anchor7">HTML5, CSS3</a> с
+									использованием <a class="services__link link"
+										href="terminy-i-opredeleniya.html#anchor10">JavaScript</a>;
+								</li>
 								<li class="list__item">разработка сайта на <a class="services__link link"
 										href="terminy-i-opredeleniya.html#anchor13">готовой теме</a> <a
 										class="services__link link" href="terminy-i-opredeleniya.html#anchor12">CMS WordPress</a>,
@@ -356,19 +363,21 @@
 							<h4 class="services__sub-subtitle sub-subtitle">План работ при создании сайта.</h4>
 							<p class="services__text text margin-bottom-40">Работы, производимые при разработке сайта, я делю
 								на две группы: работы по умолчанию, включенные в базовую стомость проекта, и дополнительные
-								работы, выполняемые по согласованию с заказчиком. Посмотреть полный перечень работ вы можете, нажав на кнопку ниже.
+								работы, выполняемые по согласованию с заказчиком. Посмотреть полный перечень работ вы можете,
+								нажав на кнопку ниже.
 							</p>
 							<div class="services__button-box margin-bottom-80">
-								<a class="services__button-more projects__button-more button text" href="plan-rabot.html#anchor50">План разработки</a>
+								<a class="services__button-more projects__button-more button text"
+									href="plan-rabot.html#anchor50">План разработки</a>
 							</div>
-							<div class="services__subtitle-box">
+							<div class="services__subtitle-box subtitle-box">
 								<svg viewBox="0 0 520 520" aria-hidden="true" focusable="false">
 									<path
 										d="m161.688 453.165a10 10 0 0 1 -9.039-5.721l-119.687-252.835a10 10 0 0 1 15.285-12.088l114 91.2 310.235-205.221a10 10 0 0 1 13.086 14.876l-316.311 366.324a10 10 0 0 1 -7.569 3.465z">
 									</path>
 								</svg>
 								<h3 class="services__subtitle subtitle">Техническое сопровождение</h3>
-							</div>							
+							</div>
 							<div class="clearfix">
 								<div class="services__img-box services__img-box--left img-box float-left" data-watch
 									data-watch-once data-watch-threshold="0.7">
@@ -390,7 +399,7 @@
 										<li class="list__item">добавление или обновление контента на сайте.</li>
 									</ul>
 								</div>
-								<div class="services__subtitle-box">
+								<div class="services__subtitle-box subtitle-box">
 									<svg viewBox="0 0 520 520" aria-hidden="true" focusable="false">
 										<path
 											d="m161.688 453.165a10 10 0 0 1 -9.039-5.721l-119.687-252.835a10 10 0 0 1 15.285-12.088l114 91.2 310.235-205.221a10 10 0 0 1 13.086 14.876l-316.311 366.324a10 10 0 0 1 -7.569 3.465z">
@@ -403,96 +412,25 @@
 									готов ответить на все ваши вопросы. Посмотреть список гарантийных обязательств можно <a
 										class="services__link link" href="garantiya.html#anchor54">здесь</a>.</p>
 							</div>
-							<!-- <h3 class="services__subtitle-price subtitle ">Стоимость услуг (без НДС)</h3>
-							<div class="services__grid grid-services text margin-bottom-30">
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--1">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-dev-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Разработка</h4>
-										<p class="grid-services__label">Лендинг</p>
-										<p class="grid-services__text">Домен и хостинг, базовая разработка на WordPress, защита и
-											ускорение сайта</p>
-									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">450</span> BYN
-									</p>
-								</div>
-
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--2">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-dev-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Разработка</h4>
-										<p class="grid-services__label">Сайт-визитка</p>
-										<p class="grid-services__text">Домен и хостинг, базовая разработка на WordPress, защита и
-											ускорение сайта</p>
-									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">750</span> BYN
-									</p>
-								</div>
-
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--3">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-dev-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Разработка</h4>
-										<p class="grid-services__label">Многостраничный сайт</p>
-										<p class="grid-services__text">Домен и хостинг, базовая разработка на WordPress, защита и
-											ускорение сайта</p>
-									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">1100</span> BYN
-									</p>
-								</div>
-
-								<div data-watch data-watch-once data-watch-threshold="0.5"
-									class="grid-services__item grid-services__item--4">
-									<div class="grid-services__item-top">
-										<div class="grid-services__img-wrapper">
-											<img class="grid-services__img" src="@img/icons/web-support-icon.png"
-												alt="иконка веб-разработки">
-										</div>
-										<h4 class="grid-services__subtitle sub-subtitle">Поддержка сайта</h4>
-										&nbsp;
-										<p class="grid-services__text">Техническая поддержка и сопровождение сайта</p>
-									</div>
-									<p class="grid-services__price">от <span class="grid-services__price-color">150</span> BYN/1
-										мес.</p>
-								</div> -->
-
-							<!-- </div> -->
-							<!-- <p class="services__text text margin-bottom-30">Стоимость создания сайта в первую очередь зависит
-								от поставленных заказчиком задач, необходимого функционала и объёма работы. Все сайты очень
-								разные, как и люди, которые их заказывают. Поэтому точную стоимость я смогу назвать только после
-								того, как заказчик заполнит <a class="services__link link"
-									href="terminy-i-opredeleniya.html#anchor31">бриф</a> на разработку сайта (посмотреть или
-								заполнить бриф можно <a class="services__link link" href="brief.html#anchor51">здесь</a>) и я
-								смогу определить необходимый объём работ.</p>
-							<p class="services__text text">Для быстрой предварительной оценки стоимости проекта пожалуйста
-								заполните небольшую форму, нажав на жёлтую кнопку в блоке ниже.</p> -->
 						</div>
 					</div>
 				</div>
 				<article class="services__action-block action-block margin-bottom-120">
 					<div class="action-block__container">
-						<div class="action-block__wrapper" >
-							<h3 class="action-block__subtitle subtitle margin-bottom-40">Узнайте стоимость<br>разработки вашего сайта<br><span class="action-block__text">отвечу в течение 20 минут!</span></h3>
-							<button class="action-block__btn text button-accent" aria-label="Кнопка рассчитать стоимость" data-popup="#popup" data-watch data-watch-once>Рассчитать стоимость</button>
-						</div>	
+						<div class="action-block__wrapper">
+							<h3 class="action-block__subtitle subtitle margin-bottom-40">Узнайте стоимость<br>разработки вашего
+								сайта<br><span class="action-block__text">отвечу в течение 20 минут!</span></h3>
+							<button class="action-block__btn text button-accent" aria-label="Кнопка рассчитать стоимость"
+								data-popup="#popup" data-watch data-watch-once>Рассчитать стоимость</button>
+						</div>
 					</div>
 				</article>
 				<div class="services__container">
 					<div class="services__wrapper">
 						<div class="services__content">
-							<h4 class="services__sub-subtitle sub-subtitle">Преимущества CMS WordPress</h4>
+							<div class="services__wrapper-sub-subtitle margin-bottom-20">
+								<h4 class="services__sub-subtitle sub-subtitle">Преимущества CMS WordPress</h4>
+							</div>
 							<div class="clearfix">
 								<div class="services__img-box services__img-box--left img-box float-left" data-watch
 									data-watch-once data-watch-threshold="0.7">
@@ -507,7 +445,8 @@
 									редактор, который очень похож на Microsoft Word (<a class="services__link link" href="#"
 										data-popup="#popup-2">посмотреть</a>). Он имеет одно поле редактирования, в котором
 									действия с контентом интуитивно понятны.</p>
-									<p class="services__text text margin-bottom-30">Если же при работе с WordPress возникают какие-либо
+								<p class="services__text text margin-bottom-30">Если же при работе с WordPress возникают
+									какие-либо
 									сложности, интернет всегда поможет. В сети можно найти большое количество различного
 									материала, инструкций, видеоинструкций и т.д., где подробно описана работа с различными
 									инструментами редактора.</p>
@@ -529,7 +468,7 @@
 									href="#">ниже</a>, открыв спойлер с вопросом "Как будет создаваться сайт?". Разработка на
 								WordPress возможна для всех видов сайтов и производится по предварительному согласованию с
 								заказчиком.</p>
-							<div class="services__subtitle-box">
+							<div class="services__subtitle-box subtitle-box">
 								<svg viewBox="0 0 520 520" aria-hidden="true" focusable="false">
 									<path
 										d="m161.688 453.165a10 10 0 0 1 -9.039-5.721l-119.687-252.835a10 10 0 0 1 15.285-12.088l114 91.2 310.235-205.221a10 10 0 0 1 13.086 14.876l-316.311 366.324a10 10 0 0 1 -7.569 3.465z">
@@ -554,7 +493,7 @@
 										<p class="spollers__text margin-bottom-20">Я принимаю оплату на карту (для оплаты из РБ и
 											России) или на расчётный счёт (только для оплаты из России).</p>
 										<p class="spollers__text margin-bottom-10">
-											Для оплаты из РБ:	
+											Для оплаты из РБ:
 										</p>
 										<p class="spollers__text margin-bottom-20">
 											- перевод на карту АЛЬФА-БАНК - 9112 3810 0747 5882, Павел Крутько.
@@ -565,11 +504,13 @@
 										<p class="spollers__text margin-bottom-10">
 											- перевод на карту Тинькофф - 2200 7009 2871 5555, Павел Крутько,
 											тел. +7 993 564 45 81;
-										</p>	
+										</p>
 										<p class="spollers__text margin-bottom-30">
 											- перевод на р/c: BY09ALFA301430B22H0060270000 (RUB),<br>
-											ЗАО «АЛЬФА-БАНК» Ул. Сурганова, 43-47, 220013 Минск, Республика Беларусь, БИК	ALFABY2X.<br>
-											Счет ЗАО «Альфа-Банк» №30111810100000000221 в АО «Альфа-Банк», Москва, РФ, БИК —	044525593, ИНН 7728168971,<br>
+											ЗАО «АЛЬФА-БАНК» Ул. Сурганова, 43-47, 220013 Минск, Республика Беларусь, БИК
+											ALFABY2X.<br>
+											Счет ЗАО «Альфа-Банк» №30111810100000000221 в АО «Альфа-Банк», Москва, РФ, БИК —
+											044525593, ИНН 7728168971,<br>
 											к/счет №30101810200000000593.
 										</p>
 										<p class="spollers__text margin-bottom-10">Предоплата в размере
@@ -602,7 +543,8 @@
 									</div>
 								</details>
 								<details class="spollers__item text">
-									<summary data-spoller-close class="spollers__title">Какие этапы работ при создании сайта?</summary>
+									<summary data-spoller-close class="spollers__title">Какие этапы работ при создании сайта?
+									</summary>
 									<div class="spollers__body">
 										<h4 class="spollers__subtitle sub-subtitle margin-bottom-20">Этапы сотрудничества при
 											создании сайта</h4>
@@ -856,8 +798,10 @@
 						<div class="contact__content text">
 							<div class="contact__left-block">
 								<p class="contact__text margin-bottom-20">Крутько Павел Вячеславович</p>
-								<p class="contact__text margin-bottom-20">Самозанятый, зарегистрирован в ИМНС 107 Инспекции МНС по Первомайскому району г. Минска (на учете с 11.08.2023), УНП AB7319068.</p>
-								<p class="contact__text margin-bottom-20">Быстро отвечу на все ваши вопросы в мессенджерах или по телефону:</p>
+								<p class="contact__text margin-bottom-20">Самозанятый, зарегистрирован в ИМНС 107 Инспекции МНС
+									по Первомайскому району г. Минска (на учете с 11.08.2023), УНП AB7319068.</p>
+								<p class="contact__text margin-bottom-20">Быстро отвечу на все ваши вопросы в мессенджерах или
+									по телефону:</p>
 								<ul class="contact__social social margin-bottom-20">
 									<li class="social__item ">
 										<a class="social__link" target="_blank" href="https://t.me/webkrutko">
@@ -884,18 +828,22 @@
 								<ul class="contact__list list margin-bottom-20">
 									<li class="list__item margin-bottom-20">
 										<div class="list__item-wrapper">
-										<span class="list__item-icon _icon-phone-flip"></span><a href="tel:+375299580130" class="list__item-link link">+375 29 958-01-30</a>,
-										 &nbsp;&nbsp;<span class="list__item-icon _icon-phone-flip"></span><a href="tel:+79935644581" class="list__item-link link">+7 993 564-45-81</a>
+											<span class="list__item-icon _icon-phone-flip"></span><a href="tel:+375299580130"
+												class="list__item-link link">+375 29 958-01-30</a>,
+											&nbsp;&nbsp;<span class="list__item-icon _icon-phone-flip"></span><a
+												href="tel:+79935644581" class="list__item-link link">+7 993 564-45-81</a>
 										</div>
 									</li>
 									<li class="list__item margin-bottom-20">
 										<div class="list__item-wrapper">
-											<span class="list__item-icon _icon-email"></span><a href="mailto:webkrutko@mail.ru" class="list__item-link link">webkrutko@mail.ru</a>
+											<span class="list__item-icon _icon-email"></span><a href="mailto:webkrutko@mail.ru"
+												class="list__item-link link">webkrutko@mail.ru</a>
 										</div>
 									</li>
 									<li class="list__item">
 										<div class="list__item-wrapper location">
-											<span class="list__item-icon _icon-location-dot"></span><p class="list__item-link">Беларусь, 220056, Минск, ул. Стариновская 3-17</p>
+											<span class="list__item-icon _icon-location-dot"></span>
+											<p class="list__item-link">Беларусь, 220056, Минск, ул. Стариновская 3-17</p>
 										</div>
 									</li>
 								</ul>

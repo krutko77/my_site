@@ -265,3 +265,22 @@ button:not(.swiper-button-prev, .swiper-button-next), .button,
 	margin-bottom: em(10, 20);
 }
 
+.subtitle-box {
+	display: flex;
+
+	svg {
+		position: relative;
+		top: -2px;
+		flex-shrink: 0;
+		height: 40px;
+		width: 40px;
+		margin-right: 4px;
+		fill: $accentColor;
+	
+		@media (max-width: $pc) {
+			height: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
+			width: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
+		}
+	}
+}
+
