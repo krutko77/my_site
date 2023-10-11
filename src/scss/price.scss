@@ -10,21 +10,29 @@
 	 padding: 100px 0 50px;
  }
 
- &__wrapper {
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 
-	 @media (max-width: $tablet) {
-		 border-width: 3px;
-	 }
- }
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		@media (max-width: $tablet) {
+			border-width: 3px;
+		}
+	}
 
- &__title {
-	 text-align: center;
-  
-	 &::after {
-		 left: 1%;
-	 }
- 	}
+	&__title {		
+	
+		&::after {
+			left: 1%;
+			}
+		}
+
+	&__subtitle {
+		align-self: flex-start;
+		margin-bottom: 30px;
+
+		@media (max-width: $pc) {
+		margin-bottom: calc(10px + 20*((100vw - 320px) / (1260 - 320)));
+		}
+	}
 }

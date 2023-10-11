@@ -24,24 +24,37 @@
 		text-align: center;
     
       &::after {
-         left: 30%;
+         left: 11%;
       }
    }
 
   	&__subtitle {
 		margin-bottom: 20px;	
+		line-height: 170%;
+	}
+
+	&__subtitle-box {
+		display: flex;		
+	}
+
+	svg {
+		position: relative;
+		top: 0;
+		flex-shrink: 0;
+		height: 40px;
+		width: 40px;
+		margin-right: 4px;
+		fill: $accentColor;
+
+		@media (max-width: $pc) {
+			top: 3px;
+			height: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
+			width: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
+		}
 	}
 
 	&__sub-subtitle {
 		margin-bottom: 10px;
-	}
-
-	&__subtitle-price {
-		margin-bottom: 30px;
-
-		@media (max-width: $pc) {
-      margin-bottom: calc(10px + 20*((100vw - 320px) / (1260 - 320)));
-   	}
 	}
 
 	&__img-box {
