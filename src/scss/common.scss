@@ -50,7 +50,6 @@
 
 .subtitle {
 	@include font(28px, 800, 120%);
-	letter-spacing: 0;
 	line-height: 110%;
 
 	@media (max-width: $pc) {
@@ -60,7 +59,6 @@
 
 .sub-subtitle {
 	@include font(24px, 700, 120%);
-	letter-spacing: 0;
 	line-height: 110%;
 
 	@media (max-width: $pc) {

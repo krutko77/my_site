@@ -56,17 +56,6 @@
 			gap: 20px; 
 	}
 
-	&__item {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		background-color: $mainLightColor;
-		padding: em(30, 20) em(30, 20);
-		border-radius: 5px;
-		opacity: 0;
-	   transform: translateY(100px);
-	}
-
 	&__item--1._watcher-view {
 		opacity: 1;
 		transform: translateY(0);
@@ -109,12 +98,7 @@
 		margin-bottom: em(10, 20);
 	} 
 
-	&__label {
-		line-height: 100%;
-		margin-bottom: em(15, 20);
-	}
-
-	&__text {
+	&__text, &__link {
 		font-size: 16px;
 		line-height: 120%;
 		margin-bottom: em(30, 20);
@@ -122,14 +106,77 @@
 		@media (max-width: $pc) {
       font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
    	}
+	}
 
-		&__link {
-			text-align: center;
-		}
+	&__link {
+		text-align: center;
+	}
+
+
+	&__link {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		
 	}
 
 	&__price-color {
 		color: $errorColor;
 	}
 	
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $mainLightColor;
+	padding: em(30, 20) em(30, 20);
+	border-radius: 5px;
+	opacity: 0;
+	transform: translateY(100px);
+
+	&__img-wrapper {
+		width: 30%;
+		margin-bottom: em(15, 20);
+
+		@media (max-width:$mobileSmall) {
+		width: 20%;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		aspect-ratio: 1/1;
+	}
+
+   &__title {
+		margin-bottom: em(5, 20);
+	} 
+
+	&__text, &__link {
+		font-size: 16px;
+		line-height: 120%;
+		
+		@media (max-width: $pc) {
+      font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
+   	}
+	}
+
+	&__text {
+		margin-bottom: em(5, 20);
+	}
+
+	&__wrapper-link {
+		text-align: center;
+	}
+
+	&__link {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: em(30, 20);
+	}
+
+	&__price-color {
+		color: $errorColor;
+	}
 }
