@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Портфолио | Разработка продающих сайтов",
+	"title":"Портфолио | Надёжные сайты",
 	"description": "Примеры разных типов сайтов"
 	})
 	<body>
@@ -15,7 +15,7 @@
 							Для каждого примера приведено краткое описание используемых технологий и реализованных
 							возможностей. При клике по карточке с проектом, можно открыть сайт в браузере и посмотреть как он
 							выглядит в полном размере.</p>
-						<div class="gallery__portfolio portfolio">
+						<div class="gallery__portfolio portfolio margin-bottom-60">
 
 							<div class="portfolio__item">
 								<a class="portfolio__link" target="_blank" href="https://ludmila-valentinova.ru/"></a>
@@ -262,9 +262,11 @@
 						</div>
 					</div>
 				</div>
+				@@include('html/_action-block.htm',{})
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		<script src="js/app.min.js"></script>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
 	</body>
 </html>

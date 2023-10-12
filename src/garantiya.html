@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Гарантия | Разработка продающих сайтов",
+	"title":"Гарантия | Надёжные сайты",
 	"description": "Гарантийные обязательства на разработку сайта"
 	})
 	<body>
@@ -9,7 +9,7 @@
 			@@include('html/_header-back.htm',{})
 			<main id="anchor54" class="garantiya">
 				<div class="garantiya__container">
-					<div class="garantiya__wrapper text">
+					<div class="garantiya__wrapper text margin-bottom-60">
 						<h1 class="garantiya__title title">Гарантия</h1>
 						<div class="garantiya__content">
 							<ol class="garantiya__list list">
@@ -41,9 +41,11 @@
 						</div>
 					</div>
 				</div>
+				@@include('html/_action-block.htm',{})
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		<script src="js/app.min.js"></script>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
 	</body>
 </html>

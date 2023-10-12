@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Договор | Разработка продающих сайтов",
+	"title":"Договор | Надёжные сайты",
 	"description": "Образцы договоров на разработку и поддержку сайта"
 	})
 	<body>
@@ -9,7 +9,7 @@
 			@@include('html/_header-back.htm',{})
 			<main id="anchor53" class="contract">
 				<div class="contract__container">
-					<div class="contract__wrapper text">
+					<div class="contract__wrapper text margin-bottom-60">
 						<h1 class="contract__title contract__title--1 title">Договор</h1>
 						<div class="contract__content margin-bottom-20"><img class="contract__img" src="@img/contracts/contract-1.jpg" alt="договор"></div>
 						<div class="contract__content margin-bottom-20"><img class="contract__img" src="@img/contracts/contract-2.jpg" alt="договор"></div>
@@ -25,10 +25,13 @@
 						<div class="contract__content margin-bottom-20"><img class="contract__img" src="@img/order-support/order-support-1.jpg" alt="заказ на разработку"></div>
 						<div class="contract__content margin-bottom-20"><img class="contract__img" src="@img/order-support/order-support-2.jpg" alt="заказ на разработку"></div>
 						<div class="contract__content"><img class="contract__img" src="@img/order-support/order-support-3.jpg" alt="заказ на разработку"></div>
+					</div>
 				</div>
+				@@include('html/_action-block.htm',{})
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		<script src="js/app.min.js"></script>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
 	</body>
 </html>

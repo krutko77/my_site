@@ -130,6 +130,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: $mainLightColor;
+	min-height: 270px;
 	padding: em(30, 20) em(30, 20);
 	border-radius: 5px;
 	opacity: 0;
@@ -163,7 +164,7 @@
 	}
 
 	&__text {
-		margin-bottom: em(5, 20);
+		margin-bottom: em(10, 20);
 	}
 
 	&__wrapper-link {
@@ -172,6 +173,7 @@
 
 	&__link {
 		text-transform: uppercase;
+		line-height: 150%;
 		letter-spacing: 1px;
 		margin-bottom: em(30, 20);
 	}

@@ -22,4 +22,18 @@
 			left: 24%;
       }
 	}
+
+	&__title.landing {
+		
+		&::after {
+			left: 17%;
+      }
+	}
+
+	&__title.card-website {
+		
+		&::after {
+			left: 29%;
+      }
+	}
 }
