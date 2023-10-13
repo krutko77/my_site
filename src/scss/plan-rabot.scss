@@ -33,7 +33,14 @@
 	&__title.card-website {
 		
 		&::after {
-			left: 29%;
+			left: 30%;
+      }
+	}
+
+	&__title.multi-page {
+		
+		&::after {
+			left: 30%;
       }
 	}
 }
