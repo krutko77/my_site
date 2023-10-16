@@ -110,10 +110,9 @@ ol {
 	text-align: left;
 }
 
-button:not(.swiper-button-prev, .swiper-button-next), .button, 
-.contact__button-brief {
+button:not(.swiper-button-prev, .swiper-button-next), .button {
 	text-transform: uppercase;
-	padding: 12px 20px 10px;
+	padding: 11px 20px 10px;
 	border-radius: 3px;
 	letter-spacing: 2px;
 	@include font(20px, 500, 150%);
@@ -123,9 +122,31 @@ button:not(.swiper-button-prev, .swiper-button-next), .button,
    }
 }
 
+.button {
+	display: inline-block;
+	text-align: center;
+}
+
 .button-accent {
 	background-color: $accentColor;
-	border: 2px solid transparent;
+	border: 3px solid $accentColor;	
+}
+
+	@media (any-hover: hover) {
+		.button-accent:hover {
+			font-weight: 700;
+			color: $accentColor;
+			background-color: transparent;
+	} 
+}
+
+.button-order {
+	color: $mainBgColor;
+	background-color: $mainButtonColor;
+	border: 3px solid $mainButtonColor;	
+}
+
+.button-accent, .button-order {
 	opacity: 0;
 	transform: scale(0.5);
 	transition: color 0.3s ease, 
@@ -133,23 +154,14 @@ button:not(.swiper-button-prev, .swiper-button-next), .button,
 					border-color 0.3s ease,
 					transform 0.8s ease, 
 					opacity 0.8s ease;
-}
+} 
 
-@media (any-hover: hover) {
-	.button-accent:hover {
-		color: $accentColor;
-		background-color: transparent;
-		border-color: $accentColor; 
-	} 
-}
-
-.button-accent._watcher-view {
+.button-accent._watcher-view, .button-order._watcher-view {
 	opacity: 1;
 	transform: scale(1);	
 }
 
-.button-accent._watcher-view:active, .portfolio__button-more:active, 
-.header__button-back:active {
+.button:active {
 	transform: translate(1px, 2px);
 	transition: transform 0.3s ease;
 }
