@@ -256,7 +256,7 @@ button:not(.swiper-button-prev, .swiper-button-next), .button {
 	margin: 0 0 em(20, 20) em(30, 20);	
 }
 
-.float-left, .float-right {
+.float-left:not(.float-left.float-left-about), .float-right {
 	@media (max-width:$mobileSmall){
 		clear: both; 
 		margin: 0 0 20px;
@@ -264,7 +264,7 @@ button:not(.swiper-button-prev, .swiper-button-next), .button {
 }
 
 .clearfix {
-	display: flow-root;
+   display: flow-root;
 }
 
 .img-box {

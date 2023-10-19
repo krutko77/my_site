@@ -51,7 +51,7 @@
       }
    }
 
-	&__text, &__img-box {
+	&__text {
 		margin-bottom: 30px;
 
 		@media (max-width: $mobileSmall) {
@@ -76,9 +76,29 @@
 		max-width: 600px;
 	}
 
+	&__img-box-1 {
+		// padding-top: em(10 ,20);
+		width: 30%;
+	
+		@media (max-width:$tablet){
+			width: 40%; 
+		}
+	}
+
 	&__img {
 		width: 100%;
 		aspect-ratio:600/429;
+	}
+
+	&__img-1 {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.float-left-about {
+	@media (max-width:$mobileSmall){
+		margin: 0 em(15, 20) em(10, 20) 0;
 	}
 }
 
