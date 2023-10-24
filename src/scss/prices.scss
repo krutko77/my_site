@@ -79,50 +79,6 @@
 		transform: translateY(0);
 		transition: transform 1.2s ease 0.7s, opacity 1.2s ease 0.7s;
 	}
-
-	&__img-wrapper {
-		width: 30%;
-		margin-bottom: em(15, 20);
-
-		@media (max-width:$mobileSmall) {
-		width: 20%;
-		}
-	}
-
-	&__img {
-		width: 100%;
-		aspect-ratio: 1/1;
-	}
-
-   &__subtitle {
-		margin-bottom: em(10, 20);
-	} 
-
-	&__text, &__link {
-		font-size: 16px;
-		line-height: 120%;
-		margin-bottom: em(30, 20);
-
-		@media (max-width: $pc) {
-      font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
-   	}
-	}
-
-	&__link {
-		text-align: center;
-	}
-
-
-	&__link {
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		
-	}
-
-	&__price-color {
-		color: $errorColor;
-	}
-	
 }
 
 .card {
@@ -155,11 +111,11 @@
 	} 
 
 	&__text, &__link {
-		font-size: 16px;
+		font-size: rem(16);
 		line-height: 120%;
 		
 		@media (max-width: $pc) {
-      font-size: calc(14px + 2*((100vw - 320px) / (1260 - 320)));
+      font-size: calc(15px + 1*((100vw - 320px) / (1260 - 320)));
    	}
 	}
 
@@ -177,6 +133,14 @@
 		line-height: 150%;
 		letter-spacing: 1.1px;
 		margin-bottom: em(30, 20);
+	}
+
+	&__price {
+		font-size: rem(24);
+
+		@media (max-width: $pc) {
+			font-size: calc(22px + 2*((100vw - 320px) / (1260 - 320)));
+			}
 	}
 
 	&__price-color {

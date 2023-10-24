@@ -4,7 +4,25 @@
 			<a class="logo__link" href="/"><img class="logo__img" src="@img/logo.svg" alt="логотип"></a>
 		</div>
 		<div class="header__menu menu">
-			<button type="button" class="menu__icon icon-menu" aria-label="Мобильное меню"><span></span></button>
+			<div class="menu__icon-wrapper">
+				<ul class="menu__social social">
+									<li class="social__item">
+										<a class="social__link" target="_blank" href="viber://chat?number=375299580130">
+											<svg class=" social__icon">
+												<use xlink:href="@img/icons/icons.svg#viber"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social__item">
+										<a class="social__link" target="_blank" href="whatsapp://send?phone=79935644581">
+											<svg class="social__icon">
+												<use xlink:href="@img/icons/icons.svg#whatsapp"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+				<button type="button" class="menu__icon icon-menu" aria-label="Мобильное меню"><span></span></button>
+			</div>			
 			<nav class="menu__body">
 				<ul class="menu__list">
 					<li class="menu__item"><a data-goto=".home" href="#" class="menu__link">Главная</a></li>
