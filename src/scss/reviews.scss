@@ -52,24 +52,31 @@
 
    &__text-block {
       text-align: center;
+
+		@media (max-width: $mobileSmall) {
+			margin-bottom: 20px;
+		}
    }
+
+	&__description {
+		position: relative;
+	}
 
 	&__video-box {
 		display: none;
-		align-self:flex-end;
-		width: 50px;
-		height: auto;
-		margin-bottom: 20px;
-
+		position: absolute;
+		bottom: -50px;
+		right: 0;
+		
 		@media (max-width: $mobileSmall) {
-			display: block;
+			display: inline-block;
 		}
-	}
+	}	
 }
 
 // Дополнительно прописываем стили swiper
 .swiper {
-   padding: 50px 40px 50px;
+	padding: 50px 40px 50px;
 
    @media (max-width: $mobileSmall) {
       padding: 35px 0 35px;
@@ -84,7 +91,6 @@
 		aspect-ratio: 175/344;
    }
 }
-
 
 // Меняем установленные стили стрелок
 :root {
