@@ -79,6 +79,12 @@
 		transform: translateY(0);
 		transition: transform 1.2s ease 0.7s, opacity 1.2s ease 0.7s;
 	}
+
+	@media (max-width:$mobileSmall) {
+		&__item--1._watcher-view, &__item--2._watcher-view, &__item--3._watcher-view, &__item--4._watcher-view {
+			transition: transform 1.2s ease, opacity 1.2s;
+		}
+	}
 }
 
 .card {
