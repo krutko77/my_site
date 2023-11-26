@@ -130,8 +130,20 @@
 }
 
 .list__item-wrapper {
-	display: inline-flex;
-	align-items: center;
+	display: inline-flex;	
+}
+
+.list__item-box {
+	display: flex;
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+	}
+}
+
+.list__item--top {
+	@media (max-width: $mobileSmall) {
+		margin-bottom: 20px;
+	}
 }
 
 .location {
