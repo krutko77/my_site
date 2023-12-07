@@ -130,9 +130,11 @@ function initSlidersScroll() {
 	}
 }
 
-window.addEventListener("load", function (e) {
-	// Запуск ініціалізації слайдерів
-	initSliders();
-	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-	// initSlidersScroll();
-});
+// window.addEventListener("load", function (e) {
+// 	// Запуск ініціалізації слайдерів
+// 	initSliders();
+// 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
+// 	// initSlidersScroll();
+// });
+
+initSliders();

@@ -1,94 +1,95 @@
 //header
 .header {
-   position:absolute;
+   position: absolute;
    background-color: $mainBgColor;
    width: 100%;
    z-index: 10;
-	
+
    &__container-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-		padding: 0 20px;
-		max-width: 1300px;
+      padding: 0 20px;
+      max-width: 1300px;
       min-height: 80px;
 
-		@media (max-width: $tablet) {
-			min-height: calc(70px + 10*((100vw - 768px) / (1260 - 768)));
+      @media (max-width: $tablet) {
+         min-height: calc(70px + 10*((100vw - 768px) / (1260 - 768)));
 
-			padding: 0 15px;
+         padding: 0 15px;
       }
    }
 
    &__logo {
-		width: 240px;
-		margin-right: 20px;
+      width: 240px;
+      margin-right: 20px;
 
-		@media (max-width: $mobile) {
-			width: calc(210px + 40*((100vw - 768px) / (1260 - 768)));
+      @media (max-width: $mobile) {
+         width: calc(210px + 40*((100vw - 768px) / (1260 - 768)));
       }
-	}
-	 
-	&__logo img {
-		width: 100%;
-		aspect-ratio: 20/7;
-		vertical-align: baseline;
-	}
-   
+   }
+
+   &__logo img {
+      width: 100%;
+      aspect-ratio: 20/7;
+      vertical-align: baseline;
+   }
+
    .menu {
       &__body {
          @media (max-width: $tablet) {
-         position: fixed;
-         top: 0;
-         left: -100%;
-         width: 100%;
-         height: 100%;
-         background-color: rgba(242,242,242, 0.9);
-         padding: 120px 0 0;
-         overflow: auto;
-         transition: left 0.3s ease 0s;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(242, 242, 242, 0.9);
+            padding: 120px 0 0;
+            overflow: auto;
+            transition: left 0.3s ease;
          }
 
          .menu-open & {
             left: 0;
+				transition: left 0.3s linear;
          }
-      } 
-		
-		&__icon-wrapper {
-			display: none;
+      }
 
-			@media (max-width: $tablet) {
-				display: flex;
-				align-items: center;
-			}
-		}
+      &__icon-wrapper {
+         display: none;
 
-		.social {
-			display: flex;
-	
-			&__item {
-				margin-right: 25px;
-			}
+         @media (max-width: $tablet) {
+            display: flex;
+            align-items: center;
+         }
+      }
 
-			&__icon {
-				height: 40px;
-				width: 40px;
-			}
-		}
+      .social {
+         display: flex;
 
-		&__list {
+         &__item {
+            margin-right: 25px;
+         }
+
+         &__icon {
+            height: 40px;
+            width: 40px;
+         }
+      }
+
+      &__list {
          display: flex;
          align-items: center;
          justify-content: space-between;
-        
+
          @media (max-width: $tablet) {
-         flex-direction: column;
+            flex-direction: column;
          }
-      } 
-      
+      }
+
       &__item {
          display: inline-block;
-			position: relative;
+         position: relative;
       }
 
       &__item:not(:last-child) {
@@ -100,54 +101,55 @@
 
          @media (max-width: $tablet) {
             margin: 0 0 30px;
-            }
+         }
       }
 
       &__link {
          padding: 7px 7px 5px;
          text-transform: uppercase;
-         cursor: pointer; 
-         display: block;         
+         cursor: pointer;
+         display: block;
 
          @media (max-width: $pc) {
             font-size: calc(12px + 2*((100vw - 768px) / (1260 - 768)));
          }
-         
+
          @media (max-width: $tablet) {
             font-size: 22px;
-            }
-      } 
+         }
+      }
 
       &__link::before,
       &__link::after {
-         content: '';    
-         position: absolute; 
-         top: 23px;    
-         width: 0;    
-         height: 2px;    
-         background: $accentColor;    
+         content: '';
+         position: absolute;
+         top: 23px;
+         width: 0;
+         height: 2px;
+         background: $accentColor;
          transition: 0.3s;
       }
 
       &__link::before {
-         left: calc(50% - 3.5px);      
+         left: calc(50% - 3.5px);
       }
 
       &__link::after {
-         right: calc(50% - 3.5px);      
+         right: calc(50% - 3.5px);
       }
 
-		@media (any-hover: hover) {
-			&__link:hover::before,
-			&__link:hover::after {
-				width: calc(50% - 3.5px);
-			}
-		}    
-      
+      @media (any-hover: hover) {
+
+         &__link:hover::before,
+         &__link:hover::after {
+            width: calc(50% - 3.5px);
+         }
+      }
+
       &__link._navigator-active {
          background-color: $accentColor;
       }
-   }   
+   }
 }
 
 //headerScroll
@@ -158,57 +160,64 @@
 
 ._header-scroll {
    min-height: 50px;
-} 
+}
 
 ._header-show {
    transition: top 0.7s 0s;
    top: 0;
-	box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+   box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 //Burger
 .icon-menu {
-	display: none;
-	@media (max-width: $tablet) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: $mainColor;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}			
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
-}
+   display: none;
 
+   @media (max-width: $tablet) {
+      display: block;
+      position: relative;
+      width: rem(30);
+      height: rem(18);
+      cursor: pointer;
+      z-index: 5;
+
+      span,
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         right: 0;
+         position: absolute;
+         width: 100%;
+         height: rem(2);
+         background-color: $mainColor;
+      }
+
+      &::before {
+         top: 0;
+      }
+
+      &::after {
+         bottom: 0;
+      }
+
+      span {
+         top: calc(50% - rem(1));
+      }
+
+      .menu-open & {
+         span {
+            width: 0;
+         }
+
+         &::before {
+            top: calc(50% - rem(1));
+            transform: rotate(-45deg);
+         }
+
+         &::after {
+            bottom: calc(50% - rem(1));
+            transform: rotate(45deg);
+         }
+      }
+   }
+}

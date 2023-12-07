@@ -22,21 +22,23 @@
    }
 
    &__title {
-      margin-bottom: 90px;
-      position: relative;
-      align-self: center;
+      position: relative;   
 
       @media (max-width: $tablet) {
-         margin-bottom: 70px;
+         margin-top: -50px;         
+      }
+
+      @media (max-width: $mobile) {
+         margin-top: -80px;         
       }
 
       @media (max-width: $mobileSmall) {
-         margin-bottom: 50px;
+         margin-top: -65px;
       }
 
       &::after {
          left: 4%;
-			background-color: $mainLightColor;
+         background-color: $mainLightColor;
       }
    }
 
@@ -85,15 +87,10 @@
 		}
 	}
 
-	&__img {
-		width: 100%;
-		aspect-ratio:600/429;
-	}
-
-	&__img-1 {
+	&__img, &__img-1  {
 		width: 100%;
 		height: auto;
-	}
+		}	
 }
 
 .float-left-about {

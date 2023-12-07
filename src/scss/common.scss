@@ -147,6 +147,7 @@ button:not(.swiper-button-prev, .swiper-button-next), .button {
 }
 
 .button-accent, .button-order {
+	will-change: transform;
 	opacity: 0;
 	transform: scale(0.5);
 	transition: color 0.3s ease, 
