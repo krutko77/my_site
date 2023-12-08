@@ -1,26 +1,31 @@
 // policy
 .policy {
-	padding: 140px 0 100px;
-      
+   padding: 160px 0 40px;
+
    @media (max-width: $tablet) {
-      padding: 110px 0 80px;
+      padding: 140px 0 40px;
    }
 
    @media (max-width: $mobileSmall) {
-      padding: 90px 0 50px;
+      padding: 100px 0 20px;
    }
 
    &__wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+      display: flex;
+      flex-direction: column;
+      border-bottom: 4px solid $mainColor;
+
+      @media (max-width: $tablet) {
+         border-width: 3px;
+      }
+   }
 
    &__title {
-		text-align: center;
+      align-self: center;
+      text-align: center;
 
-		&::after {
-			left: 24%;
+      &::after {
+         left: 24%;
       }
-	}
+   }
 }

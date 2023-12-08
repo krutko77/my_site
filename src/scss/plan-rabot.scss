@@ -1,6 +1,6 @@
 // policy
 .plan {
-	padding: 160px 0 40px;
+   padding: 160px 0 40px;
 
    @media (max-width: $tablet) {
       padding: 140px 0 40px;
@@ -21,32 +21,32 @@
    }
 
    &__title {
-		align-self: center;
+      align-self: center;
 
-		&::after {
-			left: 24%;
+      &::after {
+         left: 24%;
       }
-	}
+   }
 
-	&__title.landing {
-		
-		&::after {
-			left: 17%;
+   &__title.landing {
+
+      &::after {
+         left: 17%;
       }
-	}
+   }
 
-	&__title.card-website {
-		
-		&::after {
-			left: 30%;
+   &__title.card-website {
+
+      &::after {
+         left: 30%;
       }
-	}
+   }
 
-	&__title.multi-page {
-		text-align: center;
+   &__title.multi-page {
+      text-align: center;
 
-		&::after {
-			left: 25%;
+      &::after {
+         left: 25%;
       }
-	}
+   }
 }

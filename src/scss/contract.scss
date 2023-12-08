@@ -1,54 +1,49 @@
 // contract
 .contract {
-	padding: 140px 0 20px;
-   margin-bottom: 20px;
-   
+   padding: 160px 0 40px;
+
    @media (max-width: $tablet) {
-      padding: 100px 0 20px;
+      padding: 140px 0 40px;
    }
 
    @media (max-width: $mobileSmall) {
-      padding: 90px 0 0;
+      padding: 100px 0 20px;
    }
 
-	&__container {
-		margin-bottom: 80px;
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 4px solid $mainColor;
 
-		@media (max-width: $pc) {
-			margin-bottom: calc(50px + 30*((100vw - 478px) / (1260 - 478)));
-		} 
-	}
+      @media (max-width: $tablet) {
+         border-width: 3px;
+      }
+   }
 
-	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	&__title {
-		text-align: center;
-	}
+   &__title {
+      text-align: center;
+   }
 
    &__title--1 {
 
-		&::after {
-			left: 17%;
+      &::after {
+         left: 17%;
       }
-	}
+   }
 
-	&__title--2 {
-		&::after {
-			left: 31%;
+   &__title--2 {
+      &::after {
+         left: 31%;
       }
-	}
+   }
 
-	&__content {
-		border: solid 1px $mainColor;
-	}
+   &__content {
+      border: solid 1px $mainColor;
+   }
 
-	&__img {
-		width: 100%;
-		object-fit: cover;
-	}
+   &__img {
+      width: 100%;
+      object-fit: cover;
+   }
 }
-
