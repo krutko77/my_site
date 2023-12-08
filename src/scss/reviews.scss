@@ -14,15 +14,15 @@
    &__wrapper {
       border-bottom: 4px solid $mainColor;
 
-      padding: 140px 0 110px;
+      padding: 160px 0 40px;
 
       @media (max-width: $tablet) {
          border-width: 3px;
-         padding: 130px 0 70px;
+         padding: 140px 0 40px;
       }
 
       @media (max-width: $mobileSmall) {
-         padding: 100px 0 40px;
+         padding: 100px 0 20px;
       }
    }
 
@@ -53,30 +53,30 @@
    &__text-block {
       text-align: center;
 
-		@media (max-width: $mobileSmall) {
-			margin-bottom: 20px;
-		}
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 20px;
+      }
    }
 
-	&__description {
-		position: relative;
-	}
+   &__description {
+      position: relative;
+   }
 
-	&__video-box {
-		display: none;
-		position: absolute;
-		bottom: -50px;
-		right: 0;
-		
-		@media (max-width: $mobileSmall) {
-			display: inline-block;
-		}
-	}	
+   &__video-box {
+      display: none;
+      position: absolute;
+      bottom: -50px;
+      right: 0;
+
+      @media (max-width: $mobileSmall) {
+         display: inline-block;
+      }
+   }
 }
 
 // Дополнительно прописываем стили swiper
 .swiper {
-	padding: 50px 40px 50px;
+   padding: 50px 40px 50px;
 
    @media (max-width: $mobileSmall) {
       padding: 35px 0 35px;
@@ -87,8 +87,8 @@
    }
 
    &__img {
-		width: 100%;
-		height: auto;
+      width: 100%;
+      height: auto;
    }
 }
 
