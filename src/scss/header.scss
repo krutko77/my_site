@@ -36,7 +36,10 @@
    }
 
    .menu {
+      display: flex;
+		align-items: center;
       &__body {
+			margin-right: 20px;
          @media (max-width: $tablet) {
             position: fixed;
             top: 0;
@@ -45,32 +48,37 @@
             height: 100%;
             background-color: rgba(242, 242, 242, 0.9);
             padding: 120px 0 0;
+				margin-right: 0;
             overflow: auto;
             transition: left 0.3s ease;
          }
 
          .menu-open & {
             left: 0;
-				transition: left 0.3s linear;
+            transition: left 0.3s linear;
          }
       }
 
       &__icon-wrapper {
-         display: none;
-
-         @media (max-width: $tablet) {
-            display: flex;
-            align-items: center;
-         }
+         display: flex;
+         align-items: center;         
       }
 
       .social {
          display: flex;
 
          &__item {
-            margin-right: 25px;
+            margin-right: 20px;
          }
 
+			&__item:last-child {
+            margin-right: 0;
+
+				@media (max-width: $tablet) {
+					margin-right: 20px;
+				}
+         }
+			
          &__icon {
             height: 40px;
             width: 40px;
@@ -81,6 +89,7 @@
          display: flex;
          align-items: center;
          justify-content: space-between;
+			flex-wrap: wrap;
 
          @media (max-width: $tablet) {
             flex-direction: column;
@@ -93,10 +102,10 @@
       }
 
       &__item:not(:last-child) {
-         margin-right: 30px;
+         margin-right: 15px;
 
          @media (max-width: $pc) {
-            margin-right: calc(20px + 10*((100vw - 768px) / (1260 - 768)));
+            margin-right: calc(10px + 5*((100vw - 768px) / (1260 - 768)));
          }
 
          @media (max-width: $tablet) {
@@ -171,7 +180,6 @@
 //Burger
 .icon-menu {
    display: none;
-
    @media (max-width: $tablet) {
       display: block;
       position: relative;
