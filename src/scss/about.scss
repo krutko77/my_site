@@ -47,7 +47,7 @@
       @media (max-width: $mobileSmall) {
          margin-bottom: 30px;
       }
-   }  
+   }
 
    &__text--last {
       margin-bottom: 50px;
@@ -63,14 +63,28 @@
    }
 
    &__img-box {
+		width: 100%;
       max-width: 600px;
+      aspect-ratio: 600/430;
+      overflow: hidden;
    }
 
    &__img-box-1 {
-      width: 30%;
+      width: 100%;
+		max-width: 400px;
+      aspect-ratio: 400/300;
+      overflow: hidden;
+
+      @media (max-width:$pc) {
+         width: 30%;
+      }
 
       @media (max-width:$tablet) {
-         width: 40%;
+         width: 35%;
+      }
+
+      @media (max-width:$mobileSmall) {
+         width: 100%;
       }
    }
 
@@ -78,12 +92,6 @@
    &__img-1 {
       width: 100%;
       height: auto;
-   }
-}
-
-.float-left-about {
-   @media (max-width:$mobileSmall) {
-      margin: 0 em(15, 20) em(10, 20) 0;
    }
 }
 

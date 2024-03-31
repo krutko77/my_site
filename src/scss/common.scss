@@ -1,28 +1,29 @@
 // Заголовки, общие БЄМ блоки и проче...
-.title, .subtitle {
+.title,
+.subtitle {
    font-family: "SpectralSC", serif;
    text-transform: uppercase;
 }
 
 .title {
-	display: inline-block;
-	line-height: 120%;
-	@include font(64px, 700, 98%);
-	letter-spacing: -2px;
-	margin-bottom: 80px;
-	position: relative;
+   display: inline-block;
+   line-height: 120%;
+   @include font(64px, 700, 98%);
+   letter-spacing: -2px;
+   margin-bottom: 80px;
+   position: relative;
 
    @media (max-width: $pc) {
       font-size: calc(36px + 28*((100vw - 320px) / (1260 - 320)));
-   }	
+   }
 
-	@media (max-width: $tablet) {
-		margin-bottom: 60px;
-	}
+   @media (max-width: $tablet) {
+      margin-bottom: 60px;
+   }
 
-	@media (max-width: $mobileSmall) {
-		margin-bottom: 45px;
-	}
+   @media (max-width: $mobileSmall) {
+      margin-bottom: 45px;
+   }
 
    &::after {
       content: "";
@@ -49,19 +50,19 @@
 }
 
 .subtitle {
-	@include font(28px, 800, 120%);
-	line-height: 110%;
+   @include font(28px, 800, 120%);
+   line-height: 110%;
 
-	@media (max-width: $pc) {
+   @media (max-width: $pc) {
       font-size: calc(22px + 6*((100vw - 320px) / (1260 - 320)));
    }
 }
 
 .sub-subtitle {
-	@include font(24px, 700, 120%);
-	line-height: 110%;
+   @include font(24px, 700, 120%);
+   line-height: 110%;
 
-	@media (max-width: $pc) {
+   @media (max-width: $pc) {
       font-size: calc(22px + 2*((100vw - 320px) / (1260 - 320)));
    }
 }
@@ -91,31 +92,32 @@
 }
 
 ol {
-	margin-left: 30px;
+   margin-left: 30px;
 
-	@media (max-width: $pc) {
-		margin-left: calc(18px + 12*((100vw - 478px) / (1260 - 478)));
-	} 
+   @media (max-width: $pc) {
+      margin-left: calc(18px + 12*((100vw - 478px) / (1260 - 478)));
+   }
 }
 
 .ul-style {
-	margin-left: 20px;
+   margin-left: 20px;
 }
 
 .ul-style li {
-	list-style-type: square;	
+   list-style-type: square;
 }
 
 .left-text {
-	text-align: left;
+   text-align: left;
 }
 
-button:not(.swiper-button-prev, .swiper-button-next), .button {
-	text-transform: uppercase;
-	padding: 11px 20px 10px;
-	border-radius: 3px;
-	letter-spacing: 2px;
-	@include font(20px, 500, 150%);
+button:not(.swiper-button-prev, .swiper-button-next),
+.button {
+   text-transform: uppercase;
+   padding: 11px 20px 10px;
+   border-radius: 3px;
+   letter-spacing: 2px;
+   @include font(20px, 500, 150%);
 
    @media (max-width: $pc) {
       font-size: calc(16px + 4*((100vw - 320px) / (1260 - 320)));
@@ -123,179 +125,189 @@ button:not(.swiper-button-prev, .swiper-button-next), .button {
 }
 
 .button {
-	display: inline-block;
-	text-align: center;
+   display: inline-block;
+   text-align: center;
 }
 
 .button-accent {
-	background-color: $accentColor;
-	border: 3px solid $accentColor;	
+   background-color: $accentColor;
+   border: 3px solid $accentColor;
 }
 
-	@media (any-hover: hover) {
-		.button-accent:hover {
-			font-weight: 700;
-			color: $accentColor;
-			background-color: transparent;
-	} 
+@media (any-hover: hover) {
+   .button-accent:hover {
+      font-weight: 700;
+      color: $accentColor;
+      background-color: transparent;
+   }
 }
 
 .button-order {
-	color: $mainBgColor;
-	background-color: $mainButtonColor;
-	border: 3px solid $mainButtonColor;	
+   color: $mainBgColor;
+   background-color: $mainButtonColor;
+   border: 3px solid $mainButtonColor;
 }
 
-.button-accent, .button-order {
-	will-change: transform;
-	opacity: 0;
-	transform: scale(0.5);
-	transition: color 0.3s ease, 
-					background-color 0.3s ease, 
-					border-color 0.3s ease,
-					transform 0.8s ease, 
-					opacity 0.8s ease;
-} 
+.button-accent,
+.button-order {
+   will-change: transform;
+   opacity: 0;
+   transform: scale(0.5);
+   transition: color 0.3s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.8s ease,
+      opacity 0.8s ease;
+}
 
-.button-accent._watcher-view, .button-order._watcher-view {
-	opacity: 1;
-	transform: scale(1);	
+.button-accent._watcher-view,
+.button-order._watcher-view {
+   opacity: 1;
+   transform: scale(1);
 }
 
 .button:active {
-	transform: translate(1px, 2px);
-	transition: transform 0.3s ease;
+   transform: translate(1px, 2px);
+   transition: transform 0.3s ease;
 }
 
 .link {
-	position: relative;
-	display: inline-block;
-	transition: color 0.3s ease;
-	&::before {
-         content: '';
-         position: absolute;
-         top: 94%;
-         width: 100%;
-         height: 2px;
-         background: $accentColor;
-      }
+   position: relative;
+   display: inline-block;
+   transition: color 0.3s ease;
 
-		@media (any-hover: hover) {
-		&:hover {
-		color: $linkOtherColor;
-		}
-	}
+   &::before {
+      content: '';
+      position: absolute;
+      top: 94%;
+      width: 100%;
+      height: 2px;
+      background: $accentColor;
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         color: $linkOtherColor;
+      }
+   }
 }
 
 .margin-bottom-10 {
-	margin-bottom: 10px;
+   margin-bottom: 10px;
 }
 
 .margin-bottom-20 {
-	margin-bottom: 20px;	
+   margin-bottom: 20px;
 }
 
 .margin-bottom-30 {
-	margin-bottom: 30px;
+   margin-bottom: 30px;
 
-	@media (max-width: $pc) {
+   @media (max-width: $pc) {
       margin-bottom: calc(20px + 10*((100vw - 320px) / (1260 - 320)));
    }
 }
 
 .margin-bottom-40 {
-	margin-bottom: 40px;
+   margin-bottom: 40px;
 
-	@media (max-width: $pc) {
+   @media (max-width: $pc) {
       margin-bottom: calc(25px + 15*((100vw - 320px) / (1260 - 320)));
    }
 }
 
 .margin-bottom-50 {
-	margin-bottom: 50px;
+   margin-bottom: 50px;
 
-	@media (max-width: $pc) {
+   @media (max-width: $pc) {
       margin-bottom: calc(30px + 20*((100vw - 320px) / (1260 - 320)));
    }
 }
 
 .margin-bottom-60 {
-	margin-bottom: 60px;
+   margin-bottom: 60px;
 
-	@media (max-width: $pc) {
+   @media (max-width: $pc) {
       margin-bottom: calc(35px + 25*((100vw - 320px) / (1260 - 320)));
    }
 }
 
 .margin-bottom-80 {
-	margin-bottom: 80px;
+   margin-bottom: 80px;
 
-	@media (max-width: $pc) {
+   @media (max-width: $pc) {
       margin-bottom: calc(45px + 35*((100vw - 320px) / (1260 - 320)));
    }
 }
 
 .margin-bottom-120 {
-	margin-bottom: 120px;
-	 
-	@media (max-width: $tablet) {
-		margin-bottom: 100px;
-	}
+   margin-bottom: 120px;
 
-	@media (max-width: $mobileSmall) {
-		margin-bottom: 50px;
-	}
+   @media (max-width: $tablet) {
+      margin-bottom: 100px;
+   }
+
+   @media (max-width: $mobileSmall) {
+      margin-bottom: 50px;
+   }
 }
 
 .float-left {
-	float: left;
-	margin: 0 em(30, 20) em(20, 20) 0;	
+   float: left;
+   margin: 0 em(30, 20) em(20, 20) 0;
 }
 
 .float-right {
-	float: right;
-	margin: 0 0 em(20, 20) em(30, 20);	
+   float: right;
+   margin: 0 0 em(20, 20) em(30, 20);
 }
 
-.float-left:not(.float-left.float-left-about), .float-right {
-	@media (max-width:$mobileSmall){
-		clear: both; 
-		margin: 0 0 20px;
-	}
+.float-left,
+.float-right {
+   @media (max-width:$mobileSmall) {
+      clear: both;
+      margin: 0 0 20px;
+   }
 }
 
 .clearfix {
    display: flow-root;
+
+   @media (max-width:$mobileSmall) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
 }
 
 .img-box {
-	width: 40%;
+   width: 40%;
 
-	@media (max-width:$mobileSmall){
-		width: 100%; 
-	}
+   @media (max-width:$mobileSmall) {
+      width: 100%;
+   }
 }
 
 .checkbox__label {
-	margin-bottom: em(10, 20);
+   margin-bottom: em(10, 20);
 }
 
 .subtitle-box {
-	display: flex;
+   display: flex;
 
-	svg {
-		position: relative;
-		top: -2px;
-		flex-shrink: 0;
-		height: 40px;
-		width: 40px;
-		margin-right: 4px;
-		fill: $accentColor;
-	
-		@media (max-width: $pc) {
-			height: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
-			width: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
-		}
-	}
+   svg {
+      position: relative;
+      top: -2px;
+      flex-shrink: 0;
+      height: 40px;
+      width: 40px;
+      margin-right: 4px;
+      fill: $accentColor;
+
+      @media (max-width: $pc) {
+         height: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
+         width: calc(30px + 10*((100vw - 320px) / (1260 - 320)));
+      }
+   }
 }
-
