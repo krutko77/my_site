@@ -1,6 +1,6 @@
 //skills
 .services {
-	padding: 160px 0 40px;
+   padding: 160px 0 40px;
 
    @media (max-width: $tablet) {
       padding: 140px 0 40px;
@@ -22,76 +22,98 @@
    }
 
    &__title {
-		text-align: center;
-    
+      text-align: center;
+
       &::after {
          left: 11%;
       }
    }
 
-  	&__subtitle {
-		margin-bottom: 20px;	
-		line-height: 140%;
-	}
+   &__subtitle {
+      margin-bottom: 20px;
+      line-height: 140%;
+   }
 
-	&__sub-subtitle {
-		margin-bottom: 10px;
-	}
+   &__sub-subtitle {
+      margin-bottom: 10px;
+   }
 
-	@media (any-hover: hover) {
+   @media (any-hover: hover) {
 
-		&__img-box {
-			will-change: transform;
-			opacity: 0;
-			transition: transform 1.6s ease, opacity 1.6s ease;
-		}
+      &__img-box {
+         overflow: hidden;
+         width: 100%;
+         will-change: transform;
+         opacity: 0;
+         transition: transform 1.6s ease, opacity 1.6s ease;
+      }
 
-		&__img-box--left {
-			transform: translateX(-70px);
-		}
+      &__img-box--left {
+         transform: translateX(-70px);
+      }
 
-		&__img-box--right {
-			transform: translateX(70px);
-		}
+      &__img-box--right {
+         transform: translateX(70px);
+      }
 
-		&__img-box._watcher-view {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
+      &__img-box._watcher-view {
+         opacity: 1;
+         transform: translateX(0);
+      }
 
-	&__img {
-		width: 100%;
-		height: auto;
-	}
+      &__img-box--1 {
+         max-width: 400px;
+         aspect-ratio: 400/260;
+      }
 
-	&__list-wrapper {
-		display: flex;
-	}
+		&__img-box--2 {
+         max-width: 400px;
+         aspect-ratio: 400/231;
+      }
 
-	&__content-box {
-		margin-top: 45px;
+		&__img-box--3 {
+         max-width: 400px;
+         aspect-ratio: 400/220;
+      }
 
-		@media (max-width: $pc) {
-			margin-top: calc(5px + 40*((100vw - 992px) / (1260 - 992)));
-		}
+		&__img-box--4 {
+         max-width: 400px;
+         aspect-ratio: 400/288;
+      }
+   }
 
-		@media (max-width: $tablet) {
-			margin-top: 0;
-		}
-	}
+   &__img {
+      width: 100%;
+      height: auto;
+   }
 
-	&__button-box {
-		text-align: center;
-	}
+   &__list-wrapper {
+      display: flex;
+   }
+
+   &__content-box {
+      margin-top: 45px;
+
+      @media (max-width: $pc) {
+         margin-top: calc(5px + 40*((100vw - 992px) / (1260 - 992)));
+      }
+
+      @media (max-width: $tablet) {
+         margin-top: 0;
+      }
+   }
+
+   &__button-box {
+      text-align: center;
+   }
 }
 
 .spollers {
-	&__list {
-		margin-left: em(25, 20);
-	}
+   &__list {
+      margin-left: em(25, 20);
+   }
 }
 
 .border-none {
-	border: none;
+   border: none;
 }
