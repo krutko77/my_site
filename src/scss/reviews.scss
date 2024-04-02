@@ -1,4 +1,4 @@
-//reviews
+т//reviews
 .reviews {
    margin-bottom: 40px;
 
@@ -63,6 +63,8 @@
    }
 
    &__video-box {
+		overflow: hidden;
+		height: 50px;
       display: none;
       position: absolute;
       bottom: -50px;
@@ -84,11 +86,15 @@
 
    &__image {
       text-align: center;
+		overflow: hidden;
+		width: 100%;
+		max-width: 350px;
+		aspect-ratio: 350/688;
    }
 
    &__img {
       width: 100%;
-      height: auto;
+      height: auto;		
    }
 }
 
