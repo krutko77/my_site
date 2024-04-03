@@ -13,7 +13,6 @@
    &__wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center;
       border-bottom: 4px solid $mainColor;
 
       @media (max-width: $tablet) {
@@ -22,10 +21,11 @@
    }
 
    &__title {
-		text-align: center;
+      text-align: center;
+      align-self: center;
 
-		&::after {
-			left: 31%;
+      &::after {
+         left: 31%;
       }
-	}
+   }
 }
