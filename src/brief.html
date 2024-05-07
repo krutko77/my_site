@@ -1,156 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Бриф на разработку | Разработка продающих сайтов",
-	"description": "Список требований и задач для разработки сайта"
-	})
-	<body>		
-		<div class="wrapper">
-			@@include('html/_header-back.htm',{})
-			<main id="anchor51" class="page">
-				<div class="brief">
-					<div class="brief__container">
-						<div class="brief__wrapper">
-							<h1 class="brief__title title">Бриф<br>на разработку</h1>
-							<p class="brief__text text margin-bottom-30">Заполнение брифа значительно уменьшает время на обсуждение проекта между заказчиком и разработчиком. Этот опросный лист поможет более четко понять цели и задачи интернет-проекта. После получения заполненного брифа, я свяжусь с вами в течение 3-х часов для обсуждения всех деталей проекта и оформления заказа на разработку.</p>
-							<div class="brief__inner form-brief margin-bottom-80">
-								<form class="form-brief__body" id="form-brief" name="formBrief" action="files/sendmail/sendmail.php" method="POST" data-ajax>
-									<div class="form-brief__contact-block">
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="name-brif">Имя *</label>
-											<input class="form-brief__input text-form for-clear" id="name-brif" type="text" name="name"
-												data-validate data-error="Напишите имя" data-required placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="nameCompany">Название компании</label>
-											<input class="form-brief__input text-form for-clear" id="nameCompany" type="text" name="nameCompany" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="tel-brif">Телефон или мессенджер</label>
-											<input class="form-brief__input text-form for-clear" id="tel-brif" type="text" name="tel" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="email-brif">E-mail *</label>
-											<input class="form-brief__input text-form for-clear" id="email-brif" type="email" name="email"
-												placeholder=" " data-validate data-error="Напишите правильный E-mail"
-												data-required="email" />
-										</div>
-										<div class="form-brief__radio radio text-form">
-											<span class="radio__title">Какого типа нужен сайт?</span>
-											<div class="radio__options options-brief">
-												<div class="options__item">
-													<input id="landing" checked type="radio" value="landing" name="siteType" class="options__input">
-													<label for="landing" class="options__label">Лендинг</label>
-												</div>
-												<div class="options__item">
-													<input id="businessСard" type="radio" value="businessСard" name="siteType" class="options__input">
-													<label for="businessСard" class="options__label">Сайт-визитка</label>
-												</div>
-												<div class="options__item">
-													<input id="multiPageSite" type="radio" value="multiPageSite" name="siteType" class="options__input">
-													<label for="multiPageSite" class="options__label">Многостраничный сайт</label>
-												</div>
-												<div class="options__item">
-													<input id="blog" type="radio" value="blog" name="siteType" class="options__input">
-													<label for="blog" class="options__label">Тематический сайт-блог</label>
-												</div>
-												<div class="options__item">
-													<input id="other" type="radio" value="other" name="siteType" class="options__input">
-													<label for="other" class="options__label">Другое</label>
-												</div>
+@@include('html/_head.htm',{
+"title":"Бриф на разработку | Разработка продающих сайтов",
+"description": "страница",
+"keywords": "страница"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-back.htm',{})
+		<main id="anchor51" class="page">
+			<div class="brief">
+				<div class="brief__container">
+					<div class="brief__wrapper">
+						<h1 class="brief__title title">Бриф<br>на разработку</h1>
+						<p class="brief__text text margin-bottom-30">Заполнение брифа значительно уменьшает время на
+							обсуждение проекта между заказчиком и разработчиком. Этот опросный лист поможет более четко понять
+							цели и задачи интернет-проекта. После получения заполненного брифа, я свяжусь с вами в течение 3-х
+							часов для обсуждения всех деталей проекта и оформления заказа на разработку.</p>
+						<div class="brief__inner form-brief margin-bottom-80">
+							<form class="form-brief__body" id="form-brief" name="formBrief"
+								action="files/sendmail/sendmail.php" method="POST" data-ajax>
+								<div class="form-brief__contact-block">
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="name-brif">Имя *</label>
+										<input class="form-brief__input text-form for-clear" id="name-brif" type="text"
+											name="name" data-validate data-error="Напишите имя" data-required placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="nameCompany">Название компании</label>
+										<input class="form-brief__input text-form for-clear" id="nameCompany" type="text"
+											name="nameCompany" placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="tel-brif">Телефон или мессенджер</label>
+										<input class="form-brief__input text-form for-clear" id="tel-brif" type="text" name="tel"
+											placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="email-brif">E-mail *</label>
+										<input class="form-brief__input text-form for-clear" id="email-brif" type="email"
+											name="email" placeholder=" " data-validate data-error="Напишите правильный E-mail"
+											data-required="email" />
+									</div>
+									<div class="form-brief__radio radio text-form">
+										<span class="radio__title">Какого типа нужен сайт?</span>
+										<div class="radio__options options-brief">
+											<div class="options__item">
+												<input id="landing" checked type="radio" value="landing" name="siteType"
+													class="options__input">
+												<label for="landing" class="options__label">Лендинг</label>
 											</div>
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="theme">Какая тематика сайта *</label>
-											<input class="form-brief__input text-form for-clear" id="theme" type="text" name="theme"
-												placeholder=" " data-validate data-error="Укажите тематику сайта" data-required="theme" />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="message-brif">Опишите задачи для сайта *</label>
-											<textarea class="form-brief__input text-form for-clear" name="message" id="message-brif"
-												data-validate data-error="Опишите задачи для сайта" data-required
-												placeholder=" "></textarea>
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="region">В каком регионе вы предоставляете услугу/товар?</label>
-											<input class="form-brief__input text-form for-clear" id="region" type="text" name="region" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="site">У вас уже есть сайт? Если есть, укажите ссылку</label>
-											<input class="form-brief__input text-form for-clear" id="site" type="text" name="site" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="logo">Есть ли фирменный шрифт, цвета, логотип?</label>
-											<input class="form-brief__input text-form for-clear" id="logo" type="text" name="logo" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="design">Пожелания по дизайну сайта</label>
-											<input class="form-brief__input text-form for-clear" id="design" type="text" name="design" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="links">Укажите ссылки на сайты, которые вам нравятся</label>
-											<input class="form-brief__input text-form for-clear" id="links" type="text" name="links" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="content">Есть ли готовые фото/видео и статьи для сайта?</label>
-											<input class="form-brief__input text-form for-clear" id="content" type="text" name="content" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="term">Желаемый срок разработки сайта</label>
-											<input class="form-brief__input text-form for-clear" id="term" type="text" name="term" placeholder=" " />
-										</div>
-										<div class="form-brief__item">
-											<label class="form-brief__label text-form" for="info">Любая полезная в работе над проектом информация</label>
-											<textarea class="form-brief__input text-form for-clear" name="info" id="info"
-												placeholder=" "></textarea>
-										</div>
-										<div class="form-brief__radio radio text-form margin-bottom-10">
-											<span class="radio__title">Нужен ли домен?</span>
-											<div class="radio__options options">
-												<div class="options__item">
-													<input id="yesDomain-1" checked type="radio" value="yes" name="domain" class="options__input">
-													<label for="yesDomain-1" class="options__label">да</label>
-												</div>
-												<div class="options__item">
-													<input id="noDomain-1" type="radio" value="no" name="domain" class="options__input">
-													<label for="noDomain-1" class="options__label">нет</label>
-												</div>
+											<div class="options__item">
+												<input id="businessСard" type="radio" value="businessСard" name="siteType"
+													class="options__input">
+												<label for="businessСard" class="options__label">Сайт-визитка</label>
 											</div>
-										</div>
-										<div class="form-brief__radio radio text-form margin-bottom-10">
-											<span class="radio__title">Нужен ли хостинг?</span>
-											<div class="radio__options options">
-												<div class="options__item">
-													<input id="yesHosting-1" checked type="radio" value="yes" name="hosting" class="options__input">
-													<label for="yesHosting-1" class="options__label">да</label>
-												</div>
-												<div class="options__item">
-													<input id="noHosting-1" type="radio" value="no" name="hosting" class="options__input">
-													<label for="noHosting-1" class="options__label">нет</label>
-												</div>
+											<div class="options__item">
+												<input id="multiPageSite" type="radio" value="multiPageSite" name="siteType"
+													class="options__input">
+												<label for="multiPageSite" class="options__label">Многостраничный сайт</label>
 											</div>
-										</div>
-										<div class="form-brief__checkbox checkbox">
-											<input id="formAgreement-1" type="checkbox" name="agreement" class="checkbox__input" data-required />
-											<label for="formAgreement-1" class="checkbox__label"><span class="text-form">Заполняя форму, я соглашаюсь на <a class="checkbox__link link" href="http://webkrutko.by/politika-obrabotki.html#anchor52">обработку</a> персональных данных</span></label>
-										</div>
-										<input type="hidden" name="code" value="" id="code-brief"/>
-										<div class="form-brief__video-box">
-											<video autoplay loop muted playsinline>
-												<source src="@img/loading/loading-96.webm" type="video/webm">
-												<source src="@img/loading/loading-96.mp4" type="video/mp4">
-											</video>
+											<div class="options__item">
+												<input id="blog" type="radio" value="blog" name="siteType" class="options__input">
+												<label for="blog" class="options__label">Тематический сайт-блог</label>
+											</div>
+											<div class="options__item">
+												<input id="other" type="radio" value="other" name="siteType" class="options__input">
+												<label for="other" class="options__label">Другое</label>
+											</div>
 										</div>
 									</div>
-									<button class="form-brief__button btn-brief text button-accent clear-button" aria-label="Отправить" type="submit" data-watch data-watch-once>Отправить</button>
-								</form>
-							</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="theme">Какая тематика сайта *</label>
+										<input class="form-brief__input text-form for-clear" id="theme" type="text" name="theme"
+											placeholder=" " data-validate data-error="Укажите тематику сайта"
+											data-required="theme" />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="message-brif">Опишите задачи для сайта
+											*</label>
+										<textarea class="form-brief__input text-form for-clear" name="message" id="message-brif"
+											data-validate data-error="Опишите задачи для сайта" data-required
+											placeholder=" "></textarea>
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="region">В каком регионе вы предоставляете
+											услугу/товар?</label>
+										<input class="form-brief__input text-form for-clear" id="region" type="text" name="region"
+											placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="site">У вас уже есть сайт? Если есть,
+											укажите ссылку</label>
+										<input class="form-brief__input text-form for-clear" id="site" type="text" name="site"
+											placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="logo">Есть ли фирменный шрифт, цвета,
+											логотип?</label>
+										<input class="form-brief__input text-form for-clear" id="logo" type="text" name="logo"
+											placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="design">Пожелания по дизайну сайта</label>
+										<input class="form-brief__input text-form for-clear" id="design" type="text" name="design"
+											placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="links">Укажите ссылки на сайты, которые
+											вам нравятся</label>
+										<input class="form-brief__input text-form for-clear" id="links" type="text" name="links"
+											placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="content">Есть ли готовые фото/видео и
+											статьи для сайта?</label>
+										<input class="form-brief__input text-form for-clear" id="content" type="text"
+											name="content" placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="term">Желаемый срок разработки
+											сайта</label>
+										<input class="form-brief__input text-form for-clear" id="term" type="text" name="term"
+											placeholder=" " />
+									</div>
+									<div class="form-brief__item">
+										<label class="form-brief__label text-form" for="info">Любая полезная в работе над проектом
+											информация</label>
+										<textarea class="form-brief__input text-form for-clear" name="info" id="info"
+											placeholder=" "></textarea>
+									</div>
+									<div class="form-brief__radio radio text-form margin-bottom-10">
+										<span class="radio__title">Нужен ли домен?</span>
+										<div class="radio__options options">
+											<div class="options__item">
+												<input id="yesDomain-1" checked type="radio" value="yes" name="domain"
+													class="options__input">
+												<label for="yesDomain-1" class="options__label">да</label>
+											</div>
+											<div class="options__item">
+												<input id="noDomain-1" type="radio" value="no" name="domain" class="options__input">
+												<label for="noDomain-1" class="options__label">нет</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-brief__radio radio text-form margin-bottom-10">
+										<span class="radio__title">Нужен ли хостинг?</span>
+										<div class="radio__options options">
+											<div class="options__item">
+												<input id="yesHosting-1" checked type="radio" value="yes" name="hosting"
+													class="options__input">
+												<label for="yesHosting-1" class="options__label">да</label>
+											</div>
+											<div class="options__item">
+												<input id="noHosting-1" type="radio" value="no" name="hosting"
+													class="options__input">
+												<label for="noHosting-1" class="options__label">нет</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-brief__checkbox checkbox">
+										<input id="formAgreement-1" type="checkbox" name="agreement" class="checkbox__input"
+											data-required />
+										<label for="formAgreement-1" class="checkbox__label"><span class="text-form">Заполняя
+												форму, я соглашаюсь на <a class="checkbox__link link"
+													href="http://webkrutko.by/politika-obrabotki.html#anchor52">обработку</a>
+												персональных данных</span></label>
+									</div>
+									<input type="hidden" name="code" value="" id="code-brief" />
+									<div class="form-brief__video-box">
+										<video autoplay loop muted playsinline>
+											<source src="@img/loading/loading-96.webm" type="video/webm">
+											<source src="@img/loading/loading-96.mp4" type="video/mp4">
+										</video>
+									</div>
+								</div>
+								<button class="form-brief__button btn-brief text button-accent clear-button"
+									aria-label="Отправить" type="submit" data-watch data-watch-once>Отправить</button>
+							</form>
 						</div>
 					</div>
-				</div>				
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		<script src="js/app.min.js"></script>
-	</body>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	<script src="js/app.min.js"></script>
+</body>
+
 </html>
