@@ -93,7 +93,7 @@
    flex-direction: column;
    justify-content: space-between;
    background-color: $mainLightColor;
-   min-height: 290px;
+   min-height: 400px;
    padding: em(30, 20) em(30, 20);
    border-radius: 5px;
 
@@ -102,6 +102,13 @@
       transform: translateY(100px);
    }
 
+	@media (max-width: $tablet) {
+		min-height: 360px;
+	}
+
+	@media (max-width: $mobileSmall) {
+		min-height: 350px;
+	}
 
    &__img-wrapper {
       overflow: hidden;

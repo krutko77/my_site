@@ -38,28 +38,19 @@
       margin-bottom: 10px;
    }
 
-	&__img-box {
-		overflow: hidden;
-		width: 100%;
-	}
-
 	&__img-box--1 {
-		max-width: 400px;
 		aspect-ratio: 400/260;
 	}
 
 	&__img-box--2 {
-		max-width: 400px;
 		aspect-ratio: 400/231;
 	}
 
 	&__img-box--3 {
-		max-width: 400px;
 		aspect-ratio: 400/220;
 	}
 
 	&__img-box--4 {
-		max-width: 400px;
 		aspect-ratio: 400/288;
 	}
 
@@ -96,11 +87,7 @@
    }
 
    &__content-box {
-      margin-top: 45px;
-
-      @media (max-width: $pc) {
-         margin-top: calc(5px + 40*((100vw - 992px) / (1260 - 992)));
-      }
+      margin-top: 5px;
 
       @media (max-width: $tablet) {
          margin-top: 0;

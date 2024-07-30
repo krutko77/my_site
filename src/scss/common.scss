@@ -252,40 +252,64 @@ button:not(.swiper-button-prev, .swiper-button-next),
    }
 }
 
+// Обтекание текстом
 .float-left {
    float: left;
-   margin: 0 em(30, 20) em(20, 20) 0;
+   margin: 0 em(20, 20) em(10, 20) 0;
+
+   @media (max-width:$mobileSmall) {
+      margin: em(15, 20) 0;
+   }
 }
 
 .float-right {
    float: right;
-   margin: 0 0 em(20, 20) em(30, 20);
-}
+   margin: 0 0 em(10, 20) em(20, 20);
 
-.float-left,
-.float-right {
    @media (max-width:$mobileSmall) {
-      clear: both;
-      margin: 0 0 20px;
+      margin: em(15, 20) 0;
    }
 }
 
 .clearfix {
    display: flow-root;
-
-   @media (max-width:$mobileSmall) {
+   
+    @media (max-width:$mobileSmall) {
       display: flex;
       flex-direction: column;
       align-items: center;
    }
-
 }
 
-.img-box {
-   @media (max-width:$tablet) {
-      width: 40%;
+.img-box-300 {
+   width: 100%;
+   max-width: 300px;
+
+   @media (max-width:$pc) {
+      width: 25%;
    }
 
+   @media (max-width:$tablet) {
+      width: 30%;
+   }
+
+   @media (max-width:$mobileSmall) {
+      width: 100%;
+   }
+}
+
+.img-box-400 {
+   width: 100%;
+   max-width: 400px;
+	overflow: hidden;
+
+   @media (max-width:$pc) {
+      width: 30%;
+   }
+
+   @media (max-width:$tablet) {
+      width: 35%;
+   }
 
    @media (max-width:$mobileSmall) {
       width: 100%;
