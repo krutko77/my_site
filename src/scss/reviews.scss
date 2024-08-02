@@ -81,9 +81,9 @@
 .swiper {
    padding: 50px 40px 50px;
 
-   @media (max-width: $mobileSmall) {
-      padding: 35px 0 35px;
-   }
+	@media (max-width:$mobile) {
+		max-width: 430px;
+	}
 
    &__image {
       text-align: center;
