@@ -6,6 +6,10 @@
       padding: 140px 0 40px;
    }
 
+	@media (max-width: $tablet) and (min-aspect-ratio: 1024/600) {
+		padding: 40px 0 40px;
+	}
+
    @media (max-width: $mobileSmall) {
       padding: 100px 0 20px;
    }

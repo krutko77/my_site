@@ -63,12 +63,12 @@
    }
 
    &__video-box {
-		overflow: hidden;
-		width: 50px;
-		height: 50px;
+      overflow: hidden;
+      width: 50px;
+      height: 50px;
       display: none;
       position: absolute;
-      bottom: -50px;
+      bottom: -60px;
       right: 0;
 
       @media (max-width: $mobileSmall) {
@@ -81,21 +81,25 @@
 .swiper {
    padding: 50px 40px 50px;
 
+   @media (max-width:$mobile) {
+      max-width: 430px;
+   }
+
 	@media (max-width:$mobile) {
-		max-width: 430px;
-	}
+      padding: 50px 0;
+   }
 
    &__image {
       text-align: center;
-		overflow: hidden;
-		width: 100%;
-		max-width: 350px;
-		aspect-ratio: 350/688;
+      overflow: hidden;
+      width: 100%;
+      max-width: 350px;
+      aspect-ratio: 350/688;
    }
 
    &__img {
       width: 100%;
-      height: auto;		
+      height: auto;
    }
 }
 
