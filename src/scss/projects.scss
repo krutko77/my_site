@@ -1,5 +1,5 @@
 //projects
-.projects {	
+.projects {
    padding: 160px 0 40px;
 
    @media (max-width: $tablet) {
@@ -104,13 +104,13 @@
       margin-bottom: 15px;
    }
 
-	&__img-wrapper {
-		overflow: hidden;
-		width: 100%;
-		max-width: 540px;
+   &__img-wrapper {
+      overflow: hidden;
+      width: 100%;
+      max-width: 540px;
       aspect-ratio: 540/270;
-		margin-bottom: 20px;
-		
+      margin-bottom: 20px;
+
       @media (max-width: $pc) {
          margin-bottom: calc(10px + 10*((100vw - 320px) / (1260 - 320)));
       }
@@ -129,8 +129,7 @@
       height: auto;
       position: relative;
       z-index: 2;
-      visibility: 0;
-      transition:  transform 0.8s ease;
+      transition: transform 0.8s ease;
    }
 
    &__img-wrapper {
@@ -139,10 +138,6 @@
 
       &._watcher-view {
          transform: rotate3d(0, 1, 0, 0deg);
-      }
-
-      &._watcher-view .portfolio__img {
-         visibility: 1;
       }
    }
 
