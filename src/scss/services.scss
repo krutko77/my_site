@@ -38,21 +38,21 @@
       margin-bottom: 10px;
    }
 
-	&__img-box--1 {
-		aspect-ratio: 400/260;
-	}
+   &__img-box--1 {
+      aspect-ratio: 400/260;
+   }
 
-	&__img-box--2 {
-		aspect-ratio: 400/231;
-	}
+   &__img-box--2 {
+      aspect-ratio: 400/231;
+   }
 
-	&__img-box--3 {
-		aspect-ratio: 400/220;
-	}
+   &__img-box--3 {
+      aspect-ratio: 400/220;
+   }
 
-	&__img-box--4 {
-		aspect-ratio: 400/288;
-	}
+   &__img-box--4 {
+      aspect-ratio: 400/288;
+   }
 
    &__img {
       width: 100%;
@@ -79,7 +79,7 @@
          opacity: 1;
          transform: translateX(0);
       }
-      
+
    }
 
    &__list-wrapper {
@@ -107,4 +107,8 @@
 
 .border-none {
    border: none;
+}
+
+.services__button-more.projects__button-more {
+   margin-top: 20px;
 }
