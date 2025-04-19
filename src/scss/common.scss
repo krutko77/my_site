@@ -63,7 +63,7 @@
    line-height: 110%;
 
    @media (max-width: $pc) {
-      font-size: calc(22px + 2*((100vw - 320px) / (1260 - 320)));
+      font-size: calc(20px + 4*((100vw - 320px) / (1260 - 320)));
    }
 }
 

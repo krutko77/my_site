@@ -1,7 +1,12 @@
 //about
 .about {
-   background: url("../img/bg-about-40.jpg") center / cover no-repeat;
+   background: url("../img/bg-about-60.jpg") center / cover no-repeat;
    color: $mainLightColor;
+
+	@media (max-width: $mobileSmall) {
+		padding: 0;
+		background: url("../img/bg-about-60.jpg") center / cover no-repeat;
+	}
 
    &__wrapper {
       display: flex;
@@ -12,10 +17,6 @@
       @media (max-width: $tablet) {
          padding: 0 0 30px;
          border-width: 3px;
-      }
-
-      @media (max-width: $mobileSmall) {
-         padding: 0;
       }
    }
 
@@ -63,8 +64,13 @@
       aspect-ratio: 600/430;
    }
 
-   &__img-box-1 {
+   &__img-box.about__img-box-1 {
       aspect-ratio: 400/300;
+   }
+
+   &__img-box.about__img-box-2 {
+      aspect-ratio: 500/706;
+      max-width: 500px;
    }
 
    &__img,
@@ -74,64 +80,40 @@
    }
 }
 
-.grid {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   margin-bottom: 50px;
-   row-gap: 30px;
-
-   @media (max-width: $mobile) {
-      grid-template-columns: 1fr 1fr;
-      margin-bottom: 30px;
-   }
-
-   &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .item-grid {
-      padding: 0 20px 0;
-
-      @media (max-width: $mobileSmall) {
-         padding: 0 5px 0;
-      }
-
-      &__subtitle {
-         text-align: center;
-         margin-bottom: 15px;
-      }
-
-      &__list li {
-         list-style-type: square;
-         color: $accentColor;
-         margin-left: 20px;
-      }
-
-      &__list li span {
-         color: $mainBgColor;
-      }
-   }
-}
-
 .stack {
    display: flex;
    justify-content: space-around;
-   align-items: center;
    flex-wrap: wrap;
-	gap: 50px;
+   gap: 60px;
+
+   @media (max-width: $pc) {
+      gap: calc(15px + 45*((100vw - 320px) / (1260 - 320)));
+   }
 
    &__item {
-		min-width: 160px;
-	}
+      min-width: 145px;
+   }
 
    .list__item {
-      padding: 0 25px;
       margin-bottom: 20px;
 
-      @media (max-width: $tablet) {
-         padding: 0 10px;
+      @media (max-width: $pc) {
+         margin-bottom: calc(10px + 10*((100vw - 320px) / (1260 - 320)));
       }
+   }
+
+   .item-stack__list li span {
+      color: $mainBgColor;
+   }
+
+   .item-stack__list li {
+      list-style-type: square;
+      color: $accentColor;
+      margin-left: 20px;
+   }
+
+   .item-stack__subtitle {
+      text-align: center;
+      margin-bottom: 15px;
    }
 }
