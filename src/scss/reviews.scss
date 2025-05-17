@@ -51,7 +51,6 @@
    }
 
    &__text-block {
-      text-align: center;
 
       @media (max-width: $mobileSmall) {
          margin-bottom: 20px;
@@ -85,8 +84,13 @@
       max-width: 430px;
    }
 
-	@media (max-width:$mobile) {
+   @media (max-width:$mobile) {
       padding: 50px 0;
+   }
+
+   &__image-box {
+      display: flex;
+      justify-content: center;
    }
 
    &__image {
@@ -95,6 +99,7 @@
       width: 100%;
       max-width: 350px;
       aspect-ratio: 350/688;
+		border-radius: 10px;
    }
 
    &__img {

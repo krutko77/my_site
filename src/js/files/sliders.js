@@ -40,6 +40,7 @@ function initSliders() {
 			spaceBetween: 45,
 			autoHeight: true,
 			speed: 800,
+			
 
 			//touchRatio: 0,
 			//simulateTouch: false,
